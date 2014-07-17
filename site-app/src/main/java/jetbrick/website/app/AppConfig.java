@@ -21,8 +21,8 @@ public final class AppConfig {
             RUBY_BIN = "C:/dev/ruby-1.9.3/bin/ruby.exe";
         } else {
             // cloud vm config
-            BASE_PATH = "~/902763/github-jetbrick-website-app";
-            RUBY_BIN = "ruby";
+            BASE_PATH = "/var/lib/stickshift/53b984ece0b8cd641f000131/app-root/data/902763/github-jetbrick-website-app";
+            RUBY_BIN = "/opt/rh/ruby193/root/usr/bin/ruby";
         }
 
         BASE_DOCS_PATH = new File(BASE_PATH, "site-docs").getAbsolutePath();
