@@ -7,9 +7,8 @@ public final class WebsiteApplication {
     }
 
     public static void main(String[] args) {
-        System.out.println("hello: " + args[0]);
-        
         String html = MarkdownUtils.toHTML("jetbrick-webmvc/view.md", "utf-8");
+        html = MarkdownUtils.toPrettyHTML(html);
         System.out.println(html);
     }
 

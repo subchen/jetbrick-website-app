@@ -13,12 +13,11 @@ public final class AppConfig {
 
     public static final String GFM_SCRIPT_FILE;
 
-
     static {
 
         if (SystemUtils.IS_OS_WINDOWS) {
             // my laptop config
-            BASE_PATH = "D:/workspace/jetbrick-framework/github-jetbrick-website-app/";
+            BASE_PATH = "D:/workspace/jetbrick-framework/jetbrick-website-app";
             RUBY_BIN = "C:/dev/ruby-1.9.3/bin/ruby.exe";
         } else {
             // cloud vm config

@@ -3,16 +3,14 @@ package jetbrick.website.app;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import jetbrick.lang.StringUtils;
-import jetbrick.template.runtime.JetPageContext;
-import jetbrick.template.runtime.JetUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public final class AppFunctions {
- 
-    private static String autolist(String html) {
+
+    public static String autolist(String html) {
         Document document = Jsoup.parse(html);
         Elements headers = document.select("h1,h2,h3,h4,h5,h6");
         int n[] = new int[] { 0, 0, 0, 0, 0, 0, 0 };
@@ -41,7 +39,7 @@ public final class AppFunctions {
         }
         return document.body().html();
     }
- 
+
     public static Map<String, String> getHeaders(String html, int level) {
         Map<String, String> resultMap = new LinkedHashMap<String, String>();
         Document document = Jsoup.parse(html);
@@ -72,5 +70,5 @@ public final class AppFunctions {
         }
         return resultMap;
     }
-    
+
 }
