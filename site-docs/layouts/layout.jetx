@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="${WEBROOT}/favicon.ico"/>
     <title>${title}</title>
 
-    <link href="${WEBROOT}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="${WEBROOT}/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--[if lt IE 9]><script src="${WEBROOT}/assets/js/html5shiv.js"></script><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="${WEBROOT}/favicon.ico" />
+    
+    <link rel="stylesheet" type="text/css" href="${WEBROOT}/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="${WEBROOT}/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="${WEBROOT}/assets/css/github-markdown.css" />
+    <link rel="stylesheet" type="text/css" href="${WEBROOT}/assets/css/application.css" />
+
+    <!--[if lt IE 9]><script type="text/javascript" src="${WEBROOT}/assets/js/html5shiv.js"></script><![endif]-->
     <script type="text/javascript" src="${WEBROOT}/assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="${WEBROOT}/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${WEBROOT}/assets/js/application.js"></script>
 </head>
 
 <body>
