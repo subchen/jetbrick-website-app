@@ -6,10 +6,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="${WEBROOT}/favicon.ico"/>
     <title>${title}</title>
 
-    <link href="${WEBROOT}/assets/css/application.min.css" rel="stylesheet" type="text/css"/>
+    <link href="${WEBROOT}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="${WEBROOT}/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
     <!--[if lt IE 9]><script src="${WEBROOT}/assets/js/html5shiv.js"></script><![endif]-->
-    <script type="text/javascript" src="${WEBROOT}/assets/js/application.min.js"></script>
+    <script type="text/javascript" src="${WEBROOT}/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="${WEBROOT}/assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
