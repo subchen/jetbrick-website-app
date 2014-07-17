@@ -1,0 +1,59 @@
+body { 
+	padding-top: 50px; 
+	font-size: 14px;
+}
+
+/** Media Queries **/
+@media(min-width: 1200px) {
+	.container {
+	  	max-width: 970px;
+	}
+}
+
+@media(max-width:768px) {
+	.navbar {
+		z-index: 100;
+	}
+}
+
+.navbar {
+	position: fixed;
+	z-index: 60;
+	border-radius: 0;
+	border: 0;
+	top: 0;
+	width: 100%;
+	background-color: #001d2b;
+	box-shadow: 0 0 5px rgba(0,0,0,1);
+}
+
+.navbar-default .navbar-brand:link, .navbar-default .navbar-brand:visited {
+	color: #cccccc;;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .status:hover, .status:focus {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a:link, .navbar-default .navbar-nav>li>a:visited, .status>a:link, .status>a:visited {
+ 	color: #cccccc;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .status>a:hover, .status>a:focus {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.navbar .buttons {
+	margin: auto;
+	width: 480px;
+	text-align: center;
+}
+.navbar .buttons .btn {
+	margin: 8px;
+}
+.navbar-brand {
+	margin-left: 30px;
+	color: #cccccc;
+	font-family: 'Museo-300', Helvetica, sans;
+}
