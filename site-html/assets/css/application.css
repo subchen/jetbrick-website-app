@@ -7,24 +7,27 @@ body, p, div, table, td {
     font-size: 13px;
 }
 
-/** Media Queries **/
 @media(min-width: 1280px) {
 	.container {
 	    max-width: 1150px;
 	}
 }
-
-/** Media Queries **/
 @media(min-width: 1024px) and (max-width: 1280px) {
 	.container {
 	  	max-width: 970px;
 	}
 }
-
-@media(max-width:768px) {
-	.navbar {
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 750px;
+    }
+    .navbar {
 		z-index: 100;
 	}
+    .nav > li > a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .navbar {
@@ -69,6 +72,12 @@ body, p, div, table, td {
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .status>a:hover, .status>a:focus {
     text-decoration: none;
     color: #ffffff;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #428BCA;
 }
 
 .footermenu p {
