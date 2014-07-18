@@ -1,5 +1,5 @@
-body { 
-	padding-top: 50px; 
+body {
+	padding-top: 50px;
 }
 
 body, p, div, table, td {
@@ -10,7 +10,7 @@ body, p, div, table, td {
 /** Media Queries **/
 @media(min-width: 1280px) {
 	.container {
-	  	max-width: 1150px;
+	    max-width: 1150px;
 	}
 }
 
@@ -42,6 +42,7 @@ body, p, div, table, td {
 .navbar-brand {
 	margin-left: 30px;
 	font-size: 20px;
+	font-weight: bold;
 	color: #cccccc;
 }
 
@@ -54,11 +55,11 @@ body, p, div, table, td {
 }
 
 .navbar-default .navbar-brand:link, .navbar-default .navbar-brand:visited {
-    color: #cccccc;
+    color: #F16408;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .status:hover, .status:focus {
-    color: #ffffff;
+    color: #F12908;
 }
 
 .navbar-default .navbar-nav>li>a:link, .navbar-default .navbar-nav>li>a:visited, .status>a:link, .status>a:visited {
