@@ -1,10 +1,21 @@
 body { 
 	padding-top: 50px; 
-	font-size: 14px;
+}
+
+body, p, div, table, td {
+    font-family: "Microsoft YaHei", Helvetica, arial, sans-serif;
+    font-size: 13px;
 }
 
 /** Media Queries **/
-@media(min-width: 1200px) {
+@media(min-width: 1280px) {
+	.container {
+	  	max-width: 1150px;
+	}
+}
+
+/** Media Queries **/
+@media(min-width: 1024px) and (max-width: 1280px) {
 	.container {
 	  	max-width: 970px;
 	}
@@ -23,37 +34,43 @@ body {
 	border: 0;
 	top: 0;
 	width: 100%;
-	background-color: #001d2b;
-	box-shadow: 0 0 5px rgba(0,0,0,1);
+	background-color: #001D2B;
+	box-shadow: 0 0 5px #000;
+	font-size: 14px;
+}
+
+.navbar-brand {
+	margin-left: 30px;
+	font-size: 20px;
+	color: #cccccc;
+}
+
+.navbar-nav {
+    font-size: 14px;
+}
+
+.navbar-right {
+    font-size: 15px;
 }
 
 .navbar-default .navbar-brand:link, .navbar-default .navbar-brand:visited {
-	color: #cccccc;;
+    color: #cccccc;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .status:hover, .status:focus {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .navbar-default .navbar-nav>li>a:link, .navbar-default .navbar-nav>li>a:visited, .status>a:link, .status>a:visited {
- 	color: #cccccc;
+    color: #cccccc;
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .status>a:hover, .status>a:focus {
-	text-decoration: none;
-	color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
 }
 
-.navbar .buttons {
-	margin: auto;
-	width: 480px;
-	text-align: center;
-}
-.navbar .buttons .btn {
-	margin: 8px;
-}
-.navbar-brand {
-	margin-left: 30px;
-	color: #cccccc;
-	font-family: 'Museo-300', Helvetica, sans;
+.footermenu p {
+    text-align: center;
+    font-size: 12px;
 }
