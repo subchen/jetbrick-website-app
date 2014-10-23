@@ -153,21 +153,21 @@ Hello: jetbrick
 #end
 ```
 
-### 读取纯文本文件 read(...)
+### 读取纯文本文件内容
 
-* `String read(String relativeName)`
-* `String read(String relativeName, String encoding)`
+* `String fileGet(String relativeName)`
+* `String fileGet(String relativeName, String encoding)`
 
-### 读取子模板 include(...)
+### 读取子模板，并获取输出
 
 嵌入一个子模板。和 `#include` 指令的区别，此函数对子模板的输出进行了缓存，可以处理返回的内容，但是效率没有 `#include` 指令高。
 
-* `String include(String relativeName)`
-* `String include(String relativeName, Map<String, Object> parameters)`
+* `String includeGet(String relativeName)`
+* `String includeGet(String relativeName, Map<String, Object> parameters)`
 
 ### 调用一个 macro，并获取输出
 
-* `String macro(String name, Object... arguments)`
+* `String macroGet(String name, Object... arguments)`
 
 ### 调试专用函数 debug(...)
 
