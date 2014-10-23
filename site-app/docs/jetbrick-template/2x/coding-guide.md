@@ -32,8 +32,8 @@ JAVA 编码规范 2.0 for Jetbrick
 	 */
     ```
 
-* 代码必须是格式化的，请使用统一的 Eclipse 的代码格式文件：[jetbrick-eclipse-formatter.xml](http://github.com/jetbrick-aggregate/raw/master/jetbrick-eclipse-formatter/src/main/resources/jetbrick-eclipse-formatter.xml)
-* 不想被自动格式化的代码请用 `@formatter` 包裹，如：
+* 代码必须是格式化的，请使用统一的 Eclipse 的代码格式文件：[jetbrick-eclipse-formatter.xml](http://github.com/jetbrick-aggregate/tree/master/jetbrick-eclipse-formatter/src/main/resources/jetbrick-eclipse-formatter.xml)
+* 不想被自动格式化的代码请用 `@formatter` 包裹，如下：
 
     ```java
     //@formatter:off
@@ -48,12 +48,14 @@ JAVA 编码规范 2.0 for Jetbrick
 
 * Java 文件必须是可编译的，不应该有任何的 `warning` 存在
 
+
 2. 包名
 ---------------------
 
 * 包名必须是全部小写的，最好用一个单词表示，尽量不要以复数结尾
 * 包名必须以 `jetbrick.` 开头
 * 接口或者抽象类的多种实现，推荐以 `support`, `spi` 等命名
+
 
 3. 类名
 ---------------------
@@ -66,12 +68,14 @@ JAVA 编码规范 2.0 for Jetbrick
 * 每个 Class 都需要标注 `@auther`, `@since`
 * 每个 Class 都应该有简短的注释
 
+
 4. Imports
 ---------------------
 
 * Imports 间不要有空行
 * 超过 3 个相同包下面的 Class 需要使用 `.*` 代替
 * 不要使用 `import static`, 除了 `JUnit` / `TestNG` 的 `assertXXX` 方法
+
 
 5. 方法
 ---------------------
@@ -82,11 +86,13 @@ JAVA 编码规范 2.0 for Jetbrick
 * 每个 `public` 方法都应该有简短的注释
 * 推荐每个 `public` 的方法的参数和返回值都加上 `@Nullable` 或者 `@NotNull` 标注
 
+
 6. 常量
 ---------------------
 
 * 常量必须是全大写，并用 `_` 分隔，如 `MAX_INTEGER`
 * 常量必须是 `static` `final`
+
 
 7. 变量
 ---------------------
@@ -95,6 +101,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 变量名尽量使用缩写，以简短为主
 * 不要用拼音，要用英文表示
 * 如果是集合或数组，用复数名词，或者添加 `List`, `Map` 等后缀
+
 
 8. 注释
 ---------------------
@@ -105,6 +112,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 如果注释中有多个章节，用 `<h2>` 标签声明每个章节的标题
 * 示例代码以 `<pre>` 包裹
 
+
 9. 异常
 ---------------------
 
@@ -114,6 +122,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 异常应该和主要的 Class 放在一起，而不是所有的异常类放在一个包下面
 * 异常描述应该使用英文句子，尽量不要用中文。
 * 被 `catch` 住的 `Exception`，必须要处理，或者重新抛出
+
 
 10. 日志
 ---------------------
@@ -132,6 +141,6 @@ JAVA 编码规范 2.0 for Jetbrick
 * 单元测试覆盖率工具用 `Jacoco`
 * Mock 框架使用 `Mockito`
 * 尽可能为每个方法提供单元测试
-* 覆盖率应该不低于 50%
+* 覆盖率应该不低于 `50%`
 
 

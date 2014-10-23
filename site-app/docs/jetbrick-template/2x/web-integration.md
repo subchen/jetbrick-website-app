@@ -21,21 +21,20 @@ Web 中的默认隐含对象
 
 当 jetbrick-template 被用作 Web 应用中时候，会自动引入下面的对象，这些对象在所有的模板中全局可访问。
 
-|    隐含对象      |      类 型           |                说 明                       |
--------------------|----------------------|---------------------------------------------
-| context          | JetConext            |                                            |
-| servletContext   | ServletContext       |                                            |
-| session          | HttpSession          |                                            |
-| request          | HttpServletRequest   |                                            |
-| response         | HttpServletResponse  |                                            |
-| applicationScope | Map<String,Object>   | 快捷访问 servletContext.getAttribute(name) |
-| sessionScope     | Map<String,Object>   | 快捷访问 session.getAttribute(name)        |
-| requestScope     | Map<String,Object>   | 快捷访问 request.getAttribute(name)        |
-| parameter        | Map<String,String>   | 快捷访问 request.getParameter(name)        |
-| parameterValues  | Map<String,String[]> | 快捷访问 request.getParameterValues(name)  |
-| ctxpath 或者 CONTEXT_PATH  | String               | 快捷访问 request.getContextPath()          |
-| webroot 或者 WEBROOT_PATH  | String               | 返回完整的webapp路径: http://127.0.0.1:8080/myapp |
-| BASE_PATH        | String               | 专门用于 &lt;base href="${BASE_PATH}"> |
+|    隐含对象      |      类 型           |                说 明                          |
+-------------------|----------------------|------------------------------------------------
+| application      | ServletContext       |                                               |
+| session          | HttpSession          |                                               |
+| request          | HttpServletRequest   |                                               |
+| response         | HttpServletResponse  |                                               |
+| applicationScope | Map<String,Object>   | 快捷访问 servletContext.getAttribute(name)    |
+| sessionScope     | Map<String,Object>   | 快捷访问 session.getAttribute(name)           |
+| requestScope     | Map<String,Object>   | 快捷访问 request.getAttribute(name)           |
+| parameter        | Map<String,String>   | 快捷访问 request.getParameter(name)           |
+| parameterValues  | Map<String,String[]> | 快捷访问 request.getParameterValues(name)     |
+| CONTEXT_PATH     | String               | 快捷访问 request.getContextPath()             |
+| WEBROOT_PATH     | String               | 完整的webapp路径: http://127.0.0.1:8080/myapp |
+| BASE_PATH        | String               | 专门用于 &lt;base href="${BASE_PATH}">        |
 
 
 
@@ -50,7 +49,7 @@ request.getAttribute("items") == ${requestScope.items}
 session.getAttribute("user") == ${sessionScope.user}
 ```
 
-特别需要说明的一点是：模板中使用或者声明的全局变量不光会从 `JetConext context` 中获取，在 Web 应用中，还会从 `requestScope`，`sessionScope`，`applicationScope` 中查找对应的内容。
+特别需要说明的一点是：模板中使用或者声明的全局变量不光会从 `context` 中获取，在 Web 应用中，还会从 `requestScope`，`sessionScope`，`applicationScope` 中查找对应的内容。
 
 默认的查顺序如下：
 
@@ -61,7 +60,7 @@ session.getAttribute("user") == ${sessionScope.user}
 
 也就是说，如果存在 `request.getAttribute("user")` 的情况下 `${user}` 等价于 `${requestScope.user}`。
 
-<a name="JetEngine"></a>
+
 JetEngine 自动加载方式
 ========================
 
@@ -74,33 +73,39 @@ JetEngine 自动加载方式
 </context-param>
 
 <listener>
-  <listener-class>jetbrick.template.web.JetWebEngineLoader</listener-class>
+  <listener-class>jetbrick.template.web.JetWebEngineListener</listener-class>
 </listener>
 ```
 
-如果没有配置 `jetbrick-template-config-location` 参数，那么配置文件默认从 classpath 根目录下面查找 jetbrick-template.properties。
+如果没有配置 `jetbrick-template-config-location` 参数，那么配置文件默认是：`classpath:/jetbrick-template.properties`
 
-如果没有配置 JetWebEngineLoader 启动监听器，那么 JetEngine 也会在模板第一次请求的时候自动初始化。配置成 Listener，可以在 Webapp 启动的时候马上进行初始化。
+如果没有配置 `JetWebEngineListener` 启动监听器，那么 JetEngine 也会在模板第一次请求的时候自动初始化。配置成 Listener，可以在 Webapp 启动的时候马上进行初始化。
 
 **注意：**
 
 1. 在 Web 集成模式中，采用以下的默认值：
 
     ```
-    template.loader = jetbrick.template.web.WebResourceLoader
-    template.path = /
+    template.loader = $loader
+    
+    $loader = jetbrick.template.resource.loader.ServletResourceLoader
+    $loader.root = /
+    $loader.reloadable = false
     ```
 
-2. 对于 `WebResourceLoader` 的来说，`template.path` 的路径相对于 webapp 的根目录。
+2. 对于 `ServletResourceLoader` 的来说，`root` 的路径相对于 webapp 的根目录。如果把模板放置在 `/WEB-INF/templates` 目录下，可以这么配置：
 
     ```
-    / == servletContext.getRealPath("/")
-    /WEB-INF/jetx == servletContext.getRealPath("/WEB-INF/jetx")
+    template.loader = $loader
+    
+    $loader = jetbrick.template.resource.loader.ServletResourceLoader
+    $loader.root = /WEB-INF/templates
+    $loader.reloadable = false
     ```
  
 3. jetbrick-template 内置和其他 Web 框架的集成方式都可以用这两个配置想进行全局初始化。
 
-4. 在 web 集成模式中，`JetEngine` 是单例的，可以通过 `JetWebEngineLoader.getJetEngine()` 获取。
+4. 在 web 集成模式中，`JetEngine` 是单例的，可以通过 `JetWebEngine.getEngine()` 获取。
 
 
 各种集成方式介绍
@@ -144,6 +149,8 @@ jetbrick-template 可以直接作为 Filter 使用。需要在 web.xml 中作如
   <url-pattern>*.jetx</url-pattern>
 </filter-mapping>
 ```
+
+使用方式和 [HttpServlet](#HttpServlet) 方式完全相同。
 
 <a name="Struts"></a>
 Struts 2.x
@@ -280,8 +287,6 @@ Jodd 3.5.1+
 Nutz
 ----------------------------
 
-感谢 wendal (wendal1985@gmail.com) 提供相关代码。
-
 View： `jetbrick.template.web.nutz.JetTemplateView`
 ViewMaker：`jetbrick.template.web.nutz.JetTemplateViewMaker`
 
@@ -301,7 +306,7 @@ ViewMaker：`jetbrick.template.web.nutz.JetTemplateViewMaker`
 
     ```java
     @At
-    @Ok(".jetx:/WEB-INF/html/user_info.jetx")
+    @Ok("jetx:/WEB-INF/html/user_info.jetx")
     public String list(@Param("name") String name, HttpServletRequest request){
       if (name != null) return name;
       return "测试";

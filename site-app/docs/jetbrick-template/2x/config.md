@@ -1,51 +1,50 @@
 全局配置选项
 ===================
 
-|         名称                               |           说明          |   默认值     |
---------------------------------------------|-------------------------|----------------
-| [jetx.import.classes][1]                  | 默认导入的 java 类        |              |
-| [jetx.import.defines][2]                  | 默认声明的 java 变量类型   |              |
-| [jetx.import.methods][3]                  | 默认导入的扩展方法         |              |
-| [jetx.import.functions][4]                | 默认导入的扩展函数         |              |
-| [jetx.import.tags][5]                     | 默认导入的 tags           |              |
-| [jetx.autoscan.packages][6]               | 在指定的包中进行自动扫描    |              |
-| [jetx.autoscan.skiperrros][7]             | 自动扫描的时候跳过遇到错误  | false        |
-| [jetx.template.loaders][11]               | 模板资源载入Class         | jetbrick.template.resource.loader.ClasspathResourceLoader |
-| [jetx.template.suffix][12]                | 默认模板文件扩展名         | .jetx        |
-| [jetx.input.encoding][13]                 | 模板源文件的编码格式       | utf-8        |
-| [jetx.output.encoding][14]                | 模板输出编码格式           | utf-8        |
-| [jetx.syntax.strict][21]                  | 是否默认启用严格语法模式    | false        |
-| [jetx.syntax.safecall][22]                | 是否默认启用全局的安全调用  | false        |
-| [jetx.trim.leading.whitespaces][23]       | 是否要删除文件头开始的空白  | false        |
-| [jetx.trim.directive.whitespaces][24]     | 是否要删除指令行两边的空白  | true         |
-| [jetx.trim.directive.comments][25]        | 是否支持指令两边增加注释对  | false        |
-| [jetx.trim.directive.comments.prefix][26] | 指令注释的开始部分         | &lt;!--      |
-| [jetx.trim.directive.comments.suffix][27] | 指令注释的结束部分         | --&gt;       |
+名称                                      | 说明                       | 默认值
+------------------------------------------|----------------------------|----------------
+[jetx.import.classes][1]                  | 默认导入的 java 类         |
+[jetx.import.defines][2]                  | 默认声明的 java 变量类型   |
+[jetx.import.methods][3]                  | 默认导入的扩展方法         |
+[jetx.import.functions][4]                | 默认导入的扩展函数         |
+[jetx.import.tags][5]                     | 默认导入的 tags            |
+[jetx.autoscan.packages][6]               | 在指定的包中进行自动扫描   |
+[jetx.autoscan.skiperrros][7]             | 自动扫描的时候跳过遇到错误 | false
+[jetx.template.loaders][11]               | 模板资源载入Class          | jetbrick.template.resource.loader.ClasspathResourceLoader
+[jetx.template.suffix][12]                | 默认模板文件扩展名         | .jetx
+[jetx.input.encoding][13]                 | 模板源文件的编码格式       | utf-8
+[jetx.output.encoding][14]                | 模板输出编码格式           | utf-8
+[jetx.syntax.strict][21]                  | 是否默认启用严格语法模式   | false
+[jetx.syntax.safecall][22]                | 是否默认启用全局的安全调用 | false
+[jetx.trim.directive.whitespaces][24]     | 是否要删除指令行两边的空白 | true
+[jetx.trim.directive.comments][25]        | 是否支持指令两边增加注释对 | false
+[jetx.trim.directive.comments.prefix][26] | 指令注释的开始部分         | &lt;!--
+[jetx.trim.directive.comments.suffix][27] | 指令注释的结束部分         | --&gt;
 
-
-[1]: #jetx.import.classes
-[2]: #jetx.import.defines
-[3]: #jetx.import.methods
-[4]: #jetx.import.functions
-[5]: #jetx.import.tags
-[6]: #jetx.autoscan.packages
-[7]: #jetx.autoscan.skiperrros
-[11]: #jetx.template.loaders
-[12]: #jetx.template.suffix
-[13]: #jetx.input.encoding
-[14]: #jetx.output.encoding
-[21]: #jetx.syntax.strict
-[22]: #jetx.syntax.safecall
-[23]: #jetx.trim.leading.whitespaces
-[24]: #jetx.trim.directive.whitespaces
-[25]: #jetx.trim.directive.comments
-[26]: #jetx.trim.directive.comments.prefix
-[27]: #jetx.trim.directive.comments.suffix
+[1]: #jetx-import-classes
+[2]: #jetx-import-defines
+[3]: #jetx-import-methods
+[4]: #jetx-import-functions
+[5]: #jetx-import-tags
+[6]: #jetx-autoscan-packages
+[7]: #jetx-autoscan-skiperrros
+[11]: #jetx-template-loaders
+[12]: #jetx-template-suffix
+[13]: #jetx-input-encoding
+[14]: #jetx-output-encoding
+[21]: #jetx-syntax-strict
+[22]: #jetx-syntax-safecall
+[23]: #jetx-trim-leading-whitespaces
+[24]: #jetx-trim-directive-whitespaces
+[25]: #jetx-trim-directive-comments
+[26]: #jetx-trim-directive-comments-prefix
+[27]: #jetx-trim-directive-comments-suffix
 
 全局定义(包/类/变量)
 -----------------------
 
 在模板中，如果要用到一些其他的 Class, 那么可以先 import 进来，这样就可以在模板中使用短名字，比如 `Date` 而不是 `java.util.Date`。
+
 
 ### **jetx.import.classes**
 
@@ -61,7 +60,7 @@
 
 `jetbrick-template` 会自动引入 `java.lang.*` 和 `java.util.*`。
 
-> 优先级：方式 `1` 优先级最高，如果出现多个 Class 的名称是一样的，那么以配置文件中定义的顺序为准。
+> [info] 优先级：方式 `1` 优先级最高，如果出现多个 Class 的名称是一样的，那么以配置文件中定义的顺序为准。
 
 示例如下：
 
@@ -73,6 +72,7 @@ jetx.import.classes = jetbrick.app.model.*, \
 ```
 
 当然，我们也可以在每个模板中用 `#option(import="xxx")` 方式引入每个模板是私有的 Class。
+
 
 ### jetx.import.defines
 
@@ -88,7 +88,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 变量的类型如果没有使用包名，那么将会自动在 `jetx.import.classes` 里面查找 Class。
 
-> **注意**：全局定义的变量类型，如果在模板中被 `#define` 或者 `#set` 指令重新定义成其他类型，则以模板定义优先。
+> [warn] **注意**：全局定义的变量类型，如果在模板中被 `#define` 或者 `#set` 指令重新定义成其他类型，则以模板定义优先。
 
 
 扩展方法/函数/标签/宏
@@ -103,6 +103,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 为了让模板能找到对应的方法扩展，我们需要在配置文件中对这些实现了扩展的 Class 进行注册。
 
+
 ### jetx.import.methods
 
 允许配置多个 Method Class 定义，用逗号分隔。示例如下：
@@ -112,7 +113,8 @@ jetx.import.variables = HttpServletRequest request, \
 定义的类名会自动在 `jetx.import.classes` 里面查找 实际的Class。
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetMethods`，
-具体参考：[默认的方法扩展 Methods](syntax.html#default_methods)。
+具体参考：[默认的方法扩展 Methods](ext-method.html#default-methods)。
+
 
 ### jetx.import.functions
 
@@ -121,7 +123,7 @@ jetx.import.variables = HttpServletRequest request, \
 	jetx.import.functions = app.project.methods.UserAuthFunctions
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetFunctions`，
-具体参考：[默认的函数扩展 Functions](syntax.html#default_functions)。
+具体参考：[默认的函数扩展 Functions](ext-function.html#default-functions)。
 
 
 ### jetx.import.tags
@@ -131,7 +133,7 @@ jetx.import.variables = HttpServletRequest request, \
 	jetx.import.tags = app.project.tags.UserTags
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetTags`，
-具体参考：[默认的自定义标签 Tags](syntax.html#default_tags)。
+具体参考：[默认的自定义标签 Tags](ext-tag.html#default-tags)。
 
 
 ### jetx.import.macros
@@ -169,9 +171,11 @@ jetx.import.variables = HttpServletRequest request, \
 
 ### jetx.autoscan.packages.skiperrors
 
-如果扫描到的 Class 无法存在对应的 Annotation，那么需要 load 到 JVM 进行分析，如果 load 失败，那么默认会抛出错误，如果需要忽略这种错误，那么可以配置：
+如果扫描到的 Class 无法存在对应的 Annotation，那么需要 load 到 JVM 进行分析，如果 load 失败，那么默认会抛出错误，如果想要忽略这种错误，那么可以配置：
 
-	jetx.autoscan.packages.skiperrors = true
+```
+jetx.autoscan.packages.skiperrors = true
+```
 
 
 模板路径和编码格式
@@ -189,7 +193,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 默认为 `jetbrick.template.resource.loader.ClasspathResourceLoader`。
 
-> 注意：如果是 webapp 环境下，会将默认值修改为 `jetbrick.template.resource.loader.ServletResourceLoader`。
+> [warn] **注意**：如果是 webapp 环境下，会将默认值修改为 `jetbrick.template.resource.loader.ServletResourceLoader`
 
 
 #### 从 Classpath 中加载
@@ -246,11 +250,12 @@ $webLoader.reloadable = true
 
 模板源文件的编码格式，默认为 `utf-8`。
 
+
 ### jetx.template.output.encoding
 
 模板输出内容的编码格式，默认为 `utf-8`。
 
-> **注意**：一般在 webapp 中，`jetx.output.encoding` 应该和 html 页面的 `contentType` 中的编码，以及 `response` 的 `characterEncoding` 完全保持一致。
+> [info] **最佳实践**：一般在 webapp 中，`jetx.output.encoding` 应该和 html 页面的 `contentType` 中的编码，以及 `response` 的 `characterEncoding` 完全保持一致。
 
 
 语法选项
@@ -263,6 +268,9 @@ $webLoader.reloadable = true
 在 `strict` 模式中，每个模板中使用的变量都必须使用 `#define` 或者 `#set` 进行变量类型声明 (或者使用 `jetx.import.defines` 定义的全局变量类型声明)
 
 默认为 `false`，即允许可以不是有 `#define` 进行变量声明定义。
+
+
+> [info] **最佳实践**：从团队开发管理的角度来说，我们推荐使用 `strict` 模式，这样有利于代码的维护和沟通。
 
 
 ### jetx.syntax.safecall
@@ -283,9 +291,10 @@ $webLoader.reloadable = true
 
 ### jetx.trim.leading.whitespaces
 
-类似于 JSP 的 `<%@ page trimDirectiveWhitespaces="true" %>`, 可以将文件不输出输出的空白内容。
+类似于 JSP 的 `<%@ page trimDirectiveWhitespaces="true" %>`, 可以让模板的开始位置处跳过不必要的空白内容。
 
 默认：`false`，不启用
+
 
 ### jetx.trim.directive.whitespaces
 
@@ -324,21 +333,24 @@ ${n}
 -------------------------
 
 由于目前的指令一般直接嵌入在 HTML，对于一些使用可视化编辑器的用户来说，可能会造成一些干扰。
-模板从 1.0.1 开始增加对指令注释支持，如：`<!-- #if (...) -->`; 增强对可视化编辑器的友好度。
+模板增加对指令注释支持，如：`<!-- #if (...) -->`; 增强对可视化编辑器的友好度。
+
 
 ### jetx.trim.directive.comments
 
 是否开启对注释指令的支持，默认为 `false`，表示不启用。
 
+
 ### jetx.trim.directive.comments.prefix
 
 设置注释开始格式，默认为 `<!--`
+
 
 ### jetx.trim.directive.comments.suffix
 
 设置注释开始格式，默认为 `-->`
 
-> **注意**： 如果开启注释指令的支持，系统并没有强制要求 `jetx.trim.directive.comments.prefix` 和 `jetx.trim.directive.comments.suffix` 必须配对出现。也就是说如果使用 `<!-- #end` 也是可以的。当然我们还是建议你配对使用。
+> [warn] **注意**： 如果开启注释指令的支持，系统并没有强制要求 `jetx.trim.directive.comments.prefix` 和 `jetx.trim.directive.comments.suffix` 必须配对出现。也就是说如果使用 `<!-- #end` 也是可以的。当然我们还是建议你配对使用。
 
 范例：
 

@@ -564,169 +564,24 @@ ${java.lang.Long::valueOf("123")}
 默认的方法扩展 Methods
 ========================
 
-所有方法扩展定义在 `jetbrick.template.runtime.buildin.JetMethods`
-
-基本数据类型转换 Cast
-------------------
-
-* String.asBoolean()
-* String.asChar()
-* String.asByte()
-* String.asShort()
-* String.asInt()
-* String.asLong()
-* String.asFloat()
-* String.asDouble()
-* String.asDate()
-* String.asDate(String format)
-* Object.asString()
-
-集合类型转换 Cast
-------------------
-* Collection.asList()
-* boolean[].asList()
-* char[].asList()
-* byte[].asList()
-* short[].asList()
-* int[].asList()
-* long[].asList()
-* float[].asList()
-* doubl[].asList()
-* Object[].asList()
-
-数据格式化 Format
---------------------
-
-* Number.format()
-* Number.format(String format)
-* Date.format()
-* Date.format(String format)
-
-数据 Escape/Unescape
-----------------------
-
-* String.escapeJava()
-* String.unescapeJava()
-* String.escapeJavaScript()
-* String.unescapeJavaScript()
-* String.escapeXml()
-* String.unescapeXml()
-* String.escapeUrl()
-* String.escapeUrl(String encoding)
-* String.unescapeUrl()
-* String.unescapeUrl(String encoding)
-
-JSON 输出
---------------------
-
-* Object.asJSON()
-
-字符串转换
--------------
-
-* String.toUnderlineName()
-* String.toCamelCase()
-* String.toCapitalizeCamelCase()
-* String.repeat(int count)
-
-
-默认的函数扩展 Functions
-==========================
-
-所有函数扩展定义在 `jetbrick.template.runtime.buildin.JetFunctions`
-
-常用函数
----------------
-
-* `Date now()`
-  获取当前时间
-
-* `int random()`
-  获取一个随机数
-
-* `UUID uuid()`
-  获取一个 UUID
-
-循环计数生成器
-----------------------
-
-生成一个用于循环的数组，主要用于 `#for` 的循环迭代。
-
-* `Iterator<Integer> range(int start, int stop)`
-* `Iterator<Integer> range(int start, int stop, int step)`
-
-范例：
-
-```
-#for (int i : range(1,100))
-	${i}
-#end
-```
-
-嵌入子模板 include(...)
---------------------
-
-嵌入一个子模板。和 `#include` 指令的区别，此函数对子模板的输出进行了缓存，可以处理返回的内容，但是效率没有 `#include` 指令高。
-
-* `String include(String relativeName)`
-* `String include(String relativeName, Map<String, Object> parameters)`
-
-嵌入纯文本文件 read(...)
-----------------------
-
-* `String read(String relativeName)`
-* `String read(String relativeName, String encoding)`
-
-调试专用函数 debug(...)
-----------------------
-
-* `void debug(String format, Object... args)`
-  输出调试信息，需要配合 Slf4j 使用。 参数格式请查看 [Slf4j Logger](http://www.slf4j.org/apidocs/org/slf4j/Logger.html)。
-
-
-Web 路径获取 ctxpath() / webroot()
----------------------------------------
-
-* `String ctxpath()`
-  返回相对于 web 根目录的绝对路径，如 /myapp
-
-* `String ctxpath(String url)`
-  将 url 转换为相对于 web 根目录的绝对路径，如 /myapp/path/file
-
-* `String webroot()`
-  返回完整的 web 站点路径，如 http://127.0.0.1:8080/myapp
-
-* `String webroot(String url)`
-  将 url 转换为完整的 web 站点路径，如 http://127.0.0.1:8080/myapp/path/file
-
-
-<a name="default_tags"></a>
 默认的自定义标签 Tags
 ==========================
 
 所有 Tags 定义在 `jetbrick.template.runtime.buildin.JetTags`
 
-* `#tag layout(String file)` ... `#end`
-  应用页面布局。
-  参考：[jetbrick-template 中如何实现 layout 功能？](faq-layout.html)
-
-* `#tag layout(String file, Map<String, Object> parameters)` ... `#end`
-  应用页面布局(支持传递传输)。
-  参考：[jetbrick-template 中如何实现 layout 功能？](faq-layout.html)
-
-* `#tag block(String name)` ... `#end`
+* `#tag lyaout_block(String name)` ... `#end`
   将块内容保存到变量名为 name 的 JetContext 中。
   参考：[jetbrick-template 中如何实现 layout 功能？](faq-layout.html)
 
-* `#tag default_block(String name)` ... `#end`
+* `#tag lyaout_block_default(String name)` ... `#end`
   如果不存在指定的 JetContext 变量，那么输出 default_block 块内容，否则输出指定的 JetContext 变量。
   参考：[jetbrick-template 中如何实现 layout 功能？](faq-layout.html)
 
 * `#tag application_cache(String name, long timeout)` ... `#end`
-  将内存缓存到 ServletContext 中，在 timeout 秒之后自动超时。
+  将内存缓存到 ServletContext 中，在 timeout 秒之后自动超时。(需要 `jetbrick-template-servlet.jar`)
 
 * `#tag session_cache(String name, long timeout)` ... `#end`
-  将内存缓存到 HttpSession 中，在 timeout 秒之后自动超时。
+  将内存缓存到 HttpSession 中，在 timeout 秒之后自动超时。(需要 `jetbrick-template-servlet.jar`)
 
 
 <a name="velocity"></a>
