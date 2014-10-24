@@ -5,7 +5,7 @@ Web 集成简述
 
 目前已近集成了几种流行的 Web 框架：
 
-* [Servlet](web-integration-servlet.html)
+* [HttpServlet](web-integration-servlet.html)
 * [Filter](web-integration-filter.html)
 * [Jetbrick webmvc](web-integration-jetbrickmvc.html)
 * [Springmvc](web-integration-springmvc.html)

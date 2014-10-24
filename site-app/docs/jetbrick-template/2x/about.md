@@ -28,6 +28,6 @@
 
 8. 编码规范
 
-    [JAVA 编码规范 2.0 for Jetbrick](coding-guide.html)
+    [JAVA 编码规范 2.0 for Jetbrick](../../jetbrick-code-standards.html)
 
 

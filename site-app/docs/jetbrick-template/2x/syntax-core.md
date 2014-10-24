@@ -277,7 +277,7 @@ $!{user.description}
 > * 如果 `returnName` 为 null，那么默认为 `RESULT`
 
 
-具体用法请移步： [嵌入子模板 #Include](include.html)
+具体用法请移步： [嵌入子模板 #include](include.html)
 
 
 宏定义 #macro, #call

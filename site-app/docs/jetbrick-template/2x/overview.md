@@ -40,7 +40,7 @@
 </table>
 ```
 
-详细指令语法，请参考：[语法指南](syntax.html)。或者[和 Velocity 的比较](velocity-compare.html)。
+详细指令语法，请参考：[语法指南](syntax-core.html)。或者[和 Velocity 的比较](velocity-comparison.html)。
 
 
 易于集成 Web Integration
@@ -48,7 +48,7 @@
 
 `jetbrick-template` 可以和当前流行的 Web mvc framework 进行集成。
 
-* [Servlet](web-integration-servlet.html)
+* [HttpServlet](web-integration-servlet.html)
 * [Filter](web-integration-filter.html)
 * [Jetbrick webmvc](web-integration-jetbrickmvc.html)
 * [Springmvc](web-integration-springmvc.html)
@@ -93,6 +93,6 @@ template: /jetbrick/template/test/template.jetx: 51,18
 * 出错位置：line 51, column 18
 * 错误原因：cannot resolve property: jetbrick.template.test.Model#coding
 
-点击这里查看：[jetbrick-template 常见错误分析](faq-error.html)
+点击这里查看：[模板错误提示](handle-error.html)
 
 
