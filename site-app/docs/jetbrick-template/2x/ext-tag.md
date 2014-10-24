@@ -19,7 +19,7 @@
 定义标签 Tag
 ---------------------
 
-每一个 Tag 有 Java 中的一个静态方法实现。
+每一个 Tag 由 Java 中的一个静态方法实现。
 
 语法：
 
@@ -90,22 +90,29 @@ public class MyTags {
     ```
 
 
+JetTagContext 的使用
+------------------------------------
 
-在标签 Tag 中获取 `InterpretContext` 上下文
------------------------------------------------
+Tag 的实现第一个参数是 `JetTagContext`，它包含了 Tag 运行时的上下文，包括 `InterpretContext`。
 
-要获取 `InterpretContext` 对象，可以通过 `InterpretContext.current()` 方法获取当前 Thread local context 关联的 `InterpretContext` 对象。
+主要 API：
 
-```java
-@JetAnnotations.Tags
-public class MyTags {
 
-    public static String hello() {
-        InterpretContext ctx = InterpretContext.current();
-        ...
-    }
-}
-```
+* 获取 JetEngine
+
+  `JetEngine getEngine()`
+
+* 获取 InterpretContext
+
+  `InterpretContext getInterpretContext()`
+
+* 在当前位置输出 `#tag ... #end` 之间的内容
+
+  `void invoke()`
+
+* 执行并捕获 `#tag ... #end` 之间的内容 (不输出)
+
+  `String getBodyContent()`
 
 
 模板已经内置的标签 Buildin Tags
