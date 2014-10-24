@@ -1,5 +1,3 @@
-
-<a name="version"></a>
 所有版本 All Versions
 =============================
 
@@ -82,6 +80,7 @@
 [57]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11.jar
 [58]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11-sources.jar
 [59]: #release_notes_1_2_11
+
 
 更新历史 Release Notes
 =============================

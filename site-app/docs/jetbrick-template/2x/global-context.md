@@ -20,9 +20,7 @@ JetGlobalContext API
     define + set 快捷版本
 
 
-<div class="info">
-**最佳实践**：使用 `set(Class<?> class, String name, Object value)` 为每个全局变量设置变量类型。
-<div>
+> [info] **最佳实践**：使用 `set(Class<?> class, String name, Object value)` 为每个全局变量设置变量类型。
 
 
 范例 Samples
@@ -41,3 +39,4 @@ String tmpdir = System.getProperty("java.io.tmpdir");
 globalContext.set(String.class, "tmpdir", tmpdir);
 
 ```
+

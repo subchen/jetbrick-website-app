@@ -21,7 +21,7 @@
     <dependency>
         <groupId>com.github.subchen</groupId>
         <artifactId>jetbrick-template-core</artifactId>
-        <version>{{jetbrick-template.version}}</version>
+        <version>{{TEMPLATE.VERSION}}</version>
     </dependency>
     ```
 
@@ -83,7 +83,7 @@
             List<User> users = Arrays.asList(
                 new User("张三", "zhangsan@qq.com"),
                 new User("李四", "lisi@qq.com"),
-                new User("王五", "wangwu1@qq.com"),
+                new User("王五", "wangwu@qq.com"),
             );
     
             // 1. 创建一个默认的 JetEngine
@@ -145,7 +145,7 @@ Webapp 环境
     <dependency>
         <groupId>com.github.subchen</groupId>
         <artifactId>jetbrick-template-servlet</artifactId>
-        <version>{{jetbrick-template.version}}</version>
+        <version>{{TEMPLATE.VERSION}}</version>
     </dependency>
     ```
 

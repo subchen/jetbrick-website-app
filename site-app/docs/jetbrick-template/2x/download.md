@@ -7,7 +7,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 <dependency>
     <groupId>com.github.subchen</groupId>
     <artifactId>jetbrick-template-core</artifactId>
-    <version>{{JETX-VERSION}}</version>
+    <version>{{TEMPLATE.VERSION}}</version>
 </dependency>
 ```
 
@@ -35,14 +35,14 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 最新版本 Latest Version
 ==============================
 
-* [jetbrick-template-core-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-core/{{JETX-VERSION}}/jetbrick-template-core-{{JETX-VERSION}}.jar)
-* [jetbrick-template-serlvet-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-serlvet/{{JETX-VERSION}}/jetbrick-template-serlvet-{{JETX-VERSION}}.jar)
-* [jetbrick-template-jetbrickmvc-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jetbrickmvc/{{JETX-VERSION}}/jetbrick-template-jetbrickmvc-{{JETX-VERSION}}.jar)
-* [jetbrick-template-springmvc-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-springmvc/{{JETX-VERSION}}/jetbrick-template-springmvc-{{JETX-VERSION}}.jar)
-* [jetbrick-template-jfinal-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jfinal/{{JETX-VERSION}}/jetbrick-template-jfinal-{{JETX-VERSION}}.jar)
-* [jetbrick-template-jodd-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jodd/{{JETX-VERSION}}/jetbrick-template-jodd-{{JETX-VERSION}}.jar)
-* [jetbrick-template-struts-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-struts/{{JETX-VERSION}}/jetbrick-template-struts-{{JETX-VERSION}}.jar)
-* [jetbrick-template-nutz-{{JETX-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-nutz/{{JETX-VERSION}}/jetbrick-template-nutz-{{JETX-VERSION}}.jar)
+* [jetbrick-template-core-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-core/{{TEMPLATE.VERSION}}/jetbrick-template-core-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-serlvet-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-serlvet/{{TEMPLATE.VERSION}}/jetbrick-template-serlvet-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-jetbrickmvc-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jetbrickmvc/{{TEMPLATE.VERSION}}/jetbrick-template-jetbrickmvc-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-springmvc-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-springmvc/{{TEMPLATE.VERSION}}/jetbrick-template-springmvc-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-jfinal-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jfinal/{{TEMPLATE.VERSION}}/jetbrick-template-jfinal-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-jodd-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jodd/{{TEMPLATE.VERSION}}/jetbrick-template-jodd-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-struts-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-struts/{{TEMPLATE.VERSION}}/jetbrick-template-struts-{{TEMPLATE.VERSION}}.jar)
+* [jetbrick-template-nutz-{{TEMPLATE.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-nutz/{{TEMPLATE.VERSION}}/jetbrick-template-nutz-{{TEMPLATE.VERSION}}.jar)
 
 
 第三方依赖包 Dependences
@@ -50,7 +50,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 
 * [antlr-runtime-4.3.jar](http://search.maven.org/remotecontent?filepath=org/antlr/antlr-runtime/4.3/antlr-runtime-4.3.jar)
 * [slf4j-api-1.7.7](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar)
-* [jetbrick-commons-2.0.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-commons/2.0/jetbrick-commons-2.0.jar)
+* [jetbrick-commons-{{COMMONS.VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-commons/{{COMMONS.VERSION}}/jetbrick-commons-{{COMMONS.VERSION}}.jar)
 
 
 范例下载 Samples

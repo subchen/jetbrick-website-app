@@ -9,8 +9,8 @@
 * 支持静态方法/字段
 * 支持可变参数方法调用
 * 支持方法重载
-* 支持方法扩展
-* 支持函数扩展
+* 支持扩展方法
+* 支持扩展函数
 * 支持自定义标签 #tag
 * 支持宏定义 #macro
 * 支持布局 layout
@@ -94,3 +94,5 @@ template: /jetbrick/template/test/template.jetx: 51,18
 * 错误原因：cannot resolve property: jetbrick.template.test.Model#coding
 
 点击这里查看：[jetbrick-template 常见错误分析](faq-error.html)
+
+

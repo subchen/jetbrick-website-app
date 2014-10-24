@@ -10,7 +10,7 @@
 [jetx.import.tags][5]                     | 默认导入的 tags            |
 [jetx.autoscan.packages][6]               | 在指定的包中进行自动扫描   |
 [jetx.autoscan.skiperrros][7]             | 自动扫描的时候跳过遇到错误 | false
-[jetx.template.loaders][11]               | 模板资源载入Class          | jetbrick.template.resource.loader.ClasspathResourceLoader
+[jetx.template.loaders][11]               | 模板资源载入Class          | jetbrick.template.loader.ClasspathResourceLoader
 [jetx.template.suffix][12]                | 默认模板文件扩展名         | .jetx
 [jetx.input.encoding][13]                 | 模板源文件的编码格式       | utf-8
 [jetx.output.encoding][14]                | 模板输出编码格式           | utf-8
@@ -187,13 +187,13 @@ jetx.autoscan.packages.skiperrors = true
 
 我们支持下面几种模板查找类：
 
-* jetbrick.template.resource.loader.ClasspathResourceLoader
-* jetbrick.template.resource.loader.FileSystemResourceLoader
-* jetbrick.template.resource.loader.ServletResourceLoader
+* jetbrick.template.loader.ClasspathResourceLoader
+* jetbrick.template.loader.FileSystemResourceLoader
+* jetbrick.template.loader.ServletResourceLoader
 
-默认为 `jetbrick.template.resource.loader.ClasspathResourceLoader`。
+默认为 `jetbrick.template.loader.ClasspathResourceLoader`。
 
-> [warn] **注意**：如果是 webapp 环境下，会将默认值修改为 `jetbrick.template.resource.loader.ServletResourceLoader`
+> [warn] **注意**：如果是 webapp 环境下，会将默认值修改为 `jetbrick.template.loader.ServletResourceLoader`
 
 
 #### 从 Classpath 中加载
@@ -201,7 +201,7 @@ jetx.autoscan.packages.skiperrors = true
 ```
 jetx.template.loaders = $loader
 
-$loader = jetbrick.template.resource.loader.ClasspathResourceLoader
+$loader = jetbrick.template.loader.ClasspathResourceLoader
 $loader.root = /META-INF/templates/
 $loader.reloadable = false
 ```
@@ -211,7 +211,7 @@ $loader.reloadable = false
 ```
 jetx.template.loaders = $loader
 
-$loader = jetbrick.template.resource.loader.FileSystemResourceLoader
+$loader = jetbrick.template.loader.FileSystemResourceLoader
 $loader.root = /opt/templates/
 $loader.reloadable = true
 ```
@@ -221,7 +221,7 @@ $loader.reloadable = true
 ```
 jetx.template.loaders = $loader
 
-$loader = jetbrick.template.resource.loader.ServletResourceLoader
+$loader = jetbrick.template.loader.ServletResourceLoader
 $loader.root = /WEB-INF/templates/
 $loader.reloadable = true
 ```
@@ -231,11 +231,11 @@ $loader.reloadable = true
 ```
 jetx.template.loaders = $classpathLoader, $webLoader
 
-$classpathLoader = jetbrick.template.resource.loader.ClasspathResourceLoader
+$classpathLoader = jetbrick.template.loader.ClasspathResourceLoader
 $classpathLoader.root = /META-INF/templates/
 $classpathLoader.reloadable = false
 
-$webLoader = jetbrick.template.resource.loader.ServletResourceLoader
+$webLoader = jetbrick.template.loader.ServletResourceLoader
 $webLoader.root = /WEB-INF/templates/
 $webLoader.reloadable = true
 ```
