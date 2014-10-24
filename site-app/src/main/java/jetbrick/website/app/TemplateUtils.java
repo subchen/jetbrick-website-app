@@ -1,32 +1,32 @@
 package jetbrick.website.app;
 
 import java.util.*;
-import jetbrick.template.JetConfig;
-import jetbrick.template.JetEngine;
-import jetbrick.template.resource.loader.ClasspathResourceLoader;
+import java.io.*;
+import jetbrick.template.*;
 
 public final class TemplateUtils {
-    private static final JetEngine engine = createJetEngine();
+    private static final JetEngine engine;
+    private static final JetTemplate template;
 
-    private static JetEngine createJetEngine() {
-        Properties config = new Properties();
-        config.put(JetConfig.IMPORT_FUNCTIONS, AppFunctions.class.getName());
-        config.put(JetConfig.COMPILE_DEBUG, "true");
-        config.put(JetConfig.TEMPLATE_LOADER, ClasspathResourceLoader.class.getName());
-        config.put(JetConfig.TEMPLATE_PATH, "/");
-        return JetEngine.create(config);
+    static {
+        engine = JetEngine.create();
+        engine.getGlobalContext().set(String.class, "WEBROOT_PATH", AppConfig.WEBROOT_PATH);
+        
+        template = engine.getTemplate("/main.jetx");
     }
 
-    private static Map<String, Object> getContext() {
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("WEBROOT", "http://subchen.github.io");
-        map.put("VERSION", "2.0.0");
-        map.put("title", "jetbrick-template XXX");
-        return map;
-    }
-
-    public static String render() {
-        return null;
+    public static void render(Map<String, Object> context, File file) {
+        File dir = file.getParentFile();
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        try {
+            OutputStream out = new FileOutputStream(file);
+            template.render(context, out);
+            out.close();
+        } catch(IOException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
 }

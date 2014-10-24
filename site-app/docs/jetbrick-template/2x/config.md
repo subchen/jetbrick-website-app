@@ -16,6 +16,7 @@
 [jetx.output.encoding][14]                | 模板输出编码格式           | utf-8
 [jetx.syntax.strict][21]                  | 是否默认启用严格语法模式   | false
 [jetx.syntax.safecall][22]                | 是否默认启用全局的安全调用 | false
+[jetx.trim.leading.whitespaces][23]       | 是否要删除模板开头处的空白 | true
 [jetx.trim.directive.whitespaces][24]     | 是否要删除指令行两边的空白 | true
 [jetx.trim.directive.comments][25]        | 是否支持指令两边增加注释对 | false
 [jetx.trim.directive.comments.prefix][26] | 指令注释的开始部分         | &lt;!--
