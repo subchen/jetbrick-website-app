@@ -110,11 +110,11 @@ URL 访问方法： http://127.0.0.1:8080/layout.jetx?url=main.jetx
 ```html
 #set(String title = "TITLE")
 
-#tag block("bodyContent1")
+#tag layout_block("bodyContent1")
     BODY 1111
 #end
 
-#tag block("bodyContent2")
+#tag layout_block("bodyContent2")
     BODY 2222
 #end
 
@@ -188,7 +188,7 @@ layout_block 的默认值和重载
 ```html
 #set(String title = "TITLE")
 
-#tag block("bodyContent1")
+#tag layout_block("bodyContent1")
     BODY 1111
 #end
 
