@@ -23,21 +23,21 @@ Web 中的默认隐含对象
 
 当 `jetbrick-template` 被用作 Web 应用中时候，会自动引入下面的对象，这些对象在所有的模板中全局可访问。
 
-隐含对象         | 类 型                | 说 明
------------------|----------------------|----------------------------------------------
-application      | ServletContext       |
-session          | HttpSession          |
-request          | HttpServletRequest   |
-response         | HttpServletResponse  |
-applicationScope | Map<String,Object>   | 快捷访问 servletContext.getAttribute(name)
-sessionScope     | Map<String,Object>   | 快捷访问 session.getAttribute(name)
-requestScope     | Map<String,Object>   | 快捷访问 request.getAttribute(name)
-param            | Map<String,String>   | 快捷访问 request.getParameter(name)
-paramValues      | Map<String,String[]> | 快捷访问 request.getParameterValues(name)
-CONTEXT_PATH     | String               | 快捷访问 request.getContextPath()
-WEBROOT_PATH     | String               | 完整的webapp路径: http://127.0.0.1:8080/myapp
-BASE_PATH        | String               | 专门用于 &lt;base href="${BASE_PATH}">
 
+隐含对象         | 类 型                   | 说 明
+-----------------|------------------------ |----------------------------------------------
+application      | ServletContext          |
+session          | HttpSession             |
+request          | HttpServletRequest      |
+response         | HttpServletResponse     |
+applicationScope | Map&lt;String,Object>   | 快捷访问 servletContext.getAttribute(name)
+sessionScope     | Map&lt;String,Object>   | 快捷访问 session.getAttribute(name)
+requestScope     | Map&lt;String,Object>   | 快捷访问 request.getAttribute(name)
+param            | Map&lt;String,String>   | 快捷访问 request.getParameter(name)
+paramValues      | Map&lt;String,String[]> | 快捷访问 request.getParameterValues(name)
+CONTEXT_PATH     | String                  | 快捷访问 request.getContextPath()
+WEBROOT_PATH     | String                  | 完整的webapp路径: http://127.0.0.1:8080/myapp
+BASE_PATH        | String                  | 专门用于 &lt;base href="${BASE_PATH}">
 
 
 **下面的例子演示了如何使用这些隐含变量：**
