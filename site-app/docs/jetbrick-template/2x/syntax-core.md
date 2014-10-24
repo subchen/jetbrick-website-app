@@ -1,7 +1,7 @@
 
 这个是 `jetbrick-template` 模板语法参考手册。我们推荐的模板文件扩展名为 `.jetx`。
 
-`jetbrick-template` 的模板语法有下面的 4 部分组成：
+`jetbrick-template` 的模板语法由下面的 4 部分组成：
 
 * [值 Value](#-value)
 * [指令 Directive](#-directive)
@@ -229,7 +229,7 @@ $!{user.description}
 #end
 ```
 
-> [info] **注意**：无参数格式代表 `expression` 永远为 `true`。
+> [info] **提示**：无参数格式代表 `expression` 永远为 `true`。
 
 
 停止解析语句 #stop
@@ -248,7 +248,7 @@ $!{user.description}
 #stop(error != null)
 ```
 
-> [info] **注意**：无参数格式代表 `expression` 永远为 `true`。
+> [info] **提示**：无参数格式代表 `expression` 永远为 `true`。
 
 
 嵌套模板语句 #include
