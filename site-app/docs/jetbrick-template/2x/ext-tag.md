@@ -98,21 +98,21 @@ Tag 的实现第一个参数是 `JetTagContext`，它包含了 Tag 运行时的�
 主要 API：
 
 
-* 获取 JetEngine
+* `JetEngine getEngine()`
 
-  `JetEngine getEngine()`
+  获取 JetEngine
 
-* 获取 InterpretContext
+* `InterpretContext getInterpretContext()`
 
-  `InterpretContext getInterpretContext()`
+  获取 InterpretContext
 
-* 在当前位置输出 `#tag ... #end` 之间的内容
+* `void invoke()`
 
-  `void invoke()`
+  在当前位置输出 `#tag ... #end` 之间的内容
 
-* 执行并捕获 `#tag ... #end` 之间的内容 (不输出)
+* `String getBodyContent()`
 
-  `String getBodyContent()`
+  执行并捕获 `#tag ... #end` 之间的内容 (不输出)
 
 
 模板已经内置的标签 Buildin Tags

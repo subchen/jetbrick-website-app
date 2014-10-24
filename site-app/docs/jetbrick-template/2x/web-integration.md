@@ -88,3 +88,27 @@ $loader.reloadable = false
 ```
 
 
+获取 JetEngine
+========================
+
+在 Web 集成模式中，`JetEngine` 是由 `JetWebEngine.create(...)` 创建出来的(单例模式)，所以我们可以通过下面的代码来获取 `JetEngine`
+
+```
+JetEngine engine = JetWebEngine.getEngine();
+```
+
+获取 request, session 等 Web 对象
+=====================================
+
+在 web 环境中，我们有时候需要获取 `request`, `session`, `servletContext` 等常用对象，我们可以通过下面的方法获取：
+
+
+```java
+InterpretContext ctx = InterpretContext.current();
+ValueStack valueStack = ctx.getValueStack();
+
+HttpServletRequest request = valueStack.getValue(JetWebContext.REQUEST);
+HttpSession session = valueStack.getValue(JetWebContext.SESSION);
+ServletContext servletContext = valueStack.getValue(JetWebContext.APPLICATION);
+```
+
