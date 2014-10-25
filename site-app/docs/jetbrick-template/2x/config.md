@@ -65,7 +65,7 @@
 
 示例如下：
 
-```properties
+```
 jetx.import.classes = jetbrick.app.model.*, \
                       jetbrick.app.methods.*, \
                       jetbrick.app.support.**, \
@@ -81,7 +81,7 @@ jetx.import.classes = jetbrick.app.model.*, \
 
 允许配置多个变量定义，用逗号分隔。示例如下：
 
-```properties
+```
 jetx.import.variables = HttpServletRequest request, \
                         jetbrick.dao.orm.Pagelist pagelist, \
                         List entites
@@ -174,7 +174,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 如果扫描到的 Class 无法存在对应的 Annotation，那么需要 load 到 JVM 进行分析，如果 load 失败，那么默认会抛出错误，如果想要忽略这种错误，那么可以配置：
 
-```properties
+```
 jetx.autoscan.packages.skiperrors = true
 ```
 
@@ -199,7 +199,7 @@ jetx.autoscan.packages.skiperrors = true
 
 #### 从 Classpath 中加载
 
-```properties
+```
 jetx.template.loaders = $loader
 
 $loader = jetbrick.template.loader.ClasspathResourceLoader
@@ -209,7 +209,7 @@ $loader.reloadable = false
 
 #### 从 FileSystem 中加载
 
-```properties
+```
 jetx.template.loaders = $loader
 
 $loader = jetbrick.template.loader.FileSystemResourceLoader
@@ -219,7 +219,7 @@ $loader.reloadable = true
 
 #### 从 webapp 目录中加载 (需要 jetbrick-template-servlet-x.x.x.jar)
 
-```properties
+```
 jetx.template.loaders = $loader
 
 $loader = jetbrick.template.loader.ServletResourceLoader
@@ -229,7 +229,7 @@ $loader.reloadable = true
 
 #### 从多个目录中加载
 
-```properties
+```
 jetx.template.loaders = $classpathLoader, $webLoader
 
 $classpathLoader = jetbrick.template.loader.ClasspathResourceLoader
