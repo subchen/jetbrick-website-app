@@ -68,17 +68,16 @@ public class StringMethods {
 
     1. 配置扫描路径
     
-    ```
-    jetx.scan.packages = jetbrick.demo
-    ```
+        ```
+        jetx.scan.packages = jetbrick.demo
+        ```
     
     2. 为 Class 增加扫描 `@JetAnnotations.Methods`
     
-    ```java
-    @JetAnnotations.Methods
-    public class StringMethods { ... }
-    ```
-
+        ```java
+        @JetAnnotations.Methods
+        public class StringMethods { ... }
+        ```
 
 
 在模板中使用扩展方法

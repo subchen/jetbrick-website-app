@@ -1,14 +1,16 @@
 package jetbrick.website.app;
 
 import java.io.File;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 import jetbrick.website.app.model.Menu;
 
 public final class AppConfig {
 
     public static final String WEBROOT_PATH = "http://subchen.github.io";
+    public static final String BASE_PATH = "../../../../../";
 
-    public static final String COMMON_VERSION = "2.0";
+    public static final String COMMONS_VERSION = "2.0";
     public static final String IOC_VERSION = "2.0";
     public static final String ORM_VERSION = "2.0";
     public static final String WEBMVC_VERSION = "2.0";
@@ -50,7 +52,7 @@ public final class AppConfig {
         new Menu("jetbrick-template/2x/web-integration-nutz.md.html", "与 Nutz 集成"),
         Menu.SEPARATOR,
         new Menu("jetbrick-template/2x/download.md.html", "下载 Downloads"),
-        new Menu("jetbrick-template/2x/release-notes.md.html", "变更历史 Release Notes"),
+        //new Menu("jetbrick-template/2x/release-notes.md.html", "变更历史 Release Notes"),
         Menu.SEPARATOR,
         new Menu("jetbrick-template/2x/about.md.html", "关于 About")
     );

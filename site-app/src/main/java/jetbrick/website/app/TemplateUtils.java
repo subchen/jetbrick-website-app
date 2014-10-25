@@ -1,8 +1,9 @@
 package jetbrick.website.app;
 
-import java.util.*;
 import java.io.*;
-import jetbrick.template.*;
+import java.util.Map;
+import jetbrick.template.JetEngine;
+import jetbrick.template.JetTemplate;
 
 public final class TemplateUtils {
     private static final JetEngine engine;
@@ -11,8 +12,9 @@ public final class TemplateUtils {
     static {
         engine = JetEngine.create();
         engine.getGlobalContext().set(String.class, "WEBROOT_PATH", AppConfig.WEBROOT_PATH);
-        
-        template = engine.getTemplate("/main.jetx");
+        engine.getGlobalContext().set(String.class, "BASE_PATH", AppConfig.BASE_PATH);
+
+        template = engine.getTemplate("/templates/main.jetx");
     }
 
     public static void render(Map<String, Object> context, File file) {

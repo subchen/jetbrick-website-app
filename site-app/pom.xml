@@ -32,10 +32,17 @@
                 </executions>
                 <configuration>
                     <mainClass>jetbrick.website.app.WebsiteApplication</mainClass>
-                    <arguments>
-                        <argument>-Dmarkdown.html.dir=${project.build.directory}/html</argument>
-                        <argument>-Dtarget.html.dir=${project.build.directory}/site</argument>
-                    </arguments>
+                    <systemProperties>
+                        <property>
+                            <key>markdown.html.dir</key>
+                            <!-- ${project.build.directory}/htm -->
+                            <value>${project.basedir}/html</value>
+                        </property>
+                        <property>
+                            <key>target.html.dir</key>
+                            <value>${project.build.directory}/site</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
