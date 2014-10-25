@@ -60,18 +60,18 @@ public class MyFunctions {
 
 * 自动扫描注册
 
-    1. 配置扫描路径
+    - 配置扫描路径
     
-    ```
-    jetx.scan.packages = jetbrick.demo
-    ```
+        ```
+        jetx.autoscan.packages = jetbrick.demo
+        ```
     
-    2. 为 Class 增加扫描 `@JetAnnotations.Functions`
+    - 为 Class 增加扫描 `@JetAnnotations.Functions`
     
-    ```java
-    @JetAnnotations.Functions
-    public class MyFunctions { ... }
-    ```
+        ```java
+        @JetAnnotations.Functions
+        public class MyFunctions { ... }
+        ```
 
 
 在模板中使用扩展函数

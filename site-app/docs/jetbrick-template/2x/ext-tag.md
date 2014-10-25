@@ -76,43 +76,43 @@ public class MyTags {
 
 * 自动扫描注册
 
-    1. 配置扫描路径
+    - 配置扫描路径
+
+        ```
+        jetx.autoscan.packages = jetbrick.demo
+        ```
+
+    - 为 Class 增加扫描 `@JetAnnotations.Tags`
     
-    ```
-    jetx.scan.packages = jetbrick.demo
-    ```
-    
-    2. 为 Class 增加扫描 `@JetAnnotations.Tags`
-    
-    ```java
-    @JetAnnotations.Tags
-    public class MyTags { ... }
-    ```
+        ```java
+        @JetAnnotations.Tags
+        public class MyTags { ... }
+        ```
 
 
 JetTagContext 的使用
 ------------------------------------
 
-Tag 的实现第一个参数是 `JetTagContext`，它包含了 Tag 运行时的上下文，包括 `InterpretContext`。
+Tag 的实现第一个参数是 `JetTagContext`，它包含了 Tag 运行时的上下文。
 
 主要 API：
 
 
 * `JetEngine getEngine()`
 
-  获取 JetEngine
+    获取 JetEngine
 
 * `InterpretContext getInterpretContext()`
 
-  获取 InterpretContext
+    获取 InterpretContext
 
 * `void invoke()`
 
-  在当前位置输出 `#tag ... #end` 之间的内容
+    在当前位置输出 `#tag ... #end` 之间的内容
 
 * `String getBodyContent()`
 
-  执行并捕获 `#tag ... #end` 之间的内容 (不输出)
+    执行并捕获 `#tag ... #end` 之间的内容 (不输出)
 
 
 模板已经内置的标签 Buildin Tags
@@ -128,22 +128,22 @@ Tag 的实现第一个参数是 `JetTagContext`，它包含了 Tag 运行时的�
 
 * `#tag layout_block(String name)` ... `#end`
 
-  将块内容保存到变量名为 name 的 Context 中。
+    将块内容保存到变量名为 name 的 Context 中。
 
 * `#tag layout_block_default(String name)` ... `#end`
 
-  如果不存在指定 name 的 context 变量，那么输出 body 内容，否则输出指定的 context 变量内容。
+    如果不存在指定 name 的 context 变量，那么输出 body 内容，否则输出指定的 context 变量内容。
 
 
 ### Web 缓存相关
 
 * `#tag application_cache(String name, long timeout)` ... `#end`
 
-  将内存缓存到 ServletContext 中，在 timeout 秒之后自动超时。
+    将内存缓存到 ServletContext 中，在 timeout 秒之后自动超时。
 
 * `#tag session_cache(String name, long timeout)` ... `#end`
 
-  将内存缓存到 HttpSession 中，在 timeout 秒之后自动超时。
+    将内存缓存到 HttpSession 中，在 timeout 秒之后自动超时。
 
 
 

@@ -39,18 +39,23 @@ public final class AppMethods {
 
     public static String autolist(String html) {
         Document document = Jsoup.parse(html);
-        Elements headers = document.select("h2,h3");
+        Elements headers = document.select("h1,h2,h3,h4,h5,h6");
         int n2 = 0, n3 = 0;
         for (Element header : headers) {
             String tag = header.tagName().toLowerCase();
             String text = header.text();
+            String anchor = text.replaceAll("[^0-9a-zA-Z]+", "-").toLowerCase();
+            if ("-".equals(anchor)) {
+                anchor = String.valueOf(Math.abs(text.hashCode()));
+            }
             if ("h2".equals(tag)) {
                 text = (++n2) + " " + text;
                 n3 = 0;
             } else if ("h3".equals(tag)) {
                 text = (n2) + "." + (++n3) + " " + text;
             }
-            header.text(text);
+            text = "<a name=\"" + anchor + "\"></a>" + text;
+            header.html(text);
         }
         return document.body().html();
     }

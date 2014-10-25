@@ -7,6 +7,10 @@ basedir=$(cd $(dirname $0); pwd)
 RUBY=/usr/local/rvm/rubies/ruby-2.1.1/bin/ruby
 GRM_SCRIPT_FILE=$basedir/scripts/gfm.rb
 
+if [ ! -f $RUBY ]; then
+	RUBY=/c/dev/ruby-2.1.3/bin/ruby.exe
+fi
+
 markdown_to_html() {
     if [ ! -d $2 ]; then
         mkdir -p $2

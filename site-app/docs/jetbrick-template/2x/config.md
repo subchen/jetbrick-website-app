@@ -113,7 +113,8 @@ jetx.import.variables = HttpServletRequest request, \
 
 定义的类名会自动在 `jetx.import.classes` 里面查找 实际的Class。
 
-`JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetMethods`，
+`JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetMethods`
+
 具体参考：[默认的方法扩展 Methods](ext-method.html#default-methods)。
 
 
@@ -123,7 +124,8 @@ jetx.import.variables = HttpServletRequest request, \
 
 	jetx.import.functions = app.project.methods.UserAuthFunctions
 
-`JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetFunctions`，
+`JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetFunctions`
+
 具体参考：[默认的函数扩展 Functions](ext-function.html#default-functions)。
 
 
@@ -133,7 +135,8 @@ jetx.import.variables = HttpServletRequest request, \
 
 	jetx.import.tags = app.project.tags.UserTags
 
-`JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetTags`，
+`JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetTags`
+
 具体参考：[默认的自定义标签 Tags](ext-tag.html#default-tags)。
 
 

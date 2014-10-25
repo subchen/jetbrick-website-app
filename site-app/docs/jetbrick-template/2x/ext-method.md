@@ -66,13 +66,13 @@ public class StringMethods {
 
 * 自动扫描注册
 
-    1. 配置扫描路径
+    - 配置扫描路径
     
         ```
-        jetx.scan.packages = jetbrick.demo
+        jetx.autoscan.packages = jetbrick.demo
         ```
     
-    2. 为 Class 增加扫描 `@JetAnnotations.Methods`
+    - 为 Class 增加扫描 `@JetAnnotations.Methods`
     
         ```java
         @JetAnnotations.Methods

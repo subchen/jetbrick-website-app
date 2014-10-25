@@ -6,8 +6,8 @@
 
 首先，`jetbrick-template` 有 2 种工作模式：
 
-* Application
-* Webapp
+* [普通的 Application 应用](#-application-)
+* [Webapp 应用](#-webapp-)
 
 2 种模式的区别在于：在 webapp 模式中，我们针对 web 应用，提供的大量的 Web 专用的内置变量(如 request 对象)，以及一些常用的 web 扩展。
 
@@ -175,7 +175,7 @@ Webapp 环境
     </ul>
     ```
 
-4. 部署你的 webapp，并打开浏览器访问 http://127.0.0.1:8080/request.jetx，将会看到你的结果类似的结果：
+4. 部署你的 webapp，并打开浏览器访问 http://127.0.0.1:8080/request.jetx，将会看到下面类似的结果：
 
     ```html
     request headers:
