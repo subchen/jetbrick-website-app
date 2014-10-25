@@ -7,17 +7,18 @@ body, p, div, table, td {
     font-size: 13px;
 }
 
-@media(min-width: 1280px) {
+
+@media(min-width: 1279px) {
 	.container {
 	    max-width: 1150px;
 	}
 }
-@media(min-width: 1024px) and (max-width: 1280px) {
+@media(min-width: 1023px) and (max-width: 1279px) {
 	.container {
 	  	max-width: 970px;
 	}
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1023px) {
     .container {
         max-width: 750px;
     }

@@ -31,7 +31,7 @@
 与 Java 不同的地方 (扩展语法/语义)：
 ------------------------------------------------------------
 
-扩展语法：
+**扩展语法：**
 
 * 单引号字符串：`'abc\u00A0\r\n'`
 * 内存地址比较：`===` `!==`
@@ -42,7 +42,7 @@
 * Map 常量：`{name:"jetbrick", version: 2.0}`
 
 
-扩展语义：
+**扩展语义：**
 
 * 双等号 `==` 会被解析成 `equals()` 方法比较，而不是比内存地址。
 * Bean 属性默认会解析成 getter 方法调用，`${user.name}` 等价于 `${user.getName()}`
@@ -148,7 +148,6 @@ Bean 方法调用 bean.method(...)
 示例：
 
 ```
-方法重载 Overload
 ${"Hello".substring(2)}
 ${"Hello".substring(2, 3)}
 ```
@@ -157,7 +156,7 @@ ${"Hello".substring(2, 3)}
 函数调用 function
 -----------------
 
-jetbrick-template 还支持函数调用，如 `${now()}`, `${fileGet("/test.txt")}`。
+`jetbrick-template` 还支持函数调用，如 `${now()}`, `${fileGet("/test.txt")}`。
 
 具体参考：[扩展函数调用](ext-function.html)
 

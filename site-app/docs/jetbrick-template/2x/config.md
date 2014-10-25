@@ -8,8 +8,9 @@
 [jetx.import.methods][3]                  | 默认导入的扩展方法         |
 [jetx.import.functions][4]                | 默认导入的扩展函数         |
 [jetx.import.tags][5]                     | 默认导入的 tags            |
-[jetx.autoscan.packages][6]               | 在指定的包中进行自动扫描   |
-[jetx.autoscan.skiperrros][7]             | 自动扫描的时候跳过遇到错误 | false
+[jetx.import.macros][6]                   | 默认导入的 macros          |
+[jetx.autoscan.packages][7]               | 在指定的包中进行自动扫描   |
+[jetx.autoscan.skiperrros][8]             | 自动扫描的时候跳过遇到错误 | false
 [jetx.template.loaders][11]               | 模板资源载入Class          | jetbrick.template.loader.ClasspathResourceLoader
 [jetx.template.suffix][12]                | 默认模板文件扩展名         | .jetx
 [jetx.input.encoding][13]                 | 模板源文件的编码格式       | utf-8
@@ -27,8 +28,9 @@
 [3]: #jetx-import-methods
 [4]: #jetx-import-functions
 [5]: #jetx-import-tags
-[6]: #jetx-autoscan-packages
-[7]: #jetx-autoscan-skiperrros
+[5]: #jetx-import-macros
+[7]: #jetx-autoscan-packages
+[8]: #jetx-autoscan-skiperrros
 [11]: #jetx-template-loaders
 [12]: #jetx-template-suffix
 [13]: #jetx-input-encoding
@@ -250,12 +252,12 @@ $webLoader.reloadable = true
 默认的模板文件扩展名 `.jetx`，主要用于 Web 框架集成中，用于查找和过滤模板用。
 
 
-### jetx.template.input.encoding
+### jetx.input.encoding
 
 模板源文件的编码格式，默认为 `utf-8`。
 
 
-### jetx.template.output.encoding
+### jetx.output.encoding
 
 模板输出内容的编码格式，默认为 `utf-8`。
 

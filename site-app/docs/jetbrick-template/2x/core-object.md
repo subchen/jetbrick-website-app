@@ -45,33 +45,34 @@ JetEngine
 ### 获取 JetTemplate 对象
 
 
-获取 `JetTemplate` 对象：
+* 获取 `JetTemplate` 对象：
 
+    ```java
     public JetTemplate getTemplate(String name) throws ResourceNotFoundException;
+    ```
+
+    > [info] **提示**：`getTemplate()` 内部有 cache 机制，不会重复创建相同的模板，如果对应的 `ResourceLoader` 开启了 `reloadable=true`，那么会自动加载被修改过的模板。
 
 
-> [info] **提示**： `getTemplate()` 内部有 cache 机制，不会重复创建相同的模板，如果对应的 `ResourceLoader` 开启了 `reloadable=true`，那么会自动加载被修改过的模板。
+* 检查模板是否存在：
 
-
-检查模板是否存在：
-
+    ```java
     public boolean checkTemplate(String name);
+    ```
 
-
-> [warn] **注意**：对于一个 template 的 `name`，应该以 `/` 开头，并且以 `/` 作为分隔符 (Unix 风格)。
->
-> 比如：`/templates/index.jetx`
->
-> 不管你的模板位于哪里，相对于一个模板的 root 目录来说，都应该使用标准化的路径名称。
->
-> 对于 #include 等指令，则可以使用相对路径，如： `#include("../commons/header.jetx")`。
+    > [warn] **注意**：
+    >
+    > * 对于一个 template 的 `name`，应该以 `/` 开头，并且以 `/` 作为分隔符 (Unix 风格)。比如：`/templates/index.jetx`
+    > * 不管你的模板位于哪里，相对于一个模板的 root 目录来说，都应该使用标准化的路径名称。
+    > * 对于 #include 等指令，则可以使用相对路径，如： `#include("../commons/header.jetx")`。
 
 
 
 ### 以源代码方式直接创建模板对象
 
-    public JetTemplate createTemplate(String source);
-
+```java
+public JetTemplate createTemplate(String source);
+```
 
 范例：
 
@@ -115,24 +116,25 @@ InterpretContext
 
 在模板的运行期间，`InterpretContext` 对象会绑定在当前线程的 `Thread Local context` 中，这样我们可以在任意的地方，通过下面的 API 来获取 `InterpretContext` 对象：
 
-    InterpretContext ctx = InterpretContext.current();
-
+```java
+InterpretContext ctx = InterpretContext.current();
+```
 
 * 获取当前模板的 context
 
-  ```
-  ctx.getValueStack().getValue(name);
-  ```
+    ```java
+    ctx.getValueStack().getValue(name);
+    ```
 
 * 设置当前模板的 context
 
-  ```
-  ctx.getValueStack().setLocal(name, value);
-  ```
+    ```java
+    ctx.getValueStack().setLocal(name, value);
+    ```
 
 * 获取 JetEngine
 
-  ```
-  ctx.getEngine();
-  ```
+    ```java
+    ctx.getEngine();
+    ```
 

@@ -214,13 +214,7 @@ $!{user.description}
 	...
 	#break(book.price > 100)
 	...
-#end
-```
-
-```
-#for (book : user.books)
-	...
-	#continue(book.price > 100)
+	#continue(book.price < 50)
 	...
 #end
 ```

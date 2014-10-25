@@ -40,17 +40,17 @@
 
 * `#call macro_name(args...)` 
 
-  ```
-  #call label_input("用户名", "username", "请输入合法的用户名称.")
-  #call label_input("邮箱", "email", "请输入合法的用户邮箱.")
-  ```
+    ```
+    #call label_input("用户名", "username", "请输入合法的用户名称.")
+    #call label_input("邮箱", "email", "请输入合法的用户邮箱.")
+    ```
 
 * `${macroGet(macro_name, args...)}`
 
-  ```
-  ${macroGet("label_input", "用户名", "username", "请输入合法的用户名称.")}
-  ${macroGet("label_input", "邮箱", "email", "请输入合法的用户邮箱.")}
-  ```
+    ```
+    ${macroGet("label_input", "用户名", "username", "请输入合法的用户名称.")}
+    ${macroGet("label_input", "邮箱", "email", "请输入合法的用户邮箱.")}
+    ```
 
 
 使用外部的宏定义模板

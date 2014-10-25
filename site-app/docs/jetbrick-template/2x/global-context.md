@@ -7,15 +7,15 @@
 JetGlobalContext API
 -------------------------
 
-* define(Class<?> type, String name)
+* `define(Class<?> type, String name)`
 
     为全局变量定义类型(在 strict 模式下，必须定义类型)
 
-* set(String name, Object value)
+* `set(String name, Object value)`
 
     设置全局变量
 
-* set(Class<?> class, String name, Object value)
+* `set(Class<?> class, String name, Object value)`
 
     define + set 快捷版本
 
