@@ -50,8 +50,7 @@ public final class AppMethods {
             } else if ("h3".equals(tag)) {
                 text = (n2) + "." + (++n3) + " " + text;
             }
-            text = "<a name=\"\" href=\"\" class=\"anchor\"><span class=\"fa fa-link\"></span></a>" + text;
-            header.html(text);
+            header.text(text);
         }
         return document.body().html();
     }

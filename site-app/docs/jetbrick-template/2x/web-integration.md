@@ -1,4 +1,4 @@
-Web 集成简述
+Web 集成
 ===============
 
 `jetbrick-template` 除了作为普通的模板引擎嵌入在 Application 中外，大部分情况下还会和各种 WebMVC 框架整合作为前端的 View，来代替过时的 `JSP` 或者 `Velocity`。
@@ -19,7 +19,7 @@ Web 集成简述
 
 
 Web 中的默认隐含对象
-=========================
+---------------------------
 
 当 `jetbrick-template` 被用作 Web 应用中时候，会自动引入下面的对象，这些对象在所有的模板中全局可访问。
 
@@ -44,7 +44,7 @@ BASE_PATH        | String                  | 专门用于 &lt;base href="${BASE_
 
 模板如下：
 
-```
+```properties
 request.requestURI == ${request.requestURI}
 request.getParameter("name") == ${param.name}
 request.getAttribute("items") == ${requestScope.items}
@@ -64,12 +64,12 @@ session.getAttribute("user") == ${sessionScope.user}
 
 
 Web 下的资源加载
-========================
+---------------------------
 
 
 在 Web 集成模式中，采用以下的默认值：
 
-```
+```properties
 template.loader = $loader
 
 $loader = jetbrick.template.loader.ServletResourceLoader
@@ -79,7 +79,7 @@ $loader.reloadable = false
 
 对于 `ServletResourceLoader` 的来说，`root` 的路径相对于 webapp 的根目录。如果把模板放置在 `/WEB-INF/templates` 目录下，可以这么配置：
 
-```
+```properties
 template.loader = $loader
 
 $loader = jetbrick.template.loader.ServletResourceLoader
@@ -89,16 +89,16 @@ $loader.reloadable = false
 
 
 获取 JetEngine
-========================
+---------------------------
 
 在 Web 集成模式中，`JetEngine` 是由 `JetWebEngine.create(...)` 创建出来的(单例模式)，所以我们可以通过下面的代码来获取 `JetEngine`
 
-```
+```java
 JetEngine engine = JetWebEngine.getEngine();
 ```
 
 获取 request, session 等 Web 对象
-=====================================
+---------------------------
 
 在 web 环境中，我们有时候需要获取 `request`, `session`, `servletContext` 等常用对象，我们可以通过下面的方法获取：
 

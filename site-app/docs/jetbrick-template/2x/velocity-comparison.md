@@ -15,6 +15,7 @@
 * jetbrick-template 支持属性和方法的安全调用 (`safecall=true`)。如 `${user.name}`，`${user.hasRole("vip")}`。如果 `user` 对象为 `null`，那么返回结果就是 `null`，不会出现烦人的 `NullPointerException`。
 * jetbrick-template 还支持静态字段/方法调用，函数扩展，自定义标签等等。
 
+
 指令差异
 ------------
 

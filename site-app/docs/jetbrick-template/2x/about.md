@@ -1,3 +1,6 @@
+关于 About
+===============
+
 1. github 源码
 
 	https://github.com/subchen/jetbrick-template-2x
