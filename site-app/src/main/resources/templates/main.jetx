@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>${title}</title>
+    <title>${menu.title}</title>
     <base href="${BASE_PATH}" />
 
     <meta charset="utf-8">

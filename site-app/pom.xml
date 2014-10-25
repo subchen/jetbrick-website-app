@@ -35,8 +35,7 @@
                     <systemProperties>
                         <property>
                             <key>markdown.html.dir</key>
-                            <!-- ${project.build.directory}/htm -->
-                            <value>${project.basedir}/html</value>
+                            <value>${project.build.directory}/html</value>
                         </property>
                         <property>
                             <key>target.html.dir</key>

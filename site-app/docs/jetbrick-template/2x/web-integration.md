@@ -44,7 +44,7 @@ BASE_PATH        | String                  | 专门用于 &lt;base href="${BASE_
 
 模板如下：
 
-```properties
+```
 request.requestURI == ${request.requestURI}
 request.getParameter("name") == ${param.name}
 request.getAttribute("items") == ${requestScope.items}
@@ -69,7 +69,7 @@ Web 下的资源加载
 
 在 Web 集成模式中，采用以下的默认值：
 
-```properties
+```
 template.loader = $loader
 
 $loader = jetbrick.template.loader.ServletResourceLoader
@@ -79,7 +79,7 @@ $loader.reloadable = false
 
 对于 `ServletResourceLoader` 的来说，`root` 的路径相对于 webapp 的根目录。如果把模板放置在 `/WEB-INF/templates` 目录下，可以这么配置：
 
-```properties
+```
 template.loader = $loader
 
 $loader = jetbrick.template.loader.ServletResourceLoader
