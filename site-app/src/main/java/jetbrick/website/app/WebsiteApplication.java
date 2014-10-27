@@ -12,27 +12,32 @@ public final class WebsiteApplication {
     public WebsiteApplication() {
     }
 
-    public void build(List<Menu> menus) {
+    public void build(Menu productMenu) {
         Map<String, Object> ctx = new HashMap<String, Object>();
-        ctx.put("menus", menus);
+        ctx.put("productMenu", productMenu);
 
-        for (Menu menu: menus) {
-            if (menu.isSeparator()) {
-                continue;
+        for (Menu topMenu: productMenu) {
+            for (Menu menu: topMenu) {
+                if (menu.isSeparator()) {
+                    continue;
+                }
+                log.info("Processing: {}", menu.getLocation());
+    
+                ctx.put("menu", menu);
+    
+                File file = new File(AppConfig.TARGET_HTML_DIR, menu.getLocation());
+                TemplateUtils.render(ctx, file);
             }
-            log.info("Processing: {}", menu.getLocation());
-
-            ctx.put("menu", menu);
-
-            File file = new File(AppConfig.TARGET_HTML_DIR, menu.getLocation());
-            TemplateUtils.render(ctx, file);
         }
 
     }
 
     public static void main(String[] args) {
         WebsiteApplication app = new WebsiteApplication();
-        app.build(AppConfig.TEMPLATE_DOC_LIST);
+        
+        for (Menu menu: AppConfig.PRODUCT_MENU_LIST) {
+            app.build(menu);
+        }
     }
 
 }

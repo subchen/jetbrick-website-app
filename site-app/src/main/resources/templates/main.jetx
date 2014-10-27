@@ -2,23 +2,22 @@
 <html>
 <head>
     <title>${menu.title}</title>
-    <base href="${BASE_PATH}" />
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    
-    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/github-markdown.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/application.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="${BASE_PATH}/favicon.ico" />
 
-    <!--[if lt IE 9]><script type="text/javascript" src="./assets/js/html5shiv.js"></script><![endif]-->
-    <script type="text/javascript" src="./assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./assets/js/application.js"></script>
+    <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/github-markdown.css" />
+    <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/application.css" />
+
+    <!--[if lt IE 9]><script type="text/javascript" src="${BASE_PATH}/assets/js/html5shiv.js"></script><![endif]-->
+    <script type="text/javascript" src="${BASE_PATH}/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="${BASE_PATH}/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${BASE_PATH}/assets/js/application.js"></script>
 </head>
 
 <body>
@@ -33,57 +32,32 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="http://subchen.github.io/" class="navbar-brand" style="padding:10px;">
-                <img src="./assets/images/jetbrick-logo-light.png" height="30">
+                <img src="${BASE_PATH}/assets/images/jetbrick-logo-light.png" height="30">
             </a>
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="http://central.sonatype.org/pages/help.html">简介</a></li>
-                <li><a href="http://central.sonatype.org/pages/help.html">Commons</a></li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">IoC <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
 
+        #for(Menu topMenu: productMenu.children)
+            #if(topMenu.children.size() == 0)
+                <li><a href="${m.location}">${m.title}</a></li>
+            #else
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">ORM <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">${topMenu.title} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Template <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    #for(Menu m: menus)
-                      #if(m.separator)
+                #for(Menu m : topMenu.children)
+                    #if(m.separator)
                         <li class="divider"></li>
-                      #else
+                    #elseif (m.display)
                         <li><a href="${m.location}">${m.title}</a></li>
-                      #end
                     #end
+                #end
                     </ul>
                 </li>
+            #end
+        #end
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">WebMVC <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">快速开始 (Hello World)</a></li>
-                        <li><a href="#">配置 web.xml</a></li>
-                        <li><a href="#">配置 jetbrick-webmvc.properties</a></li>
-                        <li><a href="#">Controller</a></li>
-                        <li><a href="#">Action 参数注入</a></li>
-                        <li><a href="#">Result and ResultHandler</a></li>
-                        <li><a href="#">View and ViewHandler</a></li>
-                        <li><a href="#">异常处理 Exception Handler</a></li>
-                    </ul>
-                </li>
-            </ul>
-            
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../download.html"><i class="fa fa-download"></i> 下载</a></li>
                 <li><a href="https://github.com/subchen/jetbrick"><i class="fa fa-github-alt"></i> 源码</a></li>
@@ -102,7 +76,7 @@
     <div class="container footermenu">
         <hr>
         <p>Copyright 2013-2014 Guoqiang Chen. All rights reserved.</p>
-        <p><i class="fa fa-envelope"></i> subchen@gmail.com <i class="fa fa-qq"></i> 310491655</p>
+        <p><i class="fa fa-envelope"></i> subchen&#64;gmail.com <i class="fa fa-qq"></i> 310491655</p>
     </div>
 </footer>
 
