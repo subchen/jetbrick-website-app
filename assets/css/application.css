@@ -87,6 +87,13 @@ body, p, div, table, td {
 }
 
 
+a.anchor {
+    top: -60px; /* >= fixed_header.height */
+    display: block; 
+    position: relative; 
+    visibility: hidden;
+}
+
 .dropdown-submenu  { 
     position:relative;
 }

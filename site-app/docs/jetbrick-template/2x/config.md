@@ -10,7 +10,7 @@
 [jetx.import.tags][5]                     | 默认导入的 tags            |
 [jetx.import.macros][6]                   | 默认导入的 macros          |
 [jetx.autoscan.packages][7]               | 在指定的包中进行自动扫描   |
-[jetx.autoscan.skiperrros][8]             | 自动扫描的时候跳过遇到错误 | false
+[jetx.autoscan.skiperrors][8]             | 自动扫描的时候跳过遇到错误 | false
 [jetx.template.loaders][11]               | 模板资源载入Class          | jetbrick.template.loader.ClasspathResourceLoader
 [jetx.template.suffix][12]                | 默认模板文件扩展名         | .jetx
 [jetx.input.encoding][13]                 | 模板源文件的编码格式       | utf-8
@@ -30,7 +30,7 @@
 [5]: #jetx-import-tags
 [6]: #jetx-import-macros
 [7]: #jetx-autoscan-packages
-[8]: #jetx-autoscan-skiperrros
+[8]: #jetx-autoscan-skiperrors
 [11]: #jetx-template-loaders
 [12]: #jetx-template-suffix
 [13]: #jetx-input-encoding
@@ -175,12 +175,12 @@ jetx.import.variables = HttpServletRequest request, \
 更多详细内容请参考： [如何让自动扫描发现用户自定义的扩展方法/函数/标签 Class](faq-autoscan.html)
 
 
-### jetx.autoscan.packages.skiperrors
+### jetx.autoscan.skiperrors
 
 如果扫描到的 Class 无法存在对应的 Annotation，那么需要 load 到 JVM 进行分析，如果 load 失败，那么默认会抛出错误，如果想要忽略这种错误，那么可以配置：
 
 ```
-jetx.autoscan.packages.skiperrors = true
+jetx.autoscan.skiperrors = true
 ```
 
 
