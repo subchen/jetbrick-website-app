@@ -32,16 +32,15 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="http://subchen.github.io/" class="navbar-brand" style="padding:10px;">
-                <img src="${BASE_PATH}/assets/images/jetbrick-logo-light.png" height="30">
+                <img src="${BASE_PATH}/assets/images/jetbrick-logo-light.png" width="150" height="30">
             </a>
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-
-        #for(Menu topMenu: productMenu.children)
+        #for(Menu topMenu: product.menuList)
             #if(topMenu.children.size() == 0)
-                <li><a href="${m.location}">${m.title}</a></li>
+                <li><a href="${BASE_PATH}/${topMenu.location}">${topMenu.title}</a></li>
             #else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">${topMenu.title} <b class="caret"></b></a>
@@ -50,17 +49,18 @@
                     #if(m.separator)
                         <li class="divider"></li>
                     #elseif (m.display)
-                        <li><a href="${m.location}">${m.title}</a></li>
+                        <li><a href="${BASE_PATH}/${m.location}">${m.title}</a></li>
                     #end
                 #end
                     </ul>
                 </li>
             #end
         #end
+            </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../download.html"><i class="fa fa-download"></i> 下载</a></li>
-                <li><a href="https://github.com/subchen/jetbrick"><i class="fa fa-github-alt"></i> 源码</a></li>
+                <li><a href="${BASE_PATH}/${product.downloadURL}"><i class="fa fa-download"></i> 下载</a></li>
+                <li><a href="${product.githubURL}"><i class="fa fa-github-alt"></i> 源码</a></li>
             </ul>
         </div>
     </div>

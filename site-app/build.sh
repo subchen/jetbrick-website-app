@@ -11,6 +11,14 @@ if [ ! -f $RUBY ]; then
 	RUBY=/c/dev/ruby-2.1.3/bin/ruby.exe
 fi
 
+
+if [ ! -d "$basedir/target/site" ]; then
+    mkdir -p $basedir/target/site
+fi
+if [ ! -e "$basedir/target/site/assets" ]; then
+    ln -s $basedir/../assets $basedir/target/site/assets
+fi
+
 markdown_to_html() {
     if [ ! -d $2 ]; then
         mkdir -p $2
@@ -18,7 +26,8 @@ markdown_to_html() {
 
     for file in $1/*.md; do
         echo Processing: $file
-        target=$2/$(basename $file).html
+        name=$(basename $file)
+        target=$2/${name%.*}.html
         $RUBY -Ku $GRM_SCRIPT_FILE $file > $target
     done
 }

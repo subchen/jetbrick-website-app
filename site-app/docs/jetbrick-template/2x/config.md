@@ -28,7 +28,7 @@
 [3]: #jetx-import-methods
 [4]: #jetx-import-functions
 [5]: #jetx-import-tags
-[5]: #jetx-import-macros
+[6]: #jetx-import-macros
 [7]: #jetx-autoscan-packages
 [8]: #jetx-autoscan-skiperrros
 [11]: #jetx-template-loaders

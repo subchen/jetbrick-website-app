@@ -12,7 +12,6 @@ public final class TemplateUtils {
     static {
         engine = JetEngine.create();
         engine.getGlobalContext().set(String.class, "WEBROOT_PATH", AppConfig.WEBROOT_PATH);
-        engine.getGlobalContext().set(String.class, "BASE_PATH", AppConfig.BASE_PATH);
 
         template = engine.getTemplate("/templates/main.jetx");
     }
