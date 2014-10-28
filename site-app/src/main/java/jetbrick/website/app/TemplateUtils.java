@@ -6,20 +6,16 @@ import jetbrick.template.JetEngine;
 import jetbrick.template.JetTemplate;
 
 public final class TemplateUtils {
-    private static final JetTemplate template;
+    private static final JetEngine engine = JetEngine.create();
 
-    static {
-        JetEngine engine = JetEngine.create();
-        template = engine.getTemplate("/templates/main.jetx");
-    }
-
-    public static void render(Map<String, Object> context, File file) {
-        File dir = file.getParentFile();
+    public static void render(Map<String, Object> context, String templateName, File outputFile) {
+        File dir = outputFile.getParentFile();
         if (!dir.exists()) {
             dir.mkdirs();
         }
         try {
-            OutputStream out = new FileOutputStream(file);
+            JetTemplate template = engine.getTemplate(templateName);
+            OutputStream out = new FileOutputStream(outputFile);
             template.render(context, out);
             out.close();
         } catch(IOException e) {

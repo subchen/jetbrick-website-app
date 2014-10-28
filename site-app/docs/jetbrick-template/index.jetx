@@ -1,0 +1,28 @@
+#define(String BASE_PATH)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页 (jetbrick-template)</title>
+
+    #include("/include/assets.jetx")
+</head>
+
+<body>
+
+#include("/include/nav-without-menubar.jetx")
+
+<div class="container">
+    <div class="pull-right jb-menulist">
+        <a href="2x/overview.html">2.x 文 档</a>
+        <a href="1x/overview.html">1.x 文 档</a>
+    </div>
+
+    <img src="${BASE_PATH}/assets/images/index_logo.png" width="100%" />
+</div>
+
+#include("/include/footer.jetx")
+
+</body>
+</html>
+

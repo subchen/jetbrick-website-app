@@ -1,0 +1,32 @@
+#define(Product PRODUCT, Menu MENU)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${MENU.title} (${PRODUCT.name})</title>
+
+    #include("/include/assets.jetx")
+</head>
+
+<body>
+
+#include("/include/nav-with-menubar.jetx")
+
+<div class="container">
+#if(PRODUCT.announcement != null)
+    <div class="jb-announcement">
+        ${PRODUCT.announcement}
+    </div>
+#end
+
+    <article class="markdown">
+        ${htmlGet(MENU.url).replaceContext().autolist()}
+    </article>
+
+    #include("/include/discuss.jetx")
+</div>
+
+#include("/include/footer.jetx")
+
+</body>
+</html>

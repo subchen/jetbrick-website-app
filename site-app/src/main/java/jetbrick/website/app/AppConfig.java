@@ -16,8 +16,9 @@ public final class AppConfig {
     public static final String TEMPLATE_VERSION = "2.0";
     public static final String ALL_VERSION = "14.10.24";
 
+    public static final File JETX_DOCS_DIR = new File(System.getProperty("jetx.docs.dir")).getAbsoluteFile();
     public static final File MARKDOWN_HTML_DIR = new File(System.getProperty("markdown.html.dir")).getAbsoluteFile();
-    public static final File TARGET_HTML_DIR = new File(System.getProperty("target.html.dir")).getAbsoluteFile();
+    public static final File SITE_HTML_DIR = new File(System.getProperty("site.html.dir")).getAbsoluteFile();
 
 
     public static List<Product> PRODUCT_LIST;
@@ -102,5 +103,8 @@ public final class AppConfig {
         menu.addChild("jetbrick-template/2x/web-integration-nutz.html", "与 Nutz 集成");
         
         template2x.addHiddenMenu("jetbrick-template/2x/download.html");
+        
+        template2x.addPage("jetbrick-template/2x/index.html");
+        template2x.addPage("jetbrick-template/index.jetx");
     }
 }

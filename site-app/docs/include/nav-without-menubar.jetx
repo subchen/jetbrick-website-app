@@ -1,0 +1,11 @@
+#define(String BASE_PATH, Product PRODUCT)
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="${BASE_PATH}/" class="navbar-brand" style="padding:10px;">
+                <img src="${BASE_PATH}/assets/images/logo-${PRODUCT.name}-light.png" height="30">
+            </a>
+        </div>
+    </div>
+</nav>

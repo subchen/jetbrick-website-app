@@ -1,7 +1,6 @@
 package jetbrick.website.app.model;
 
 import java.util.*;
-import jetbrick.util.StringUtils;
 
 public final class Menu {
     private static final Menu DIVIDER = new Menu(null, null, false);
@@ -32,18 +31,6 @@ public final class Menu {
 
     public boolean isDivider() {
         return this == DIVIDER;
-    }
-
-    public String getBasePath() {
-        int count = StringUtils.count(url, '/');
-        StringBuilder sb = new StringBuilder();
-        for (int i=0; i<count; i++) {
-            if (sb.length() > 0) {
-                sb.append('/');
-            }
-            sb.append("..");
-        }
-        return sb.toString();
     }
 
     public List<Menu> getChildren() {

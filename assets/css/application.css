@@ -105,6 +105,29 @@ body, p, div, table, td {
     display: none;
 }
 
+.jb-menulist {
+    margin: 20px 0;
+}
+.jb-menulist a {
+    display: block;
+    float: left;
+
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 16px;
+
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.jb-menulist a:hover {
+    text-decoration: none;
+    background-color: #47a447;
+    border-color: #398439;
+}
+
 .dropdown-submenu  { 
     position:relative;
 }

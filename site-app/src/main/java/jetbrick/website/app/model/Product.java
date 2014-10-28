@@ -10,6 +10,7 @@ public final class Product {
     private boolean hidden;
     private String announcement;
     private final List<Menu> menuList;
+    private final List<String> pageList;
 
     public Product(String name, String version) {
         this.name = name;
@@ -19,6 +20,7 @@ public final class Product {
         this.hidden = false;
         this.announcement = null;
         this.menuList = new ArrayList<Menu>();
+        this.pageList = new ArrayList<String>();
     }
 
     public String getName() {
@@ -80,4 +82,13 @@ public final class Product {
     public void addHiddenMenu(String url) {
         menuList.add(new Menu(url, null, true));
     }
+    
+    public List<String> getPageList() {
+        return pageList;
+    }
+    
+    public void addPage(String url) {
+        pageList.add(url);
+    }
+
 }

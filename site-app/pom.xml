@@ -34,11 +34,15 @@
                     <mainClass>jetbrick.website.app.WebsiteApplication</mainClass>
                     <systemProperties>
                         <property>
+                            <key>jetx.docs.dir</key>
+                            <value>${basedir}/docs</value>
+                        </property>
+                        <property>
                             <key>markdown.html.dir</key>
                             <value>${project.build.directory}/html</value>
                         </property>
                         <property>
-                            <key>target.html.dir</key>
+                            <key>site.html.dir</key>
                             <value>${project.build.directory}/site</value>
                         </property>
                     </systemProperties>
