@@ -46,7 +46,7 @@ public final class AppConfig {
 
 
         // jetbrick-template 1x ---------------------------------------------------------
-        Product template1x = new Product("jetbrick-template", TEMPLATE_1X_VERSION);
+        Product template1x = new Product("jetbrick-template-1x", TEMPLATE_1X_VERSION);
         template1x.setDir("jetbrick-template/1x");
         template1x.setScm("http://github.com/subchen/jetbrick-template-1x");
         template1x.setAnnouncement("jetbrick-template-2.x 已经发布，新版文档请看这里：<a href=\"http://subchen.github.io/jetbrick-template/2x/\">http://subchen.github.io/jetbrick-template/2x/</a>");
