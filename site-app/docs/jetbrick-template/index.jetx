@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>首页 (jetbrick-template)</title>
+    <title>jetbrick-template 首页</title>
 
     #include("/include/assets.jetx")
 </head>

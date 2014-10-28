@@ -52,8 +52,27 @@ public final class AppConfig {
         template1x.setAnnouncement("jetbrick-template-2.x 已经发布，新版文档请看这里：<a href=\"http://subchen.github.io/jetbrick-template/2x/\">http://subchen.github.io/jetbrick-template/2x/</a>");
         template1x.setHidden(true);
         PRODUCT_LIST.add(template1x);
+        
+        template1x.addMenu("jetbrick-template/1x/overview.html", "概述");
+        template1x.addMenu("jetbrick-template/1x/userguide.html", "开发");
+        template1x.addMenu("jetbrick-template/1x/config.html", "配置");
+        template1x.addMenu("jetbrick-template/1x/syntax.html", "语法");
+        template1x.addMenu("jetbrick-template/1x/integration.html", "Web集成");
+        
+        menu = template1x.addMenu("FAQ");
+        menu.addChild("jetbrick-template/1x/faq-compile.html", "将模板编译成 Java Class 有什么好处");
+        menu.addChild("jetbrick-template/1x/faq-define.html", "为什么需要 #define 声明变量类型？");
+        menu.addChild("jetbrick-template/1x/faq-error.html", "常见错误分析");
+        menu.addChild("jetbrick-template/1x/faq-autoscan.html", "如何让自动扫描发现用户自定义的扩展方法/函数/标签 Class");
+        menu.addChild("jetbrick-template/1x/faq-include.html", "如何嵌入子模板？（父子间参数传递）");
+        menu.addChild("jetbrick-template/1x/faq-layout.html", "如何实现 layout 功能？");
+        menu.addChild("jetbrick-template/1x/faq-tag.html", "如何自定义 Tag？");
+        menu.addChild("jetbrick-template/1x/faq-spring.html", "在 Spring 中的集成方法");
+        
+        template1x.addHiddenMenu("jetbrick-template/1x/download.html");
 
-
+        template1x.addPage("jetbrick-template/1x/index.html");
+        
         // jetbrick-template 2x ---------------------------------------------------------
         Product template2x = new Product("jetbrick-template", TEMPLATE_VERSION);
         template2x.setDir("jetbrick-template/2x");
