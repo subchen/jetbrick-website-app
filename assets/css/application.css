@@ -86,8 +86,15 @@ body, p, div, table, td {
     font-size: 12px;
 }
 
+.jb-tips {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #DFF0D8;
+}
 
-a.anchor {
+.anchor {
     top: -60px; /* >= fixed_header.height */
     display: block; 
     position: relative; 

@@ -5,14 +5,14 @@ import java.util.*;
 public final class Product {
     private final String name;
     private final String version;
-    private final String downloadURL;
+    private final String homeURL;
     private final String githubURL;
     private List<Menu> menuList;
 
-    public Product(String name, String version, String downloadURL, String githubURL) {
+    public Product(String name, String version, String homeURL, String githubURL) {
         this.name = name;
         this.version = version;
-        this.downloadURL = downloadURL;
+        this.homeURL = homeURL;
         this.githubURL = githubURL;
         this.menuList = new ArrayList<Menu>();
     }
@@ -25,8 +25,8 @@ public final class Product {
         return version;
     }
 
-    public String getDownloadURL() {
-        return downloadURL;
+    public String getHomeURL() {
+        return homeURL;
     }
 
     public String getGithubURL() {

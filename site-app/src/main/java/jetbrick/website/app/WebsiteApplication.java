@@ -14,6 +14,7 @@ public final class WebsiteApplication {
 
     public void build(Product product) {
         Map<String, Object> ctx = new HashMap<String, Object>();
+        ctx.put("products", AppConfig.PRODUCT_LIST);
         ctx.put("product", product);
 
         for (Menu topMenu: product.getMenuList()) {

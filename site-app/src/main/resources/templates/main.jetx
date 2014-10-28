@@ -56,10 +56,19 @@
                 </li>
             #end
         #end
+        
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    #for(Product p : products)
+                        <li><a href="${BASE_PATH}/${p.homeURL}">${p.name}</a></li>
+                    #end
+                    </ul>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="${BASE_PATH}/${product.downloadURL}"><i class="fa fa-download"></i> 下载</a></li>
+                <li><a href="${BASE_PATH}/${product.homeURL}/download.html"><i class="fa fa-download"></i> 下载</a></li>
                 <li><a href="${product.githubURL}"><i class="fa fa-github-alt"></i> 源码</a></li>
             </ul>
         </div>
@@ -67,6 +76,10 @@
 </nav>
 
 <div class="container">
+    <div class="jb-tips">
+        jetbrick-template-1.x 旧版文档请看这里：<a href="http://subchen.github.io/jetbrick-template/1x/index.html">http://subchen.github.io/jetbrick-template/1x/index.html</a>
+    </div>
+    
     <article class="markdown">
         ${htmlGet(menu.location).replaceContext().autolist()}
     </article>

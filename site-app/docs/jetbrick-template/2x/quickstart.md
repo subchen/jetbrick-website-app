@@ -4,6 +4,9 @@
 本章节将快速的带领你领略一下 `jetbrick-template` 的工作方式。
 
 
+> [info] **推荐**：模板文件扩展名为 `.jetx`。
+
+
 首先，`jetbrick-template` 有 2 种工作模式：
 
 * [普通的 Application 应用](#-application-)

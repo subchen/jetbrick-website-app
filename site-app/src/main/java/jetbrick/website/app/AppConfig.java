@@ -26,12 +26,13 @@ public final class AppConfig {
         Menu menu = null;
 
         // jetbrick-commons --------------------------------------------------------------
-
+        Product commons = new Product("jetbrick-commons", "2.0", "jetbrick-commons", "http://github.com/subchen/jetbrick-commons");
+        PRODUCT_LIST.add(commons);
 
 
         // jetbrick-webmvc --------------------------------------------------------------
-        //Product webmvc = new Product("jetbrick-webmvc", "2.0");
-        //PRODUCT_LIST.add(webmvc);
+        Product webmvc = new Product("jetbrick-webmvc", "2.0", "jetbrick-webmvc", "http://github.com/subchen/jetbrick-webmvc");
+        PRODUCT_LIST.add(webmvc);
 
 
         // jetbrick-ioc --------------------------------------------------------------
@@ -48,10 +49,10 @@ public final class AppConfig {
 
 
         // jetbrick-template 2x ---------------------------------------------------------
-        Product template2x = new Product("jetbrick-template", "2.0", "jetbrick-template/2x/dwonload.html", "http://github.com/subchen/jetbrick-template-2x");
+        Product template2x = new Product("jetbrick-template", "2.0", "jetbrick-template/2x", "http://github.com/subchen/jetbrick-template-2x");
         PRODUCT_LIST.add(template2x);
 
-        menu = template2x.add(new Menu("开发指南"));
+        menu = template2x.add(new Menu("开发"));
         menu.add(new Menu("jetbrick-template/2x/overview.html", "概述 Overview"));
         menu.add(new Menu("jetbrick-template/2x/quickstart.html", "快速开发指南 Quick Start"));
         menu.add(new Menu("jetbrick-template/2x/core-object.html", "核心对象 Core"));
@@ -60,7 +61,7 @@ public final class AppConfig {
         menu.add(new Menu("jetbrick-template/2x/handle-error.html", "模板详细错误"));
         menu.add(new Menu("jetbrick-template/2x/debug.html", "调试模板 Debug"));
 
-        menu = template2x.add(new Menu("进阶使用"));
+        menu = template2x.add(new Menu("进阶"));
         menu.add(new Menu("jetbrick-template/2x/ext-method.html", "扩展方法 Method"));
         menu.add(new Menu("jetbrick-template/2x/ext-function.html", "扩展函数 Function"));
         menu.add(new Menu("jetbrick-template/2x/ext-tag.html", "标签 Tag"));
@@ -69,12 +70,14 @@ public final class AppConfig {
         menu.add(new Menu("jetbrick-template/2x/include.html", "嵌入子模板 Include"));
         menu.add(new Menu("jetbrick-template/2x/layout.html", "布局 Layout"));
 
-        menu = template2x.add(new Menu("jetbrick-template/2x/config.html", "配置大全"));
+        menu = template2x.add(new Menu("jetbrick-template/2x/config.html", "配置"));
 
-        menu = template2x.add(new Menu("语法参考"));
-        menu.add(new Menu("jetbrick-template/2x/syntax-core.html", "基本指令"));
-        menu.add(new Menu("jetbrick-template/2x/syntax-expression.html", "表达式"));
-        menu.add(new Menu("jetbrick-template/2x/ext-macro.html", "宏 Macro"));
+        menu = template2x.add(new Menu("语法"));
+        menu.add(new Menu("jetbrick-template/2x/syntax-text.html", "文本 Text"));
+        menu.add(new Menu("jetbrick-template/2x/syntax-comment.html", "注释 Comment"));
+        menu.add(new Menu("jetbrick-template/2x/syntax-value.html", "值 Value"));
+        menu.add(new Menu("jetbrick-template/2x/syntax-directive.html", "指令 Directive"));
+        menu.add(new Menu("jetbrick-template/2x/syntax-expression.html", "表达式 Expression"));
         menu.addSeparator();
         menu.add(new Menu("jetbrick-template/2x/velocity-comparison.html", "和 Velocity 的比较"));
 
