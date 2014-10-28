@@ -68,9 +68,13 @@ public final class WebsiteApplication {
             File file = new File(AppConfig.SITE_HTML_DIR, filePath);
             TemplateUtils.render(ctx, url, file);
         } else {
-            File src = new File(AppConfig.JETX_DOCS_DIR, url);
-            File dest = new File(AppConfig.SITE_HTML_DIR, url);
-            FileCopyUtils.copyFile(src, dest);
+            try {
+                File src = new File(AppConfig.JETX_DOCS_DIR, url);
+                File dest = new File(AppConfig.SITE_HTML_DIR, url);
+                FileCopyUtils.copyFile(src, dest);
+            } catch(Exception e) {
+                throw new IllegalStateException(e);
+            }
         }
     }
 
