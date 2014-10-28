@@ -81,12 +81,12 @@ body, p, div, table, td {
     background-color: #428BCA;
 }
 
-.footermenu p {
+.jb-footer p {
     text-align: center;
     font-size: 12px;
 }
 
-.jb-tips {
+.jb-announcement {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -99,6 +99,10 @@ body, p, div, table, td {
     display: block; 
     position: relative; 
     visibility: hidden;
+}
+
+#cnzz_stat_icon_1000210720 {
+    display: none;
 }
 
 .dropdown-submenu  { 

@@ -136,7 +136,7 @@
     </table>
     ```
 
-完整的 demo 请参考： https://github.com/subchen/jetbrick-template-samples/tree/master/quickstart-app/
+完整的 demo 请参考： https://github.com/subchen/jetbrick-template-samples/blob/master/quickstart-app/
 
 
 Webapp 环境
@@ -178,7 +178,7 @@ Webapp 环境
     </ul>
     ```
 
-4. 部署你的 webapp，并打开浏览器访问 http://127.0.0.1:8080/request.jetx，将会看到下面类似的结果：
+4. 部署你的 webapp，并打开浏览器访问 [http://127.0.0.1:8080/request.jetx](#)，将会看到下面类似的结果：
 
     ```html
     request headers:
@@ -192,5 +192,5 @@ Webapp 环境
     * User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36
     ```
 
-完整的 demo 请参考： https://github.com/subchen/jetbrick-template-samples/tree/master/quickstart-webapp/
+完整的 demo 请参考： https://github.com/subchen/jetbrick-template-samples/blob/master/quickstart-webapp/
 

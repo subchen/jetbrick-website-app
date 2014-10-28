@@ -6,13 +6,10 @@ import jetbrick.template.JetEngine;
 import jetbrick.template.JetTemplate;
 
 public final class TemplateUtils {
-    private static final JetEngine engine;
     private static final JetTemplate template;
 
     static {
-        engine = JetEngine.create();
-        engine.getGlobalContext().set(String.class, "WEBROOT_PATH", AppConfig.WEBROOT_PATH);
-
+        JetEngine engine = JetEngine.create();
         template = engine.getTemplate("/templates/main.jetx");
     }
 

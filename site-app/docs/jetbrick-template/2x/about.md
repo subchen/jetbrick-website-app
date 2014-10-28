@@ -31,6 +31,6 @@
 
 8. 编码规范
 
-    [JAVA 编码规范 2.0 for Jetbrick](../../jetbrick-code-standards.html)
+    [JAVA 编码规范 2.0 for Jetbrick](http://subchen.github.io/jetbrick-code-standards.html)
 
 

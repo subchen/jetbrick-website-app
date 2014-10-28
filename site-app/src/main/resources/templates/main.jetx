@@ -1,12 +1,15 @@
+#define(String WEBROOT_PATH, String BASE_PATH)
+#define(List PRODUCT_LIST, Product PRODUCT, Menu MENU)
 <!DOCTYPE html>
 <html>
 <head>
-    <title>${menu.title}</title>
+    <title>${MENU.title} (${PRODUCT.name})</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="canonical" href="${WEBROOT_PATH}/${MENU.url}"/>
     <link rel="shortcut icon" type="image/x-icon" href="${BASE_PATH}/favicon.ico" />
 
     <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/bootstrap.min.css" />
@@ -38,18 +41,19 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-        #for(Menu topMenu: product.menuList)
-            #if(topMenu.children.size() == 0)
-                <li><a href="${BASE_PATH}/${topMenu.location}">${topMenu.title}</a></li>
+        #for(Menu menubar: PRODUCT.menuList)
+            #continue(menubar.hidden)
+            #if(menubar.children.size() == 0)
+                <li><a href="${BASE_PATH}/${menubar.url}">${menubar.title}</a></li>
             #else
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">${topMenu.title} <b class="caret"></b></a>
+                    <a href="${menubar.url ?: '#'}" class="dropdown-toggle" data-toggle="dropdown">${menubar.title} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                #for(Menu m : topMenu.children)
-                    #if(m.separator)
+                #for(Menu m : menubar.children)
+                    #if(m.divider)
                         <li class="divider"></li>
-                    #elseif (m.display)
-                        <li><a href="${BASE_PATH}/${m.location}">${m.title}</a></li>
+                    #else
+                        <li><a href="${BASE_PATH}/${m.url}">${m.title}</a></li>
                     #end
                 #end
                     </ul>
@@ -60,33 +64,53 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多 <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    #for(Product p : products)
-                        <li><a href="${BASE_PATH}/${p.homeURL}">${p.name}</a></li>
+                    #for(Product p : PRODUCT_LIST)
+                        #continue(p.hidden)
+                        <li><a href="${BASE_PATH}/${p.dir}/">${p.name}</a></li>
                     #end
                     </ul>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="${BASE_PATH}/${product.homeURL}/download.html"><i class="fa fa-download"></i> 下载</a></li>
-                <li><a href="${product.githubURL}"><i class="fa fa-github-alt"></i> 源码</a></li>
+                <li><a href="${BASE_PATH}/${PRODUCT.dir}/download.html"><i class="fa fa-download"></i> 下载</a></li>
+                <li><a href="${PRODUCT.scm}"><i class="fa fa-github-alt"></i> 源码</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <div class="container">
-    <div class="jb-tips">
-        jetbrick-template-1.x 旧版文档请看这里：<a href="http://subchen.github.io/jetbrick-template/1x/index.html">http://subchen.github.io/jetbrick-template/1x/index.html</a>
+#if(PRODUCT.announcement != null)
+    <div class="jb-announcement">
+        ${PRODUCT.announcement}
     </div>
-    
+#end
+
     <article class="markdown">
-        ${htmlGet(menu.location).replaceContext().autolist()}
+        ${htmlGet(MENU.url).replaceContext().autolist()}
     </article>
+    
+    
+    <div id="SOHUCS"></div>
+    <script>
+      (function(){
+        var appid = 'cyrq0AJBi',
+        conf = 'prod_c4f298861c05cc4301a4a5b1eb5115e9';
+        var doc = document,
+        s = doc.createElement('script'),
+        h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+        s.type = 'text/javascript';
+        s.charset = 'utf-8';
+        s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+        h.insertBefore(s,h.firstChild);
+        window.SCS_NO_IFRAME = true;
+      })()
+    </script>   
 </div>
 
 <footer>
-    <div class="container footermenu">
+    <div class="container jb-footer">
         <hr>
         <p>Copyright 2013-2014 Guoqiang Chen. All rights reserved.</p>
         <p><i class="fa fa-envelope"></i> subchen&#64;gmail.com <i class="fa fa-qq"></i> 310491655</p>
