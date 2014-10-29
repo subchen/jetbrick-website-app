@@ -1,7 +1,7 @@
 /******************************************
  *  jetbrick.widget.scrolltop.js
  ******************************************/
-(function (root, $) {
+(function (window, $) {
 
     /**
      * 单击此处，返回到顶部
@@ -47,6 +47,6 @@
         scrolltop();
     });
 
-})(typeof window == "undefined" ? window : this, jQuery);
+})(typeof window !== "undefined" ? window : this, jQuery);
 
 
