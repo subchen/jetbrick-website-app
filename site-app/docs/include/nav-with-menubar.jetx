@@ -19,16 +19,16 @@
             <ul class="nav navbar-nav">
         #for(Menu menubar: PRODUCT.menuList)
             #if(menubar.children.size() == 0)
-                <li><a href="${BASE_PATH}/${menubar.url}">${menubar.title}</a></li>
+                <li><a href="${BASE_PATH}/${menubar.htmlUrl}">${menubar.title}</a></li>
             #else
                 <li class="dropdown">
-                    <a href="${menubar.url ?: '#'}" class="dropdown-toggle" data-toggle="dropdown">${menubar.title} <b class="caret"></b></a>
+                    <a href="${menubar.htmlUrl ?: '#'}" class="dropdown-toggle" data-toggle="dropdown">${menubar.title} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                 #for(Menu m : menubar.children)
                     #if(m.divider)
                         <li class="divider"></li>
                     #else
-                        <li><a href="${BASE_PATH}/${m.url}">${m.title}</a></li>
+                        <li><a href="${BASE_PATH}/${m.htmlUrl}">${m.title}</a></li>
                     #end
                 #end
                     </ul>

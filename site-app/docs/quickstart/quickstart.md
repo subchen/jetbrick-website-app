@@ -1,45 +1,52 @@
 快速入门 Quick Start
---------------------------
+======================================
 
 jetbrick 推荐使用 Eclipse IDE for Java EE Developers 做为开发环境。最新版下载地址：http://www.eclipse.org/downloads/
 
 下面，我们以一个用户登录的例子来简单的学习一下如何使用 jetbrick 来进行快速开发。
 
-### 创建 Dynamic Web Project
+创建 Dynamic Web Project
+-------------------------------
 
 请用你的 Eclipse IDE 根据下面的向导，快速新建一个动态 Web 项目。
 
-#### 新建 Web 工程
+### 新建 Web 工程
+
 ![新建 Web 工程](images/new_web_project.png)
 
-#### 填写项目信息
+### 填写项目信息
+
 ![项目信息](images/new_web_project_info.png)
 
 推荐使用 Servlet API 3.0 以上的标准。
 
-#### 设置 Build Path
+### 设置 Build Path
+
 ![BuildPath](images/new_web_project_path.png)
 
 推荐使用例子中的 source 文件结构 (Maven 标准) ，以及使用对应的 Output folder 路径。
 
-#### 设置 Web Module
+### 设置 Web Module
+
 ![WebModule](images/new_web_project_root.png)
 
-#### 新建项目信息汇总
+### 新建项目信息汇总
 
 根据上面新建的 Web 项目，将会具有如下的目录结构：
 
 * /src/main/java/
 * /src/main/resources/
+* /src/main/webapp/WEB-INF/web.xml
+* /src/main/webapp/WEB-INF/lib/
+* /src/main/webapp/WEB-INF/classes/
 * /src/test/java/
 * /src/test/resources/
-* /WebContent/WEB-INF/web.xml
-* /WebContent/WEB-INF/lib/
-* /WebContent/WEB-INF/classes/
 
 我们假设你的 Java 项目的包都在 `jetbrick.docs.samples` 下面，然后部署在 `http://127.0.0.1:8080/jetbrick_docs_samples/` 下面。
 
-### 增加 jetbrick 依赖包
+
+增加 jetbrick 依赖包
+----------------------------
 
 **Maven 用户**
 
@@ -49,7 +56,7 @@ jetbrick 推荐使用 Eclipse IDE for Java EE Developers 做为开发环境。�
 <dependency>
   <groupId>com.github.subchen</groupId>
   <artifactId>jetbrick-all</artifactId>
-  <version>{{VERSION}}</version>
+  <version>{{ALL-VERSION}}</version>
 </dependency>
 <dependency>
   <groupId>org.slf4j</groupId>
@@ -65,16 +72,18 @@ jetbrick 推荐使用 Eclipse IDE for Java EE Developers 做为开发环境。�
 
 **普通用户**
 
-将如下的 jars 复制到工程的 /WebContent/WEB-INF/lib/ 目录下面，然后加入到 Build Path 中去。
+将如下的 jars 复制到工程的 /src/main/webapp/WEB-INF/lib/ 目录下面，然后加入到 Build Path 中去。
 
-* [jetbrick-all-{{VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-all/{{VERSION}}/jetbrick-all-{{VERSION}}.jar)
+* [jetbrick-all-{{ALL-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-all/{{ALL-VERSION}}/jetbrick-all-{{ALL-VERSION}}.jar)
 * [slf4j-api-1.7.7.jar](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar)
 * [slf4j-simple-1.7.7.jar](http://search.maven.org/remotecontent?filepath=org/slf4j/slf4j-simple/1.7.7/slf4j-simple-1.7.7.jar) (可选包)
 * [fastjson-1.1.38.jar](http://search.maven.org/remotecontent?filepath=com/alibaba/fastjson/1.1.38/fastjson-1.1.38.jar) (可选包)
 
 对于 jetbrick 来说，我们只强依赖于 `slf4j-api`，其他的第三方依赖都是可选的。
 
-### 配置 web.xml
+
+配置 web.xml
+-------------------------
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -101,7 +110,8 @@ jetbrick 推荐使用 Eclipse IDE for Java EE Developers 做为开发环境。�
 </web-app>
 ```
 
-### 配置 /WEB-INF/jetbrick-webmvc.properties
+配置 /WEB-INF/jetbrick-webmvc.properties
+------------------------------------------------
 
 ```
 web.development = true
@@ -112,7 +122,11 @@ web.urls.router = jetbrick.web.mvc.router.RestfulRouter
 web.view.default = jsp
 ```
 
+输入你的代码
+-------------------------
+
 ### 创建一个 Controller
+
 
 ```java
 package jetbrick.docs.samples.controllers;
@@ -170,7 +184,7 @@ public class PassportService {
 }
 ```
 
-### 创建登录页面 /WebContent/passport/login.jsp
+### 创建登录页面 /src/main/webapp/passport/login.jsp
 
 ```html
 <!DOCTYPE html>
@@ -188,31 +202,38 @@ public class PassportService {
 </html>
 ```
 
-### 放在 Tomcat 里面运行
+放在 Tomcat 里面运行
+----------------------------
 
 好了，尝试将你的 Web 项目部署到 Tomcat 中去吧，然后运行。
 
-#### 打开 Servers View
+### 打开 Servers View
+
 ![打开 Servers View](images/new_server_0.png)
 
-#### 新建一个 Tomcat Server
+### 新建一个 Tomcat Server
+
 ![新建一个 Tomcat Server](images/new_server_1.png)
 
-#### 选择本地 Tomcat 服务器安装路径
+### 选择本地 Tomcat 服务器安装路径
+
 ![选择本地 Tomcat 服务器安装路径](images/new_server_2.png)
 
-#### 选择要部署的 Web 项目
+### 选择要部署的 Web 项目
+
 ![选择要部署的 Web 项目](images/new_server_3.png)
 
-#### 启动 Tomcat
+### 启动 Tomcat
+
 ![启动 Tomcat](images/new_server_4.png)
 
-#### 打开你的浏览器
+### 打开你的浏览器
 
 输入：http://127.0.0.1:8080/jetbrick_docs_samples/passport/login
 
 
-### 完整 demo 下载
+完整 demo 下载
+--------------------------
 
 你可以在 http://subchen.github.io/jetbrick/download.html 中下载最新的 demo 实例代码。
 

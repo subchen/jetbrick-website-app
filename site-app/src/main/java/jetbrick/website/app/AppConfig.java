@@ -36,6 +36,30 @@ public final class AppConfig {
         Product webmvc = new Product("jetbrick-webmvc", WEBMVC_VERSION);
         PRODUCT_LIST.add(webmvc);
 
+        menu = webmvc.addMenu("开发指南");
+        menu.addChild("jetbrick-webmvc/helloworld.md");
+        menu.addChild("jetbrick-webmvc/webxml.md");
+        menu.addChild("jetbrick-webmvc/config.md");
+        menu.addChild("jetbrick-webmvc/bypass-urls.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-webmvc/controller.md");
+        menu.addChild("jetbrick-webmvc/action-inject.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-webmvc/result.md");
+        menu.addChild("jetbrick-webmvc/view.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-webmvc/fileupload.md");
+        menu.addChild("jetbrick-webmvc/request-context.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-webmvc/annotation-list.md");
+
+        menu = webmvc.addMenu("高级用法");
+        menu.addChild("jetbrick-webmvc/exception-handler.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-webmvc/interceptor.md");
+        menu.addChild("jetbrick-webmvc/plugin.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-webmvc/custom-annotation.md");
 
         // jetbrick-ioc --------------------------------------------------------------
 
@@ -53,13 +77,13 @@ public final class AppConfig {
         template1x.setAnnouncement("jetbrick-template-2.x 已经发布，新版文档请看这里：<a href=\"http://subchen.github.io/jetbrick-template/2x/\">http://subchen.github.io/jetbrick-template/2x/</a>");
         template1x.setHidden(true);
         PRODUCT_LIST.add(template1x);
-        
+
         template1x.addMenu("jetbrick-template/1x/overview.md", "概述");
         template1x.addMenu("jetbrick-template/1x/userguide.md", "开发");
         template1x.addMenu("jetbrick-template/1x/config.md", "配置");
         template1x.addMenu("jetbrick-template/1x/syntax.md", "语法");
         template1x.addMenu("jetbrick-template/1x/integration.md", "Web集成");
-        
+
         menu = template1x.addMenu("FAQ");
         menu.addChild("jetbrick-template/1x/faq-compile.md", "将模板编译成 Java Class 有什么好处");
         menu.addChild("jetbrick-template/1x/faq-define.md", "为什么需要 #define 声明变量类型？");
@@ -69,11 +93,11 @@ public final class AppConfig {
         menu.addChild("jetbrick-template/1x/faq-layout.md", "如何实现 layout 功能？");
         menu.addChild("jetbrick-template/1x/faq-tag.md", "如何自定义 Tag？");
         menu.addChild("jetbrick-template/1x/faq-spring.md", "在 Spring 中的集成方法");
-        
+
         template1x.add("jetbrick-template/1x/download.md");
         template1x.add("jetbrick-template/1x/history.md");
         template1x.add("jetbrick-template/1x/index.html");
-        
+
         // jetbrick-template 2x ---------------------------------------------------------
         Product template2x = new Product("jetbrick-template", TEMPLATE_VERSION);
         template2x.setBasedir("jetbrick-template/2x");
@@ -122,7 +146,7 @@ public final class AppConfig {
         menu.addChild("jetbrick-template/2x/web-integration-jodd.md", "与 Jodd madvoc 集成");
         menu.addChild("jetbrick-template/2x/web-integration-struts.md", "与 Struts 2.x 集成");
         menu.addChild("jetbrick-template/2x/web-integration-nutz.md", "与 Nutz 集成");
-        
+
         template2x.add("jetbrick-template/2x/download.md");
         template2x.add("jetbrick-template/2x/release-notes.md");
         template2x.add("jetbrick-template/2x/index.html");

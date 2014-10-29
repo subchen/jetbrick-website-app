@@ -1,9 +1,11 @@
 Result/ResultHandler
------------------------------------
+=====================================
 
 Result 是 action 方法的返回值。 action 方法返回值可以是任意类型，每一种 Result 类型将会有一个对应的 ResultHandler 来负责处理相应的 Result 对象。
 
-### 内置的 Result/ResultHandler
+
+内置的 Result/ResultHandler
+-------------------------------------
 
 jetbrick 已经内置了多种 Result/ResultHandler 处理器：
 
@@ -19,7 +21,7 @@ jetbrick 已经内置了多种 Result/ResultHandler 处理器：
 
 我们将分别介绍不同的 Result 的使用方法。
 
-#### String
+### String
 
 String Result 是专门用来处理模板 View 的，同时也能处理 forward 和 redirect 的情况。
 
@@ -37,7 +39,7 @@ public String login() {
 }
 ```
 
-当我们使用 String 作为 Result 的时候，我们实际是由 View/ViewHandler 这一对兄弟来处理对应的 View。具体可以参考 [View/ViewHandler](mvc-view.md)
+当我们使用 String 作为 Result 的时候，我们实际是由 View/ViewHandler 这一对兄弟来处理对应的 View。具体可以参考 [View/ViewHandler](view.html)
 
 ### HttpStatus
 
@@ -102,7 +104,7 @@ public JSONAware list() {
 }
 ```
 
-#### JsonElement
+### JsonElement
 
 使用 gson 库来生成一个 json 输出。
 
@@ -146,11 +148,13 @@ public void action() {
 }
 ```
 
-### 自定义 Result/ResultHandler
+
+自定义 Result/ResultHandler
+-------------------------------------
 
 jetbrick 允许用户定义自己的 Result 和 ResultHandler。
 
-#### 自定义 Result
+### 自定义 Result
 
 新建一个普通的 Java 对象: `MyResult`
 
@@ -161,9 +165,9 @@ public class MyResult {
 }
 ```
 
-> **Tips**: 需要使用 `@ManagedWith(...)` 标注，参数是对应的 ResultHandler 类。
+> [info] **提示**: 需要使用 `@ManagedWith(...)` 标注，参数是对应的 ResultHandler 类。
 
-#### 自定义 ResultHandler
+### 自定义 ResultHandler
 
 新建一个 `MyResultHandler` 类来处理 `MyResult`
 
@@ -178,11 +182,13 @@ public class MyResultHandler implements ResultHandler<MyResult> {
 }
 ```
 
-> **Tips**: 
+> [info] **提示**：
 > 1. 需要实现 `jetbrick.web.mvc.results.ResultHandler` 接口
 > 2. 需要使用 `@Managed(...)` 标注，参数是 Result 类。如果省略参数，那么将自动从 ResultHandler 接口的泛型参数中获取。
 
-#### 使用系统/第三方自带的 Result 类
+
+使用系统/第三方自带的 Result 类
+-------------------------------------
 
 如果你的 `Result` 类是系统自带的，或者第三方提供的，无法增加 `@ManagedWith(...)` 注解，那么也没关系。
 

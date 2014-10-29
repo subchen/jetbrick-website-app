@@ -32,8 +32,7 @@ markdown_to_html() {
     done
 }
 
-#markdown_to_html $basedir/docs/jetbrick-webmvc $basedir/target/html/jetbrick-webmvc
-
+markdown_to_html $basedir/docs/jetbrick-webmvc      $basedir/target/html/jetbrick-webmvc
 markdown_to_html $basedir/docs/jetbrick-template/1x $basedir/target/html/jetbrick-template/1x
 markdown_to_html $basedir/docs/jetbrick-template/2x $basedir/target/html/jetbrick-template/2x
 

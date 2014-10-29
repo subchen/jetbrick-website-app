@@ -1,11 +1,10 @@
 自定义插件 Plugin
-------------------------
-
-### 概述 
+============================
 
 Plugin 是 jetbrick webmvc 用来进行扩展自身功能的。Plugin 会随着 jetbrick webmvc 的启动而启动。
 
-### Plugin 例子
+Plugin 例子
+---------------------
 
 用户自定义的 Plugin 需要实现 `jetbrick.web.mvc.plugin.Plugin` 接口。
 
@@ -43,7 +42,8 @@ public class DbUpgradePlugin implements Plugin {
 }
 ```
 
-### Plugin 配置 
+Plugin 配置 
+---------------------
 
 ```
 $DbUpgradePlugin = jetbrick.docs.samples.DbUpgradePlugin

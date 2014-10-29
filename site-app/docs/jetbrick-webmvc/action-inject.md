@@ -1,9 +1,10 @@
 Controller/Action 注入
-----------------------------
+====================================
 
 jetbrick 支持 IoC，所以，我们的 Controller 自然也可以注入依赖的 Bean 对象。
 
-### Controller 字段注入
+Controller 字段注入
+-------------------------
 
 我们可以使用如下的 Annotation 来实现字段注入：
 
@@ -14,13 +15,14 @@ jetbrick 支持 IoC，所以，我们的 Controller 自然也可以注入依赖�
 
 基本上，Controller 字段注入的大部分都是全局对象。不支持直接注入 Request/Session 上下文相关的对象。
 
-### Action 参数注入
+Action 参数注入
+---------------------------
 
 在 Action 中，我们不仅可以注入 IoC 容器中的对象，我们也可以注入 Request/Session 上下文相关的对象。
 
 对于 Action 参数的注入，我们支持 2 种方式：
 
-**1. 根据 Annotation 注入**：
+### **根据 Annotation 注入**
 
 * `@Inject` - IoC 容器中的对象
 * `@Config` - 配置文件中的配置项
@@ -36,7 +38,7 @@ jetbrick 支持 IoC，所以，我们的 Controller 自然也可以注入依赖�
 * `@InitParameter` - ServletContext.getInitParameter(...)
 * `@XXX` - 用户自定义标注
 
-**2. 根据参数的类型注入：**
+### **根据参数的类型注入：**
 
 * `RequestContext` - Request 上下文对象
 * `Model` - Action 要返回的 Model 对象
@@ -57,19 +59,20 @@ jetbrick 支持 IoC，所以，我们的 Controller 自然也可以注入依赖�
 * `ServetContextInitParameterMap` - a map of servlet context init parameters.
 * `@XXX` - 用户自定义类型
 
-下面我们将对每一个 Annotation 和参数类型来说明。
 
-#### 根据 Annotation 注入
+下面我们将对每一个 Annotation 和参数类型来说明
+----------------------------------------------------
 
-##### @Inject/@Config/@SpringBean
+### 根据 Annotation 注入
+
+#### @Inject/@Config/@SpringBean
 
 这几个 Annotation 是 IoC 容器本身提供的，具体说明可以参考 IoC 中的相关内容。
 
-* [@Inject](ioc-inject.md)
-* [@Config](ioc-config.md)
-* [@SpringBean](ioc-springbean.md)
+* [@Inject](../jetbrick-ioc/inject.html)
+* [@Config](../jetbrick-ioc/config.html)
 
-##### @PathVariable
+#### @PathVariable
 
 专门用于获取 Request URL 中 `{}` 参数变量。支持变量类型的自动转换。
 
@@ -77,9 +80,13 @@ jetbrick 支持 IoC，所以，我们的 Controller 自然也可以注入依赖�
 
 这样你就可以用 `@PathVariable("id")` 来获取 URL 中参数 `{id}` 对应的变量 `123`.
 
-> **Tips**:
+> [info] **提示**:
 > 
-> JDK 8 开始支持方法参数名称，所以我们如果省略 `@PathVariable` 参数名称，那么我们将会从参数的名称中获取名字。对于使用 JDK 8 之前的版本，只要 Javac 编译的时候使用了 `-g` 编译选项（debug 编译），那么我们也可以在字节码源文件中自动获取参数名称。
+> JDK 8 开始支持方法参数名称(编译选项 `-parameters`)。
+> 
+> 我们如果省略 `@PathVariable` 参数名称，那么我们将会从参数的名称中获取名字。
+> 
+> 对于使用 JDK 8 之前的版本，只要 Javac 编译的时候使用了 `-g` 编译选项（debug 编译），那么我们也可以在字节码源文件中自动获取参数名称。
 > 
 > ```java
 > @Action("/users/{id}")
@@ -88,10 +95,9 @@ jetbrick 支持 IoC，所以，我们的 Controller 自然也可以注入依赖�
 > }
 > ```
 >
->
 > 是不是这样的代码更优雅！记住其他的类似的 Annotation 都可以这么干哦！
 
-##### @RequestParam
+#### @RequestParam
 
 用于从 Request 中获取参数，等价于 `request.getParameter(...)`，支持自动类型转换。
 
@@ -107,7 +113,7 @@ public void action(
 }
 ```
 
-##### @RequestForm
+#### @RequestForm
 
 将多个 Request 参数，注入到一个 Form 对象中
 
@@ -128,108 +134,109 @@ public void action(@RequestForm LoginInfo form) {
 }
 ```
 
-##### @RequestHeader
+#### @RequestHeader
 
 等价于 `Request.getHeader(...)`，支持自动类型转换。
 
-##### @RequestCookie
+#### @RequestCookie
 
 获取 Cookie 信息，支持自动类型转换。
 
-##### @RequestAttribute
+#### @RequestAttribute
 
 等价于 `Request.getAttribute(...)`
 
-##### @SessionAttribute
+#### @SessionAttribute
 
 等价于 `Session.getAttribute(...)`
 
-##### @ServletContextAttribute
+#### @ServletContextAttribute
 
 等价于 `ServletContext.getAttribute(...)`
 
-##### @InitParameter
+#### @InitParameter
 
 等价于 `ServletContext.getInitParameter(...)`，支持自动类型转换。
 
 
 #### 根据参数的类型注入
 
-##### RequestContext
+#### RequestContext
 
 Request 上下文对象
 
-##### Model
+#### Model
 
 Action 要返回的 Model 对象
 
-##### HttpServletRequest
+#### HttpServletRequest
 
 Request  对象
 
-##### HttpServletResponse
+#### HttpServletResponse
 
 Response  对象
 
-##### HttpSession
+#### HttpSession
 
 Session  对象
 
-##### ServletContext
+#### ServletContext
 
 ServletContext 对象
 
-##### FilePart
+#### FilePart
 
 单个上传文件对象
 
-##### FilePart[]
+#### FilePart[]
 
 所有上传文件对象
 
-##### RequestParameterMap
+#### RequestParameterMap
 
 a map of request parameter.
 
-##### RequestParameterValuesMap
+#### RequestParameterValuesMap
 
 a map of request parameter values.
 
-##### RequestHeaderMap
+#### RequestHeaderMap
 
 a map of request header.
 
-##### RequestHeaderValuesMap
+#### RequestHeaderValuesMap
 
 a map of request header values.
 
-##### RequestCookieMap
+#### RequestCookieMap
 
 a map of request cookie.
 
-##### RequestAttributeMap
+#### RequestAttributeMap
 
 a map of request attributes.
 
-##### SessionAttributeMap
+#### SessionAttributeMap
 
 a map of session attributes.
 
-##### ServetContextAttributeMap
+#### ServetContextAttributeMap
 
 a map of servlet context attributes.
 
-##### ServetContextInitParameterMap
+#### ServetContextInitParameterMap
 
 a map of servlet context init parameters.
 
 
-#### 进阶（自定义 Annotation 或者类型）
+进阶（自定义 Annotation 或者类型）
+------------------------------------
 
 jetbrick webmvc 已经内置了大量的参数注入方式，怎么用都可以，并且我们也提供了扩展机制。
 
 如果用户想自定义注入的对象或者 Annotation，请看下面的章节：[自定义注入 Annotation
-](mvc_custom_annotation.md)
+](custom_annotation.html)
 
 
 

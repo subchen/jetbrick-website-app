@@ -1,11 +1,13 @@
 自定义 Action 参数注入 Annotation
--------------------------------------------
+=====================================
 
-在 [Action 参数注入](mvc-action-inject.md)章节中，我们看到 `@Inject`, `@Config` 等用于 Controller 注入的 Annotation，还看到了 `@PathVariable`, `@RequestParam` 等专门用于 Action 方法的参数注入的 Request/Session 相关的 Annotation。
+在 [Action 参数注入](action-inject.html)章节中，我们看到 `@Inject`, `@Config` 等用于 Controller 注入的 Annotation，还看到了 `@PathVariable`, `@RequestParam` 等专门用于 Action 方法的参数注入的 Request/Session 相关的 Annotation。
 
-同样的，我们在 IoC 相关的章节中也介绍了[IoC 自定义注入 Annotation](ioc-custom-annotation.md)。但是在 IoC 容器中，只能使用 Request/Session 无关的自定义 Annotation。而本章节将介绍的是专门用于 Action 方法的参数注入的 Request 相关的自定义 Annotation。
+同样的，我们在 IoC 相关的章节中也介绍了[IoC 自定义注入 Annotation](ioc-custom-annotation.html)。但是在 IoC 容器中，只能使用 Request/Session 无关的自定义 Annotation。而本章节将介绍的是专门用于 Action 方法的参数注入的 Request 相关的自定义 Annotation。
 
-### 看代码学习
+
+看代码学习
+------------------------
 
 先创建自己的 Annotation。
 
@@ -43,7 +45,9 @@ public class RequestHeaderArgumentGetter implements AnnotatedArgumentGetter<Requ
 
 其中，泛型参数 `A` 代表你要处理的自定义 Annotation，`T` 代表返回值类型。
 
-### 自定义注入类型
+
+自定义注入类型
+-------------------------
 
 ```java
 @ManagedWith(SessionUserArgumentGetter.class)

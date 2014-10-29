@@ -1,5 +1,5 @@
 Controller 和 Action
----------------------------
+==================================
 
 Controller 是一个普通的 Java POJO 类。
 
@@ -7,7 +7,8 @@ Controller 是一个普通的 Java POJO 类。
 
 jetbrick 使用 `@Controller` 来标注 Controller 类，使用 `@Action` 来标注一个 Action 方法。
 
-### 一个最简单的 Controller 类
+一个最简单的 Controller 类
+----------------------------------
 
 ```java
 @Controller("/hello")
@@ -21,15 +22,16 @@ public class HelloController {
 
 这个 Action 方法将会被映射到 `/hello/world` 这样的 URL 上面。
 
-### Action URL 映射
+Action URL 映射
+-------------------------------
 
-一个 Action URL 由 controller_path 和 action_path 组合而成。 规则如下：
+一个 Action URL 由 `controller_path` 和 `action_path` 组合而成。 规则如下：
 
 ```
 Action URL = /<controller_path>/<action_path>
 ```
 
-#### 范例 1
+### 范例 1
 
 ```java
 @Controller("/users")
@@ -48,7 +50,7 @@ public class UsersController {
 那么组合在一起的 Action URL 就是 `/users/list`
 
 
-#### 范例 2 （默认 path）
+### 范例 2 （默认 path）
 
 ```java
 @Controller
@@ -67,7 +69,7 @@ public class UsersController {
 
 根据默认规则，这样我们的 Action URL 就是 `/list`
 
-#### URL 映射表格
+### URL 映射表格
 
 下面的表格有助于对如何生成对于的 Action URL 有更直观的了解。
 
@@ -82,7 +84,9 @@ public class UsersController {
 | /boo            | /foo          | /boo/foo                |
 | /boo            | foo           | /boo/foo                |
 
-### Controller 单例？
+
+Controller 单例？
+-----------------------------
 
 默认，我们的 Controller 是单例的，如果你的 Controller 是有状态的，那么你可以将 Controller 设为非单例的。如下：
 
@@ -93,11 +97,14 @@ public class HelloController {
 }
 ```
 
-> **Tips**：
+> [info] **最佳实践**：
+>
 > * 单例的 Controller 有助于提高响应速度，IoC 注入只发生一次。
 > * 单例的 Controller 是线程不安全的，所以应该是无状态的，或者是无关 Request/Session 的。
 
-### HTTP request methods
+
+HTTP request methods
+----------------------------
 
 默认的 Action 将会匹配 GET 和 POST 方法，用户可以使用 `@Action` 进行重载。
 

@@ -1,7 +1,5 @@
 自定义拦截器 Interceptor
-----------------------------
-
-### 概述 
+===============================
 
 Interceptor 是 jetbrick webmvc 用来实现对 Action 的预处理和后处理功能（AOP）。
 
@@ -9,7 +7,9 @@ jetbrick 采用了类似于 HTTP Filter 的责任链模式实现 Interceptor cha
 
 所有 Interceptor 都是单例的，非线程安全的。
 
-### Interceptor 例子
+
+Interceptor 例子
+--------------------------------------------------
 
 用户自定义的 Interceptor 需要实现 `jetbrick.web.mvc.intercept.Interceptor` 接口。
 
@@ -44,9 +44,11 @@ public class LogInterceptor implements Interceptor {
 
 其中 `chain.invoke()` 方法将调用下一个 Interceptor 或者 Action 方法。
 
-> **Tips**: Interceptor 只能拦截 Action，不能拦截 View。
+> [warn] **注意**: Interceptor 只能拦截 Action，不能拦截 View。
 
-### Interceptor 配置 
+
+Interceptor 配置 
+--------------------------------------------------
 
 jetbrick 总共下面支持 3 种级别的 Interceptor
 
@@ -54,7 +56,8 @@ jetbrick 总共下面支持 3 种级别的 Interceptor
 * Controller 级别 - 对 Controller 中定义的 Action 进行拦截 (当前版本暂未实现)
 * Action 级别 - 对单个 Action 方法进行拦截 (当前版本暂未实现)
 
-#### Global 级别
+
+### Global 级别
 
 在全局配置文件中 jetbrick-webmvc.properties 进行配置。
 
@@ -65,7 +68,7 @@ $DbTransactionInterceptor = jetbrick.docs.samples.DbTransactionInterceptor
 web.interceptors = $LogInterceptor, $DbTransactionInterceptor
 ```
 
-#### Controller 级别 (当前版本暂未实现)
+### Controller 级别 (当前版本暂未实现)
 
 在 Controller 类上面添加 @InterceptedWith 标注
 
@@ -77,7 +80,7 @@ public class UserController {
 }
 ```
 
-#### Action 级别 (当前版本暂未实现)
+### Action 级别 (当前版本暂未实现)
 
 在 Action 方法上面添加 @InterceptedWith 标注
 
@@ -93,7 +96,7 @@ public class UserController {
 }
 ```
 
-> **Tips**: 
+> [warn] **注意**：
 > 拦截器调用的顺序如下：
 > 1. Action 级别
 > 2. Controller 级别

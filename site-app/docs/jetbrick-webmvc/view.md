@@ -1,5 +1,5 @@
 View/ViewHandler
------------------------------------
+=========================================
 
 当我们使用 String 作为 Result 的时候，我们实际是由 View/ViewHandler 这一对兄弟来处理对应的 View。
 
@@ -18,12 +18,13 @@ String Result = <view_type>:<view_path_name>
 * login.jsp
 * jetx:login.jetx
 
-> **Tips**: 
+> [info] **提示**：
 > * 如果 view_type 省略，那么将从 view_path_name 中的使用的扩展名中获取。
 > * 如果 view_path_name 扩展名也没有，那么将使用系统默认的 ViewHandler (由 `web.view.default` 配置)。
 
 
-### 内置的 View/ViewHandler
+内置的 View/ViewHandler
+---------------------------------------
 
 jetbrick 已经内置了多种 View/ViewHandler 处理器：
 
@@ -40,7 +41,7 @@ jetbrick 已经内置了多种 View/ViewHandler 处理器：
 
 我们将分别介绍不同的 View 的使用方法。
 
-#### forward
+### forward
 
 等价于 `request.getRequestDispatcher(viewPathName).forward(request, response)`
 
@@ -62,7 +63,8 @@ public String list() {
 }
 ```
 
-> **Tips**: 
+> [info] **提示**: 
+>
 > * 返回的路径可以是 `http://`, `https://` 等开头的绝对路径。
 > * 返回的路径也可以是相对于 request URL 的相对路径。
 > * 返回的路径如果是 `/` 开头的绝对路径，那么 jetbrick 自动在前面会加上 `request.getContextPath()`。
@@ -132,7 +134,9 @@ public String css() {
 }
 ```
 
-### 自定义 ViewHandler
+
+自定义 ViewHandler
+--------------------------
 
 jetbrick 允许用户定义自己的 ViewHandler。
 
@@ -168,11 +172,13 @@ public class FreemarkerViewHandler extends AbstractTemplateViewHandler {
 }
 ```
 
-> **Tips**: 
+> [info] **提示**：
+>
 > 1. 需要实现 `jetbrick.web.mvc.results.views.ViewHandler` 接口，我们推荐直接继承 `jetbrick.web.mvc.results.views.AbstractTemplateViewHandler` 抽象类
 > 2. 需要使用 `@Managed` 标注
 > 3. 需要将自定义的 ViewHandler 所在的 package 加入的 jetbrick 自动扫描路径下（由 `web.scan.packages` 配置）
 
 如果大家实现了第三方的 ViewHandler，我们希望能共享出来，让 jetbrick 可以为更多的用户服务。
+
 
 

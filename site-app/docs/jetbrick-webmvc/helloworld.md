@@ -1,7 +1,11 @@
-一个简单的例子 Hello World
--------------------------------
+快速开始 Hello World
+================================
 
-### 配置 web.xml
+本章节将快速的带领你领略一下 `jetbrick-webmvc` 的使用方法和具备的基本功能。
+
+
+配置 web.xml
+-------------------------
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -29,7 +33,8 @@
 ```
 
 
-### 配置 /WEB-INF/jetbrick-webmvc.properties
+配置 /WEB-INF/jetbrick-webmvc.properties
+--------------------------------------------------
 
 ```
 web.development = true
@@ -40,7 +45,8 @@ web.urls.router = jetbrick.web.mvc.router.RestfulRouter
 web.view.default = jsp
 ```
 
-### 创建一个 Controller
+创建一个 Controller
+-------------------------
 
 ```java
 package jetbrick.docs.demo.controllers;
@@ -59,8 +65,8 @@ public class HelloController {
 ```
 
 
-### 创建登录页面 /WebContent/hello.jsp
-
+创建登录页面 /src/main/webapp/hello.jsp
+--------------------------------------------------
 
 ```html
 <!DOCTYPE html>
@@ -72,11 +78,12 @@ Hello ${name}!
 </html>
 ```
 
-### 放在 Tomcat 里面运行
+放在 Tomcat 里面运行
+--------------------------------------------------
 
 好了，将你的项目部署到 Tomcat 中去，然后运行吧。
 
 打开你的浏览器，输入：http://127.0.0.1:8080/demo/hello
 
-![运行结果截图](images/tomcat_hello_world.png)
+![运行结果截图](/assets/images/tomcat_hello_world.png)
 
