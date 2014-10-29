@@ -15,7 +15,7 @@ Web 集成
 * [Nutz](web-integration-nutz.html)
 
 
-[点击这里下载各种集成方式的演示 demo](download.html#samples)
+[点击这里下载各种集成方式的演示 demo](download.html#-samples)
 
 
 Web 中的默认隐含对象

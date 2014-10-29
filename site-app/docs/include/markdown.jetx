@@ -1,9 +1,9 @@
-#define(Product PRODUCT, Menu MENU)
+#define(Product PRODUCT, String TITLE, String FILE_PATH)
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>${MENU.title} (${PRODUCT.name})</title>
+    <title>${TITLE} (${PRODUCT.name})</title>
 
     #include("/include/assets.jetx")
 </head>
@@ -20,7 +20,7 @@
 #end
 
     <article class="markdown">
-        ${htmlGet(MENU.url).replaceContext().autolist()}
+        ${htmlGet(FILE_PATH).replaceContext().autolist()}
     </article>
 
     #include("/include/discuss.jetx")

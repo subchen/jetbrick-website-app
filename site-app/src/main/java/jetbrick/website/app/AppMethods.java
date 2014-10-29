@@ -15,12 +15,13 @@ public final class AppMethods {
     private static final String BLOCKQUOTE_REPLACEMENT = "<blockquote class=\"$1\"><p>";
 
     public static String replaceContext(String html) {
-        html = replaceVariable(html, "{{COMMONS.VERSION}}", AppConfig.COMMONS_VERSION);
-        html = replaceVariable(html, "{{IOC.VERSION}}", AppConfig.IOC_VERSION);
-        html = replaceVariable(html, "{{ORM.VERSION}}", AppConfig.ORM_VERSION);
-        html = replaceVariable(html, "{{WEBMVC.VERSION}}", AppConfig.WEBMVC_VERSION);
-        html = replaceVariable(html, "{{TEMPLATE.VERSION}}", AppConfig.TEMPLATE_VERSION);
-        html = replaceVariable(html, "{{ALL.VERSION}}", AppConfig.ALL_VERSION);
+        html = replaceVariable(html, "{{COMMONS-VERSION}}", AppConfig.COMMONS_VERSION);
+        html = replaceVariable(html, "{{IOC-VERSION}}", AppConfig.IOC_VERSION);
+        html = replaceVariable(html, "{{ORM-VERSION}}", AppConfig.ORM_VERSION);
+        html = replaceVariable(html, "{{WEBMVC-VERSION}}", AppConfig.WEBMVC_VERSION);
+        html = replaceVariable(html, "{{TEMPLATE_1X_VERSION}}", AppConfig.TEMPLATE_1X_VERSION);
+        html = replaceVariable(html, "{{TEMPLATE-VERSION}}", AppConfig.TEMPLATE_VERSION);
+        html = replaceVariable(html, "{{ALL-VERSION}}", AppConfig.ALL_VERSION);
 
         html = BLOCKQUOTE_PATTERN.matcher(html).replaceAll(BLOCKQUOTE_REPLACEMENT);
 

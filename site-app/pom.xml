@@ -31,7 +31,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>jetbrick.website.app.WebsiteApplication</mainClass>
+                    <mainClass>jetbrick.website.app.SiteApplication</mainClass>
                     <systemProperties>
                         <property>
                             <key>jetx.docs.dir</key>

@@ -117,7 +117,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetMethods`
 
-具体参考：[默认的方法扩展 Methods](ext-method.html#default-methods)。
+具体参考：[默认的方法扩展 Methods](ext-method.html#-buildin-methods)。
 
 
 ### jetx.import.functions
@@ -128,7 +128,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetFunctions`
 
-具体参考：[默认的函数扩展 Functions](ext-function.html#default-functions)。
+具体参考：[默认的函数扩展 Functions](ext-function.html#-buildin-functions)。
 
 
 ### jetx.import.tags
@@ -139,7 +139,7 @@ jetx.import.variables = HttpServletRequest request, \
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetTags`
 
-具体参考：[默认的自定义标签 Tags](ext-tag.html#default-tags)。
+具体参考：[默认的自定义标签 Tags](ext-tag.html#-buildin-tags)。
 
 
 ### jetx.import.macros

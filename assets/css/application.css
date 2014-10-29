@@ -81,6 +81,10 @@ body, p, div, table, td {
     background-color: #428BCA;
 }
 
+.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+
 .jb-footer p {
     text-align: center;
     font-size: 12px;

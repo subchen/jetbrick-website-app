@@ -5,22 +5,24 @@ import java.util.*;
 public final class Product {
     private final String name;
     private final String version;
-    private String dir;
+    private String basedir;
+    private String welcome;
     private String scm;
     private boolean hidden;
     private String announcement;
     private final List<Menu> menuList;
-    private final List<String> pageList;
+    private final List<String> fileList;
 
     public Product(String name, String version) {
         this.name = name;
         this.version = version;
-        this.dir = name;
+        this.basedir = name;
+        this.welcome = name + "/index.html";
         this.scm = "https://github.io/subchen/" + name;
         this.hidden = false;
         this.announcement = null;
         this.menuList = new ArrayList<Menu>();
-        this.pageList = new ArrayList<String>();
+        this.fileList = new ArrayList<String>();
     }
 
     public String getName() {
@@ -31,12 +33,20 @@ public final class Product {
         return version;
     }
 
-    public String getDir() {
-        return dir;
+    public String getBasedir() {
+        return basedir;
     }
 
-    public void setDir(String dir) {
-        this.dir = dir;
+    public void setBasedir(String basedir) {
+        this.basedir = basedir;
+    }
+
+    public String getWelcome() {
+        return welcome;
+    }
+
+    public void setWelcome(String welcome) {
+        this.welcome = welcome;
     }
 
     public String getScm() {
@@ -68,27 +78,23 @@ public final class Product {
     }
     
     public Menu addMenu(String name) {
-        Menu menu = new Menu(null, name, false);
+        Menu menu = new Menu(null, name);
         menuList.add(menu);
         return menu;
     }
     
     public Menu addMenu(String url, String name) {
-        Menu menu = new Menu(url, name, false);
+        Menu menu = new Menu(url, name);
         menuList.add(menu);
         return menu;
     }
 
-    public void addHiddenMenu(String url) {
-        menuList.add(new Menu(url, null, true));
+    public List<String> getFileList() {
+        return fileList;
     }
     
-    public List<String> getPageList() {
-        return pageList;
-    }
-    
-    public void addPage(String url) {
-        pageList.add(url);
+    public void add(String url) {
+        fileList.add(url);
     }
 
 }

@@ -3,17 +3,16 @@ package jetbrick.website.app;
 import java.io.File;
 import java.util.*;
 import jetbrick.io.file.FileCopyUtils;
-import jetbrick.util.StringUtils;
 import jetbrick.website.app.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public final class WebsiteApplication {
-    private final Logger log = LoggerFactory.getLogger(WebsiteApplication.class);
+public final class SiteApplication {
+    private final Logger log = LoggerFactory.getLogger(SiteApplication.class);
 
     private final Map<String, Object> ctx = new HashMap<String, Object>();
 
-    public WebsiteApplication() {
+    public SiteApplication() {
         ctx.put("WEBROOT_PATH", AppConfig.WEBROOT_PATH);
         ctx.put("PRODUCT_LIST", AppConfig.PRODUCT_LIST);
     }
@@ -35,8 +34,8 @@ public final class WebsiteApplication {
             }
         }
 
-        for (String url: product.getPageList()) {
-             process(url);
+        for (String url: product.getFileList()) {
+             process(url, null);
         }
     }
 
@@ -45,25 +44,31 @@ public final class WebsiteApplication {
             return;
         }
 
-        ctx.put("MENU", menu);
-        ctx.put("BASE_PATH", getBasePath(menu.getUrl()));
-        ctx.put("FILE_PATH", menu.getUrl());
-
-        log.info("Processing: {}", menu.getUrl());
-
-        File file = new File(AppConfig.SITE_HTML_DIR, menu.getUrl());
-        TemplateUtils.render(ctx, "/include/markdown.jetx", file);
+        process(menu.getUrl(), menu.getTitle());
     }
 
-    private void process(String url) {
+    private void process(String url, String title) {
         log.info("Processing: {}", url);
 
-        if (url.endsWith(".jetx")) {
-            ctx.put("MENU", null);
-            ctx.put("BASE_PATH", getBasePath(url));
+        if (url.endsWith(".md")) {
+            String filePath = url.replace(".md", ".html");
 
+            if (title == null) {
+                title = AppFunctions.getMarkdownTitle(filePath);
+            }
+
+            ctx.put("TITLE", title);
+            ctx.put("BASE_PATH", AppFunctions.getBasePath(filePath));
+            ctx.put("FILE_PATH", filePath);
+
+            File file = new File(AppConfig.SITE_HTML_DIR, filePath);
+            TemplateUtils.render(ctx, "/include/markdown.jetx", file);
+        } else if (url.endsWith(".jetx")) {
             String filePath = url.replace(".jetx", ".html");
-            ctx.put("FILE_PATH", getBasePath(url));
+
+            ctx.put("TITLE", null);
+            ctx.put("BASE_PATH", AppFunctions.getBasePath(filePath));
+            ctx.put("FILE_PATH", filePath);
 
             File file = new File(AppConfig.SITE_HTML_DIR, filePath);
             TemplateUtils.render(ctx, url, file);
@@ -78,20 +83,8 @@ public final class WebsiteApplication {
         }
     }
 
-    private static String getBasePath(String url) {
-        int count = StringUtils.count(url, '/');
-        StringBuilder sb = new StringBuilder();
-        for (int i=0; i<count; i++) {
-            if (sb.length() > 0) {
-                sb.append('/');
-            }
-            sb.append("..");
-        }
-        return sb.toString();
-    }
-
     public static void main(String[] args) {
-        WebsiteApplication app = new WebsiteApplication();
+        SiteApplication app = new SiteApplication();
         app.execute();
     }
 

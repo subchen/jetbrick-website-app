@@ -77,14 +77,13 @@
 [57]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.10/jetbrick-template-1.2.10.jar
 [58]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.10/jetbrick-template-1.2.10-sources.jar
 [59]: #release_notes_1_2_10
-[57]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11.jar
-[58]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11-sources.jar
-[59]: #release_notes_1_2_11
+[61]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11.jar
+[62]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11-sources.jar
+[63]: #release_notes_1_2_11
 
 
 更新历史 Release Notes
 ---------------------------------------
-
 
 <a name="release_notes_1_2_11"></a>
 **Version 1.2.11 (2014-09-06)**
@@ -93,9 +92,9 @@
 * \[修复] [#108 servletContext 对象获取改进建议(JFinal 集成)][issue_108]
 * \[修复] [#111 使用jetbrick每次启动时都报错：ClientAbortException 但功能不影响][issue_111]
 
-[issue_107]: https://github.com/subchen/jetbrick-template/issues/107
-[issue_108]: https://github.com/subchen/jetbrick-template/issues/108
-[issue_111]: https://github.com/subchen/jetbrick-template/issues/111
+[issue_107]: https://github.com/subchen/jetbrick-template-1x/issues/107
+[issue_108]: https://github.com/subchen/jetbrick-template-1x/issues/108
+[issue_111]: https://github.com/subchen/jetbrick-template-1x/issues/111
 
 
 <a name="release_notes_1_2_10"></a>
@@ -103,7 +102,7 @@
 
 * \[修复] [#106 ClasspathResourceLoader 中文模板名称有问题][issue_106]
 
-[issue_106]: https://github.com/subchen/jetbrick-template/issues/106
+[issue_106]: https://github.com/subchen/jetbrick-template-1x/issues/106
 
 
 <a name="release_notes_1_2_9"></a>
@@ -111,7 +110,7 @@
 
 * \[修复] [#105 define内部类生成错误][issue_105]
 
-[issue_105]: https://github.com/subchen/jetbrick-template/issues/105
+[issue_105]: https://github.com/subchen/jetbrick-template-1x/issues/105
 
 
 <a name="release_notes_1_2_8"></a>
@@ -123,9 +122,9 @@
 * \[修复] 捕获 Tomcat Server 中的 ClientAbortException
 * \[修复] Lexer 中的非法字符串
 
-[issue_102]: https://github.com/subchen/jetbrick-template/issues/102
-[issue_103]: https://github.com/subchen/jetbrick-template/issues/103
-[issue_104]: https://github.com/subchen/jetbrick-template/issues/104
+[issue_102]: https://github.com/subchen/jetbrick-template-1x/issues/102
+[issue_103]: https://github.com/subchen/jetbrick-template-1x/issues/103
+[issue_104]: https://github.com/subchen/jetbrick-template-1x/issues/104
 
 
 <a name="release_notes_1_2_7"></a>
@@ -135,9 +134,9 @@
 * \[修复] [#99 @Permission.view_schoolOrg 静态字段编译错误][issue_99]
 * \[修复] [#100 Map 的泛型类型推导问题][issue_100]
 
-[issue_98]: https://github.com/subchen/jetbrick-template/issues/98
-[issue_99]: https://github.com/subchen/jetbrick-template/issues/99
-[issue_100]: https://github.com/subchen/jetbrick-template/issues/100
+[issue_98]: https://github.com/subchen/jetbrick-template-1x/issues/98
+[issue_99]: https://github.com/subchen/jetbrick-template-1x/issues/99
+[issue_100]: https://github.com/subchen/jetbrick-template-1x/issues/100
 
 
 <a name="release_notes_1_2_6"></a>
@@ -149,11 +148,11 @@
 * \[修复] [#88 安全调用对扩展方法不起作用][issue_88]
 * \[修复] [#92 JDK8 对 (a==null?null:a.toString()) 编译存在问题][issue_92]
 
-[issue_88]: https://github.com/subchen/jetbrick-template/issues/88
-[issue_92]: https://github.com/subchen/jetbrick-template/issues/92
-[issue_93]: https://github.com/subchen/jetbrick-template/issues/93
-[issue_94]: https://github.com/subchen/jetbrick-template/issues/94
-[issue_95]: https://github.com/subchen/jetbrick-template/issues/95
+[issue_88]: https://github.com/subchen/jetbrick-template-1x/issues/88
+[issue_92]: https://github.com/subchen/jetbrick-template-1x/issues/92
+[issue_93]: https://github.com/subchen/jetbrick-template-1x/issues/93
+[issue_94]: https://github.com/subchen/jetbrick-template-1x/issues/94
+[issue_95]: https://github.com/subchen/jetbrick-template-1x/issues/95
 
 
 <a name="release_notes_1_2_5"></a>
@@ -161,14 +160,14 @@
 
 * \[新增] [#85 Jodd 3.5.1 mvc support ][issue_85]
 
-[issue_85]: https://github.com/subchen/jetbrick-template/issues/85
+[issue_85]: https://github.com/subchen/jetbrick-template-1x/issues/85
 
 <a name="release_notes_1_2_4"></a>
 **Version 1.2.4 (2014-03-22)**
 
 * \[修复] [#84 多线程编译出现 "Compilation in progress" 错误][issue_84]
 
-[issue_84]: https://github.com/subchen/jetbrick-template/issues/84
+[issue_84]: https://github.com/subchen/jetbrick-template-1x/issues/84
 
 
 <a name="release_notes_1_2_3"></a>
@@ -179,10 +178,10 @@
 * \[修复] [#80 WildFly 8.0.0 autoscan/compile error.][issue_80]
 * \[修复] [#81 resin-3.1.13 compile issue][issue_81]
 
-[issue_80]: https://github.com/subchen/jetbrick-template/issues/80
-[issue_81]: https://github.com/subchen/jetbrick-template/issues/81
-[issue_82]: https://github.com/subchen/jetbrick-template/issues/82
-[issue_83]: https://github.com/subchen/jetbrick-template/issues/83
+[issue_80]: https://github.com/subchen/jetbrick-template-1x/issues/80
+[issue_81]: https://github.com/subchen/jetbrick-template-1x/issues/81
+[issue_82]: https://github.com/subchen/jetbrick-template-1x/issues/82
+[issue_83]: https://github.com/subchen/jetbrick-template-1x/issues/83
 
 <a name="release_notes_1_2_2"></a>
 **Version 1.2.2 (2014-02-23)**
@@ -193,11 +192,11 @@
 * \[修复] [#76 如果默认的 jetbrick-template.properties 配置文件不存在，会报错][issue_76]
 * \[修复] [#77 如果 template 放在 java 目录下，编译或出错][issue_77]
 
-[issue_69]: https://github.com/subchen/jetbrick-template/issues/69
-[issue_76]: https://github.com/subchen/jetbrick-template/issues/76
-[issue_77]: https://github.com/subchen/jetbrick-template/issues/77
-[issue_78]: https://github.com/subchen/jetbrick-template/issues/78
-[issue_79]: https://github.com/subchen/jetbrick-template/issues/79
+[issue_69]: https://github.com/subchen/jetbrick-template-1x/issues/69
+[issue_76]: https://github.com/subchen/jetbrick-template-1x/issues/76
+[issue_77]: https://github.com/subchen/jetbrick-template-1x/issues/77
+[issue_78]: https://github.com/subchen/jetbrick-template-1x/issues/78
+[issue_79]: https://github.com/subchen/jetbrick-template-1x/issues/79
 
 <a name="release_notes_1_2_1"></a>
 **Version 1.2.1 (2014-01-26)**
@@ -208,11 +207,11 @@
 * \[修复] [#74 ClassLoaderUtils.loadClass() 如果 Class 不存在，提示信息不正确][issue_74]
 * \[修复] [#70 关于https协议默认端口的问题][issue_70]
 
-[issue_72]: https://github.com/subchen/jetbrick-template/issues/72
-[issue_73]: https://github.com/subchen/jetbrick-template/issues/73
-[issue_75]: https://github.com/subchen/jetbrick-template/issues/75
-[issue_74]: https://github.com/subchen/jetbrick-template/issues/74
-[issue_70]: https://github.com/subchen/jetbrick-template/issues/70
+[issue_72]: https://github.com/subchen/jetbrick-template-1x/issues/72
+[issue_73]: https://github.com/subchen/jetbrick-template-1x/issues/73
+[issue_75]: https://github.com/subchen/jetbrick-template-1x/issues/75
+[issue_74]: https://github.com/subchen/jetbrick-template-1x/issues/74
+[issue_70]: https://github.com/subchen/jetbrick-template-1x/issues/70
 
 
 <a name="release_notes_1_2_0"></a>
@@ -226,13 +225,13 @@
 * \[新增] [#64 Spell error in JetAnnoations Class name, Should be JetAnnotations.][issue_64]
 * \[新增] [#65 给 #for 指令内部对象增加 for.odd 和 for.even 支持.][issue_65]
 
-[issue_38]: https://github.com/subchen/jetbrick-template/issues/38
-[issue_49]: https://github.com/subchen/jetbrick-template/issues/49
-[issue_54]: https://github.com/subchen/jetbrick-template/issues/54
-[issue_62]: https://github.com/subchen/jetbrick-template/issues/62
-[issue_63]: https://github.com/subchen/jetbrick-template/issues/63
-[issue_64]: https://github.com/subchen/jetbrick-template/issues/64
-[issue_65]: https://github.com/subchen/jetbrick-template/issues/65
+[issue_38]: https://github.com/subchen/jetbrick-template-1x/issues/38
+[issue_49]: https://github.com/subchen/jetbrick-template-1x/issues/49
+[issue_54]: https://github.com/subchen/jetbrick-template-1x/issues/54
+[issue_62]: https://github.com/subchen/jetbrick-template-1x/issues/62
+[issue_63]: https://github.com/subchen/jetbrick-template-1x/issues/63
+[issue_64]: https://github.com/subchen/jetbrick-template-1x/issues/64
+[issue_65]: https://github.com/subchen/jetbrick-template-1x/issues/65
 
 
 <a name="release_notes_1_1_3"></a>
@@ -249,16 +248,16 @@
 * \[修复] [#60 #if (obj == null) 报错，invalid token null][issue_60]
 * \[修复] [#61 import.variables 如果存在多个泛型类型定义会报错][issue_61]
 
-[issue_50]: https://github.com/subchen/jetbrick-template/issues/50
-[issue_52]: https://github.com/subchen/jetbrick-template/issues/52
-[issue_53]: https://github.com/subchen/jetbrick-template/issues/53
-[issue_55]: https://github.com/subchen/jetbrick-template/issues/55
-[issue_56]: https://github.com/subchen/jetbrick-template/issues/56
-[issue_57]: https://github.com/subchen/jetbrick-template/issues/57
-[issue_58]: https://github.com/subchen/jetbrick-template/issues/58
-[issue_59]: https://github.com/subchen/jetbrick-template/issues/59
-[issue_60]: https://github.com/subchen/jetbrick-template/issues/60
-[issue_61]: https://github.com/subchen/jetbrick-template/issues/61
+[issue_50]: https://github.com/subchen/jetbrick-template-1x/issues/50
+[issue_52]: https://github.com/subchen/jetbrick-template-1x/issues/52
+[issue_53]: https://github.com/subchen/jetbrick-template-1x/issues/53
+[issue_55]: https://github.com/subchen/jetbrick-template-1x/issues/55
+[issue_56]: https://github.com/subchen/jetbrick-template-1x/issues/56
+[issue_57]: https://github.com/subchen/jetbrick-template-1x/issues/57
+[issue_58]: https://github.com/subchen/jetbrick-template-1x/issues/58
+[issue_59]: https://github.com/subchen/jetbrick-template-1x/issues/59
+[issue_60]: https://github.com/subchen/jetbrick-template-1x/issues/60
+[issue_61]: https://github.com/subchen/jetbrick-template-1x/issues/61
 
 
 <a name="release_notes_1_1_2"></a>
@@ -273,14 +272,14 @@
 * \[修复] [#46 通过 classpath 加载 jar 中模板，出现 ResourceNotFoundException][issue_46]
 * \[修复] [#47 tomcat 目录中带空格，template 编译失败][issue_47]
 
-[issue_32]: https://github.com/subchen/jetbrick-template/issues/32
-[issue_43]: https://github.com/subchen/jetbrick-template/issues/43
-[issue_44]: https://github.com/subchen/jetbrick-template/issues/44
-[issue_45]: https://github.com/subchen/jetbrick-template/issues/45
-[issue_46]: https://github.com/subchen/jetbrick-template/issues/46
-[issue_47]: https://github.com/subchen/jetbrick-template/issues/47
-[issue_48]: https://github.com/subchen/jetbrick-template/issues/48
-[issue_51]: https://github.com/subchen/jetbrick-template/issues/51
+[issue_32]: https://github.com/subchen/jetbrick-template-1x/issues/32
+[issue_43]: https://github.com/subchen/jetbrick-template-1x/issues/43
+[issue_44]: https://github.com/subchen/jetbrick-template-1x/issues/44
+[issue_45]: https://github.com/subchen/jetbrick-template-1x/issues/45
+[issue_46]: https://github.com/subchen/jetbrick-template-1x/issues/46
+[issue_47]: https://github.com/subchen/jetbrick-template-1x/issues/47
+[issue_48]: https://github.com/subchen/jetbrick-template-1x/issues/48
+[issue_51]: https://github.com/subchen/jetbrick-template-1x/issues/51
 
 
 <a name="release_notes_1_1_1"></a>
@@ -303,22 +302,22 @@
 * \[修复] [#41 从 request uri 中获取模板路径存在问题，会出现404错误][issue_41]
 * \[修复] [#42 include() 函数和 #tag layout() 传的 Map 参数出现编译错误][issue_42]
 
-[issue_20]: https://github.com/subchen/jetbrick-template/issues/20
-[issue_24]: https://github.com/subchen/jetbrick-template/issues/24
-[issue_25]: https://github.com/subchen/jetbrick-template/issues/25
-[issue_27]: https://github.com/subchen/jetbrick-template/issues/27
-[issue_28]: https://github.com/subchen/jetbrick-template/issues/28
-[issue_29]: https://github.com/subchen/jetbrick-template/issues/29
-[issue_30]: https://github.com/subchen/jetbrick-template/issues/30
-[issue_31]: https://github.com/subchen/jetbrick-template/issues/31
-[issue_33]: https://github.com/subchen/jetbrick-template/issues/33
-[issue_34]: https://github.com/subchen/jetbrick-template/issues/34
-[issue_35]: https://github.com/subchen/jetbrick-template/issues/35
-[issue_37]: https://github.com/subchen/jetbrick-template/issues/37
-[issue_39]: https://github.com/subchen/jetbrick-template/issues/39
-[issue_40]: https://github.com/subchen/jetbrick-template/issues/40
-[issue_41]: https://github.com/subchen/jetbrick-template/issues/41
-[issue_42]: https://github.com/subchen/jetbrick-template/issues/42
+[issue_20]: https://github.com/subchen/jetbrick-template-1x/issues/20
+[issue_24]: https://github.com/subchen/jetbrick-template-1x/issues/24
+[issue_25]: https://github.com/subchen/jetbrick-template-1x/issues/25
+[issue_27]: https://github.com/subchen/jetbrick-template-1x/issues/27
+[issue_28]: https://github.com/subchen/jetbrick-template-1x/issues/28
+[issue_29]: https://github.com/subchen/jetbrick-template-1x/issues/29
+[issue_30]: https://github.com/subchen/jetbrick-template-1x/issues/30
+[issue_31]: https://github.com/subchen/jetbrick-template-1x/issues/31
+[issue_33]: https://github.com/subchen/jetbrick-template-1x/issues/33
+[issue_34]: https://github.com/subchen/jetbrick-template-1x/issues/34
+[issue_35]: https://github.com/subchen/jetbrick-template-1x/issues/35
+[issue_37]: https://github.com/subchen/jetbrick-template-1x/issues/37
+[issue_39]: https://github.com/subchen/jetbrick-template-1x/issues/39
+[issue_40]: https://github.com/subchen/jetbrick-template-1x/issues/40
+[issue_41]: https://github.com/subchen/jetbrick-template-1x/issues/41
+[issue_42]: https://github.com/subchen/jetbrick-template-1x/issues/42
 
 <a name="release_notes_1_1_0"></a>
 **Version 1.1.0 (2013-12-02)**
@@ -334,16 +333,16 @@
 * \[修复] [#22 对于 ${bean.property}，优先使用 getXXX()][issue_22]
 * \[修复] [#23 Fixed request uri in JetTemplateServlet/JetTemplateFilter][issue_23]
 
-[issue_12]: https://github.com/subchen/jetbrick-template/issues/12
-[issue_13]: https://github.com/subchen/jetbrick-template/issues/13
-[issue_14]: https://github.com/subchen/jetbrick-template/issues/14
-[issue_15]: https://github.com/subchen/jetbrick-template/issues/15
-[issue_18]: https://github.com/subchen/jetbrick-template/issues/18
-[issue_19]: https://github.com/subchen/jetbrick-template/issues/19
-[issue_20]: https://github.com/subchen/jetbrick-template/issues/20
-[issue_21]: https://github.com/subchen/jetbrick-template/issues/21
-[issue_22]: https://github.com/subchen/jetbrick-template/issues/22
-[issue_23]: https://github.com/subchen/jetbrick-template/issues/23
+[issue_12]: https://github.com/subchen/jetbrick-template-1x/issues/12
+[issue_13]: https://github.com/subchen/jetbrick-template-1x/issues/13
+[issue_14]: https://github.com/subchen/jetbrick-template-1x/issues/14
+[issue_15]: https://github.com/subchen/jetbrick-template-1x/issues/15
+[issue_18]: https://github.com/subchen/jetbrick-template-1x/issues/18
+[issue_19]: https://github.com/subchen/jetbrick-template-1x/issues/19
+[issue_20]: https://github.com/subchen/jetbrick-template-1x/issues/20
+[issue_21]: https://github.com/subchen/jetbrick-template-1x/issues/21
+[issue_22]: https://github.com/subchen/jetbrick-template-1x/issues/22
+[issue_23]: https://github.com/subchen/jetbrick-template-1x/issues/23
 
 <a name="release_notes_1_0_2"></a>
 **Version 1.0.2 (2013-11-22)**
@@ -355,12 +354,12 @@
 * \[修复] [#8  jetx 模板生成的 java 文件名可能会产生冲突][issue_8]
 * \[修复] [#11 模板的路径如有使用 "../../file.jetx" 那么就会访问到 template.path 路径的外面][issue_11]
 
-[issue_8]: https://github.com/subchen/jetbrick-template/issues/8
-[issue_9]: https://github.com/subchen/jetbrick-template/issues/9
-[issue_10]: https://github.com/subchen/jetbrick-template/issues/10
-[issue_11]: https://github.com/subchen/jetbrick-template/issues/11
-[issue_16]: https://github.com/subchen/jetbrick-template/issues/16
-[issue_17]: https://github.com/subchen/jetbrick-template/issues/17
+[issue_8]: https://github.com/subchen/jetbrick-template-1x/issues/8
+[issue_9]: https://github.com/subchen/jetbrick-template-1x/issues/9
+[issue_10]: https://github.com/subchen/jetbrick-template-1x/issues/10
+[issue_11]: https://github.com/subchen/jetbrick-template-1x/issues/11
+[issue_16]: https://github.com/subchen/jetbrick-template-1x/issues/16
+[issue_17]: https://github.com/subchen/jetbrick-template-1x/issues/17
 
 <a name="release_notes_1_0_1"></a>
 **Version 1.0.1 (2013-11-20)**
@@ -372,12 +371,12 @@
 * \[修复] [#6 JDK 6 can't load the template class compiled using JDK 7.][issue_6]
 * \[修复] [#7 JetTemplateServlet 和 JetTemplateFilter 默认可能输出错误的 contentType.][issue_7]
 
-[issue_1]: https://github.com/subchen/jetbrick-template/issues/1
-[issue_2]: https://github.com/subchen/jetbrick-template/issues/2
-[issue_3]: https://github.com/subchen/jetbrick-template/issues/3
-[issue_4]: https://github.com/subchen/jetbrick-template/issues/4
-[issue_6]: https://github.com/subchen/jetbrick-template/issues/6
-[issue_7]: https://github.com/subchen/jetbrick-template/issues/7
+[issue_1]: https://github.com/subchen/jetbrick-template-1x/issues/1
+[issue_2]: https://github.com/subchen/jetbrick-template-1x/issues/2
+[issue_3]: https://github.com/subchen/jetbrick-template-1x/issues/3
+[issue_4]: https://github.com/subchen/jetbrick-template-1x/issues/4
+[issue_6]: https://github.com/subchen/jetbrick-template-1x/issues/6
+[issue_7]: https://github.com/subchen/jetbrick-template-1x/issues/7
 
 <a name="release_notes_1_0_0"></a>
 **Version 1.0.0 (2013-11-18)**

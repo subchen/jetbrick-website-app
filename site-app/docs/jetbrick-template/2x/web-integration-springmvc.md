@@ -11,7 +11,7 @@ Maven 依赖
 <dependency>
     <groupId>com.github.subchen</groupId>
     <artifactId>jetbrick-template-springmvc</artifactId>
-    <version>{{TEMPLATE.VERSION}}</version>
+    <version>{{TEMPLATE-VERSION}}</version>
 </dependency>
 ```
 

@@ -1,64 +1,64 @@
 全局配置选项
 ===================
 
-|         名称                         |           说明             |   默认值     |
----------------------------------------|----------------------------|----------------
-| [import.packages][1]                 | 默认导入的 java 包         |              |
-| [import.classes][2]                  | 默认导入的 java 类         |              |
-| [import.variables][3]                | 默认定义的 java 变量类型    |              |
-| [global.variables][71]               | 全局变量工厂类             |              |
-| [import.methods][4]                  | 默认导入的扩展方法         |              |
-| [import.functions][5]                | 默认导入的扩展函数         |              |
-| [import.tags][6]                     | 默认导入的自定义标签 tags  |              |
-| [import.autoscan][7]                 | 是否自动扫描用户自定义扩展 Class | false  |
-| [import.autoscan.packages][8]        | 在指定的包中进行自动扫描   |              |
-| [input.encoding][11]                 | 模板源文件的编码格式       | utf-8        |
-| [output.encoding][12]                | 模板输出编码格式           | utf-8        |
-| [syntax.safecall][61]                | 是否默认启用全局的安全调用  | false        |
-| [template.loader][21]                | 模板资源载入Class          | jetbrick.template.resource.loader.FileSystemResourceLoader |
-| [template.path][22]                  | 模板资源的根目录           | 当前目录     |
-| [template.suffix][23]                | 默认模板文件扩展名         | .jetx        |
-| [template.reloadable][24]            | 是否允许热加载             | false        |
-| [compile.tool][35]                   | 编译器                    | jetbrick.template.compiler.JdtCompiler |
-| [compile.strategy][31]               | 编译策略                   | always       |
-| [compile.debug][33]                  | 是否允许输出 debug 信息    | false        |
-| [compile.path][34]                   | 默认编译输出路径           | 系统TEMP目录下面的 jetx 目录 |
-| [security.manager][41]               | 安全管理器实现类           |              |
-| [security.manager.file][42]          | 安全管理器黑白名单文件     |              |
-| [security.manager.namelist][43]      | 安全管理器黑白名单列表     |              |
-| [trim.directive.line][51]            | 是否要删除指令行两边的空白 | true         |
-| [trim.directive.comments][52]        | 是否支持指令两边增加注释对 | false        |
-| [trim.directive.comments.prefix][53] | 指令注释的开始部分         | &lt;!--      |
-| [trim.directive.comments.suffix][54] | 指令注释的结束部分         | --&gt;       |
+名称                                 | 说明                         | 默认值
+-------------------------------------|------------------------------|-------------
+[import.packages][1]                 | 默认导入的 java 包           |
+[import.classes][2]                  | 默认导入的 java 类           |
+[import.variables][3]                | 默认定义的 java 变量类型     |
+[global.variables][71]               | 全局变量工厂类               |
+[import.methods][4]                  | 默认导入的扩展方法           |
+[import.functions][5]                | 默认导入的扩展函数           |
+[import.tags][6]                     | 默认导入的自定义标签 tags    |
+[import.autoscan][7]                 | 是否自动扫描自定义扩展 Class | false
+[import.autoscan.packages][8]        | 在指定的包中进行自动扫描     |
+[input.encoding][11]                 | 模板源文件的编码格式         | utf-8
+[output.encoding][12]                | 模板输出编码格式             | utf-8
+[syntax.safecall][61]                | 是否默认启用全局的安全调用   | false
+[template.loader][21]                | 模板资源载入Class            | jetbrick.template.resource.loader.FileSystemResourceLoader
+[template.path][22]                  | 模板资源的根目录             | 当前目录
+[template.suffix][23]                | 默认模板文件扩展名           | .jetx
+[template.reloadable][24]            | 是否允许热加载               | false
+[compile.tool][35]                   | 编译器                       | jetbrick.template.compiler.JdtCompiler
+[compile.strategy][31]               | 编译策略                     | always
+[compile.debug][33]                  | 是否允许输出 debug 信息      | false
+[compile.path][34]                   | 默认编译输出路径             | 系统TEMP目录下面的 jetx 目录
+[security.manager][41]               | 安全管理器实现类             |
+[security.manager.file][42]          | 安全管理器黑白名单文件       |
+[security.manager.namelist][43]      | 安全管理器黑白名单列表       |
+[trim.directive.line][51]            | 是否要删除指令行两边的空白   | true
+[trim.directive.comments][52]        | 是否支持指令两边增加注释对   | false
+[trim.directive.comments.prefix][53] | 指令注释的开始部分           | &lt;!--
+[trim.directive.comments.suffix][54] | 指令注释的结束部分           | --&gt;
 
 
-[1]: #import.packages
-[2]: #import.classes
-[3]: #import.variables
-[4]: #import.methods
-[5]: #import.functions
-[6]: #import.tags
-[7]: #import.autoscan
-[8]: #import.autoscan.packages
-[11]: #input.encoding
-[12]: #output.encoding
-[21]: #template.loader
-[22]: #template.path
-[23]: #template.suffix
-[24]: #template.reloadable
-[31]: #compile.strategy
-[33]: #compile.debug
-[34]: #compile.path
-[35]: #compile.tool
-[41]: #security.manager
-[42]: #security.manager.file
-[43]: #security.manager.namelist
-[51]: #trim.directive.line
-[52]: #trim.directive.comments
-[53]: #trim.directive.comments.prefix
-[54]: #trim.directive.comments.suffix
-[61]: #syntax.safecall
-[71]: #global.variables
+[1]: #import-packages
+[2]: #import-classes
+[3]: #import-variables
+[4]: #import-methods
+[5]: #import-functions
+[6]: #import-tags
+[7]: #import-autoscan
+[8]: #import-autoscan-packages
+[11]: #input-encoding
+[12]: #output-encoding
+[21]: #template-loader
+[22]: #template-path
+[23]: #template-suffix
+[24]: #template-reloadable
+[31]: #compile-strategy
+[33]: #compile-debug
+[34]: #compile-path
+[35]: #compile-tool
+[41]: #security-manager
+[42]: #security-manager-file
+[43]: #security-manager-namelist
+[51]: #trim-directive-line
+[52]: #trim-directive-comments
+[53]: #trim-directive-comments-prefix
+[54]: #trim-directive-comments-suffix
+[61]: #syntax-safecall
+[71]: #global-variables
 
 > **注意**：
 >
@@ -70,7 +70,6 @@
 
 在模板中，如果要用到一些其他的 Class, 那么可以先 import 进来，这样就可以在模板中使用短名字，比如 `Date` 而不是 `java.util.Date`。
 
-<a name="import.packages"></a>
 ### **import.packages**
 
 用来配置包名，会自动导入包下面的所有类。允许配置多个包名，用逗号分隔。
@@ -93,7 +92,6 @@ import.packages = jetbrick.schema.app.model, jetbrick.schema.app.methods.*, jetb
 > **注意**：`jetbrick-template` 会自动引入 `java.lang.*` 和 `java.util.*`。
 
 
-<a name="import.classes"></a>
 ### **import.classes**
 
 用来配置单个类名，优先级比 `import.packages` 高。允许配置多个类名，用逗号分隔。
@@ -105,7 +103,6 @@ import.classes = java.io.File, java.util.List
 ```
 
 
-<a name="import.variables"></a>
 ### import.variables
 
 在一个 webapp 中，我们希望每个模板都自动引入一些变量，比如 `HttpServletRequest request`，那么我们就可以在这里定义。
@@ -122,7 +119,6 @@ import.variables = jetbrick.orm.Pagelist pagelist, List<Entity> entites
 > **注意**：全局定义的变量如果在模板中被重新定义成其他类型(`#define`, `#set`)，则以模板定义优先。
 
 
-<a name="global.variables"></a>
 ### global.variables
 
 该配置主要用来设置用户自定义的全局变量。如下：
@@ -168,7 +164,6 @@ ${contextPath}
 扩展方法/函数/标签
 -----------------------
 
-<a name="import.methods"></a>
 ### import.methods
 
 我们知道一个 Java Class 的 所有 methods 都是定义在同一个 class 文件中的，不能在其他地方进行动态扩展。但是一些其他动态语言却支持在 Class 外部为这个 Class 增加一些方法。比如：
@@ -189,7 +184,6 @@ jetbrick-template 也在这里带给大家强大的动态方法扩展机制。
 `jetbrick-template` 默认会注册 `jetbrick.template.runtime.JetMethods`，
 具体参考：[默认的方法扩展 Methods](syntax.html#default_methods)。
 
-<a name="import.functions"></a>
 ### import.functions
 
 和 `import.methods` 类似，我们还支持在模板中使用函数。
@@ -202,7 +196,6 @@ jetbrick-template 也在这里带给大家强大的动态方法扩展机制。
 具体参考：[默认的函数扩展 Functions](syntax.html#default_functions)。
 
 
-<a name="import.tags"></a>
 ### import.tags
 
 我们支持在模板中自定义标签 #tag。
@@ -215,14 +208,12 @@ jetbrick-template 也在这里带给大家强大的动态方法扩展机制。
 具体参考：[默认的自定义标签 Tags](syntax.html#default_tags)。
 
 
-<a name="import.autoscan"></a>
 ### import.autoscan
 
 是否自动扫描用户自定义的扩展 Class，扫描的内容是： **扩展方法，扩展函数，自定义标签**
 
 默认 `false`，不启用。
 
-<a name="import.autoscan.packages"></a>
 ### import.autoscan.packages
 
 在指定的包下面进行自动扫描，如果为空，那么扫描整个 classpath。支持定义多个包。
@@ -243,12 +234,10 @@ import.autoscan.packages = app.methods, app.functions, app.tags
 模板路径和编码格式
 ------------------------
 
-<a name="input.encoding"></a>
 ### input.encoding
 
 模板源文件的编码格式，默认为 `utf-8`。
 
-<a name="output.encoding"></a>
 ### output.encoding
 
 模板输出内容的编码格式，默认为 `utf-8`。
@@ -259,7 +248,6 @@ import.autoscan.packages = app.methods, app.functions, app.tags
 语法选项
 ------------------------
 
-<a name="syntax.safecall"></a>
 ### syntax.safecall
 
 jetbrick-template 支持 4 种方法的安全调用（类似于 Groovy），以避免出现 `NullPointerException`
@@ -275,7 +263,6 @@ jetbrick-template 支持 4 种方法的安全调用（类似于 Groovy），以�
 默认为 `false`，不启用。
 
 
-<a name="template.loader"></a>
 ### template.loader
 
 如何找到我们自己的模板文件呢？这里就是定义我们要使用的查找类。我们支持下面几种 Class
@@ -292,14 +279,13 @@ template.loader = jetbrick.template.resource.loader.MultipathResourceLoader
 
 注意：如果是 Web 集成模式，默认值为 `jetbrick.template.web.WebResourceLoader`。
 
-<a name="template.path"></a>
 ### template.path
 
 除了要定义 `template.loader`，我们还需要定义模板存放的根目录。
 
 默认为系统当前目录：`System.getProperty("user.dir")`。
 
-注意：如果是 web 集成模式，默认为 webapp 的根目录。具体请参考：[JetEngine 自动加载方式](integrate.html#JetEngine) 中注意事项。
+注意：如果是 web 集成模式，默认为 webapp 的根目录。具体请参考：[JetEngine 自动加载方式](integration.html#JetEngine) 中注意事项。
 
 * 从文件系统加载
 
@@ -359,12 +345,10 @@ template.path = ${webapp.dir}/WEB-INF/templates
 其中 `webapp.dir` 是个特殊变量，由 Web 集成框架在系统启动的时候，通过 `System.setProperty("webapp.dir", servletContext.getRealPath("/"))` 设置的。
 
 
-<a name="template.suffix"></a>
 ### template.suffix
 
 默认的模板文件扩展名 `.jetx`，主要用于 Web 框架集成中，用于查找和过滤模板用。
 
-<a name="template.reloadable"></a>
 ### template.reloadable
 
 在开发模式下面，我们一般需要频繁的修改模板内容来进行调试。那么我们需要打开这个功能来支持模板的热部署。（类似于 `JSP`）
@@ -378,7 +362,6 @@ template.path = ${webapp.dir}/WEB-INF/templates
 
 jetbrick-template 采用编译成 Java ByteCode 来提高性能。
 
-<a name="compile.tool"></a>
 ### compile.tool
 
 模板编译器的配置，默认使用 Eclipse Java Compiler, 如果不存在，那么将切换到 JDK 自带的编译器 （需要使用 JDK，而不是 JRE）。
@@ -406,7 +389,6 @@ Eclipse Java Compiler 需要引入第三方 jar (Tomcat 等 WebServer 一般都�
 1. 对于不支持 `javax.tools.JavaCompiler` 接口的 BAE (Baidu App Engine), 应该使用该编译器。
 2. 对于出现未知的编译错误的时候，可以尝试切换编译器。
 
-<a name="compile.strategy"></a>
 ### compile.strategy
 
 模板从 1.2.0 开始，提供更加灵活的编译策略。由下面 4 中情况
@@ -436,7 +418,6 @@ compile.strategy = none
 > 注意：
 > 不管采用什么模式，对于使用 `JetEngine.createTemplate(source)` 直接由源码创建的模板，仍然需要进行编译。 
 
-<a name="compile.debug"></a>
 ### compile.debug
   
 是否在日志中打印输出模板生成的 Java Source 源代码。
@@ -445,7 +426,6 @@ compile.strategy = none
 
 > **注意**：同时需要 slf4j 的配合才能输出日志。默认已经开启了 `INFO` 级别的日志。
 
-<a name="compile.path"></a>
 ### compile.path
 
 在模板编译的时候，会先生成对应的 `.java` 文件，然后在把 `.java` 文件编译成 `.class` 文件。我们生成的这 2 种文件就放在这个目录下面。
@@ -478,7 +458,6 @@ compile.path = ${webapp.dir}/WEB-INF/jetx_classes
 从 1.2.0 开始，模块新增了安全管理器，特别适合于 CMS 软件，允许用户自定义模板的场景。
 
 
-<a name="security.manager"></a>
 ### security.manager
 
 配置安全管理器的实现类，默认为空，表示禁用安全管理器。
@@ -493,7 +472,6 @@ security.manager = jetbrick.template.parser.JetSecurityManagerImpl
 
 安全管理器只在对模板进行解析编译的时候进行，运行期不会影响任何性能。
 
-<a name="security.manager.file"></a>
 ### security.manager.file
 
 给默认的安全管理器，配置黑白名单，将该名单放在独立的外部文件中。（每行一个名单）
@@ -502,7 +480,6 @@ security.manager = jetbrick.template.parser.JetSecurityManagerImpl
 security.manager.file = ${webapp.dir}/WEB-INF/jetx-white-black-list.txt
 ```
 
-<a name="security.manager.namelist"></a>
 ### security.manager.namelist
 
 给默认的安全管理器，配置黑白名单，多个名单以逗号分隔。
@@ -550,17 +527,14 @@ security.manager.namelist = -java.lang.System.exit \
 由于目前的指令一般直接嵌入在 HTML，对于一些使用可视化编辑器的用户来说，可能会造成一些干扰。
 模板从 1.0.1 开始增加对指令注释支持，如：`<!-- #if (...) -->`; 增强对可视化编辑器的友好度。
 
-<a name="trim.directive.comments"></a>
 ### trim.directive.comments
 
 是否开启对注释指令的支持，默认为 `false`，表示不启用。
 
-<a name="trim.directive.comments.prefix"></a>
 ### trim.directive.comments.prefix
 
 设置注释开始格式，默认为 `<!--`
 
-<a name="trim.directive.comments.suffix"></a>
 ### trim.directive.comments.suffix
 
 设置注释开始格式，默认为 `-->`
@@ -584,7 +558,6 @@ security.manager.namelist = -java.lang.System.exit \
 其他选项
 ------------
 
-<a name="trim.directive.line"></a>
 ### trim.directive.line
 
 由于指令之间存在很多的空白内容，而空白内容也会被作为原始文本原封不动的输出，这样会造成很多输出的内容参差不齐。这个就是用来优化输出格式的，对于用模板来进行代码生成时候特别有用。不建议关闭。

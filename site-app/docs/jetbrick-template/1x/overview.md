@@ -58,15 +58,15 @@ jetbrick-template 将模板编译成 Java ByteCode 运行，并采用强类型�
 
 可以和市面上常见的 Web MVC framework 进行集成。
 
-* [HttpServlet](integrate.html#HttpServlet)
-* [Filter](integrate.html#Filter)
-* [Struts 2.x](integrate.html#Struts)
-* [Spring MVC](integrate.html#SpringMVC)
-* [JFinal](integrate.html#JFinal)
-* [Nutz](integrate.html#Nutz)
-* [Jodd](integrate.html#Jodd)
+* [HttpServlet](integration.html#HttpServlet)
+* [Filter](integration.html#Filter)
+* [Struts 2.x](integration.html#Struts)
+* [Spring MVC](integration.html#SpringMVC)
+* [JFinal](integration.html#JFinal)
+* [Nutz](integration.html#Nutz)
+* [Jodd](integration.html#Jodd)
 
-具体集成方法，请参考： [Web 框架集成](integrate.html)
+具体集成方法，请参考： [Web 框架集成](integration.html)
 
 也可以和 Spring Ioc 进行集成，请参考：[如何在 Spring 中使用 JetEngine](faq-spring.html)
 
