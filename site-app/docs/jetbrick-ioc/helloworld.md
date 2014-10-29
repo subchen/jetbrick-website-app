@@ -1,9 +1,11 @@
 一个简单的例子 Hello World
-------------------------------------
+===================================
 
-### 编程方式
 
-显式的将对象加入到 IoC 容器中，并通过 [`@Inject`](ioc-inject.md) 进行对象注入。
+编程方式
+---------------------------
+
+显式的将对象加入到 IoC 容器中，并通过 [`@Inject`](inject.html) 进行对象注入。
 
 ```java
 package jetbrick.docs.demo;
@@ -35,9 +37,12 @@ public class Test {
 }
 ```
 
-### 通过 annotation 自动发现
 
-通过 [`@IocBean`](ioc-iocbean.md) 注解来自动将对象加入到 IoC 容器中，并通过 `@Inject` 进行对象注入。
+通过 annotation 自动发现
+------------------------------------
+
+
+通过 [`@IocBean`](iocbean.html) 注解来自动将对象加入到 IoC 容器中，并通过 `@Inject` 进行对象注入。
 
 ```java
 package jetbrick.docs.demo;
@@ -73,7 +78,8 @@ public class Test {
 ```
 
 
-### .properties 配置方式
+.properties 配置方式
+--------------------------------
 
 在配置文件中配置，所有 `$` 开头的对象，将自动加入到 IoC 容器中。
 
@@ -119,11 +125,13 @@ public class Test {
 }
 ```
 
-### 自定义配置文件？
+
+自定义配置文件？
+--------------------------------
 
 既然我们可以支持 `.properties` 配置文件，那么我们也可以支持 XML，JSON 等格式的配置文件。
 
-其实我们只要实现一个 `jetbrick.ioc.loaders.IocLoader` 接口的自定义加载器就可以了。
+其实我们只要实现一个 `jetbrick.ioc.loader.IocLoader` 接口的自定义加载器就可以了。
 
 ```java
 public interface IocLoader {
@@ -131,7 +139,7 @@ public interface IocLoader {
 }
 ```
 
-具体怎么实现，可以参考：`jetbrick.ioc.loaders.IocAnnotationLoader` 或者 `jetbrick.ioc.loaders.IocPropertiesLoader`。
+具体怎么实现，可以参考：`jetbrick.ioc.loader.IocAnnotationLoader` 或者 `jetbrick.ioc.loader.IocPropertiesLoader`。
 
 同时，如果大家实现自己的 IocLoader，欢迎 share 相应的实现。
 

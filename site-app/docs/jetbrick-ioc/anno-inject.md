@@ -1,9 +1,11 @@
 @Inject
-----------------------------
+================================
 
-上一章节我们介绍了 [`@IocBean`](ioc-iocbean.md) 可以将 Java 对象自动加入到 IoC 容器中进行管理。这一章我们将介绍 `@Inject` 注解，来实现对象的注入。
+上一章节我们介绍了 [`@IocBean`](iocbean.html) 可以将 Java 对象自动加入到 IoC 容器中进行管理。这一章我们将介绍 `@Inject` 注解，来实现对象的注入。
 
-### 简单的例子
+
+简单的例子
+-------------------
 
 ```java
 package jetbrick.docs.demo;
@@ -34,7 +36,9 @@ public static void main(String args) {
 
 看清楚了吗？我们通过 `@Inject` 注解，我们已经将 User 对象成功的注入到了 Hello 对象中。
 
-### @Inject 可配置的属性
+
+@Inject 可配置的属性
+------------------------
 
 1. **value**
 
@@ -56,7 +60,9 @@ public static void main(String args) {
 
     默认情况下，`required=true`
 
-### 字段注入
+
+字段注入
+---------------
 
 就像我们上面看到的例子一样，我们用 `@Inject` 注入的是字段。
 
@@ -67,11 +73,13 @@ public static void main(String args) {
 private Logger logger;
 ```
 
-### 构造函数注入
+构造函数注入
+---------------
 
 除了最常见的字段注入之外，我们还提供了构造函数注入方式。
 
-#### 指定构造函数
+
+### 指定构造函数
 
 ```java
 @IocBean
@@ -91,11 +99,13 @@ public class Hello {
 
 通过将 `@Inject` 声明在构造函数上面，我们就可以使用指定的构造函数来初始化对象。
 
-#### 默认构造函数
+
+### 默认构造函数
 
 如果没有 `@Inject` 声明的构造函数，那么必须存在一个空的构造函数，并且是 public 的。
 
-#### 构造函数参数注入
+
+### 构造函数参数注入
 
 默认情况下，每个参数都缺省使用了 `@Inject`，如果我们需要自定义，那么我们可以给每个参数手动指定 `@Inject`。如下：
 

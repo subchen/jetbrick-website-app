@@ -31,7 +31,26 @@ public final class AppConfig {
         Product commons = new Product("jetbrick-commons", COMMONS_VERSION);
         PRODUCT_LIST.add(commons);
 
+        // jetbrick-ioc --------------------------------------------------------------
+        Product ioc = new Product("jetbrick-ioc", IOC_VERSION);
+        PRODUCT_LIST.add(ioc);
 
+        menu = ioc.addMenu("开发指南");
+        menu.addChild("jetbrick-ioc/helloworld.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-ioc/anno-iocbean.md");
+        menu.addChild("jetbrick-ioc/anno-inject.md");
+        menu.addChild("jetbrick-ioc/lifecycle.md");
+        menu.addChild("jetbrick-ioc/anno-config.md");
+        menu.addChild("jetbrick-ioc/anno-springbean.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-ioc/custom-annotation.md");
+        menu.addDivider();
+        menu.addChild("jetbrick-ioc/annotation-list.md");
+        
+        //ioc.add("jetbrick-ioc/download.md");
+        //ioc.add("jetbrick-ioc/release-notes.md");
+        
         // jetbrick-webmvc --------------------------------------------------------------
         Product webmvc = new Product("jetbrick-webmvc", WEBMVC_VERSION);
         PRODUCT_LIST.add(webmvc);
@@ -61,10 +80,9 @@ public final class AppConfig {
         menu.addDivider();
         menu.addChild("jetbrick-webmvc/custom-annotation.md");
 
-        // jetbrick-ioc --------------------------------------------------------------
-
-
-
+        //webmvc.add("jetbrick-webmvc/download.md");
+        //webmvc.add("jetbrick-webmvc/release-notes.md");
+        
         // jetbrick-orm --------------------------------------------------------------
 
 

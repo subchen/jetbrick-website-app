@@ -1,11 +1,14 @@
-自定义注入 Annotation，牛！
------------------------------
+自定义注入 Annotation
+===============================
 
 学习了前面的 `@Inject`, `@Config` 和 `@SpringBean` 注入 Annotation，这回 jetbrick 带来了更加强大的自定义 Annotation 注入功能。
 
 啥意思？ 看看下面的代码就明白了。
 
-### 看代码学习
+
+
+看代码学习
+--------------------------
 
 ```java
 @IocBean
@@ -60,7 +63,9 @@ public class InjectMeInjector implements FieldInjector {
 
 介绍完了自定义注入字段 Annotation，采用类似的方法，我们还可以定义注入参数 Annotation。
 
-### 自定义字段注入
+
+自定义字段注入
+------------------------
 
 ```java
 @Target({ElementType.FIELD})
@@ -75,7 +80,9 @@ public class XXXFieldInjector implements FieldInjector {
 }
 ```
 
-### 自定义参数注入 (构造函数参数)
+
+自定义参数注入 (构造函数参数)
+---------------------------------
 
 ```java
 @Target({ElementType.PARAMETER})
@@ -90,5 +97,5 @@ public class XXXParameterInjector implements ParameterInjector {
 }
 ```
 
-**Tips**：我们也可以让一个注解既支持字段注入，也支持参数注入。怎么做？我们可以参考 `@Config` 或者 `@SpringBean` Annotation 的代码实现。
+> [info] **提示**：我们也可以让一个注解既支持字段注入，也支持参数注入。怎么做？我们可以参考 `@Config` 或者 `@SpringBean` Annotation 的代码实现。
 
