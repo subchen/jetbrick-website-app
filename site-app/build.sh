@@ -28,7 +28,7 @@ markdown_to_html() {
         echo Processing: $file
         name=$(basename $file)
         target=$2/${name%.*}.html
-        $RUBY -Ku $GRM_SCRIPT_FILE $file > $target
+        $RUBY -Ku -E UTF-8:UTF-8 $GRM_SCRIPT_FILE $file > $target
     done
 }
 
