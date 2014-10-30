@@ -173,3 +173,28 @@ body, p, div, table, td {
     -moz-border-radius:6px 0 6px 6px;
     border-radius:6px 0 6px 6px;
 }
+
+.zero-clipboard {
+    position: relative;
+}
+.btn-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 0 4px;
+    font-size: 12px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.zeroclipboard-is-hover {
+    color: #FFF;
+    background-color: #563D7C;
+    border-color: #563D7C;
+}
+.zeroclipboard-is-active {
+}
+

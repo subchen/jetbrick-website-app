@@ -15,4 +15,5 @@
     <!--[if lt IE 9]><script type="text/javascript" src="${BASE_PATH}/assets/js/html5shiv.js"></script><![endif]-->
     <script type="text/javascript" src="${BASE_PATH}/assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="${BASE_PATH}/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${BASE_PATH}/assets/js/ZeroClipboard.min.js"></script>
     <script type="text/javascript" src="${BASE_PATH}/assets/js/application.js"></script>
