@@ -21,10 +21,10 @@
 
 <table>
     <tr>
-        <th width="140px">velocity</th>
-        <th width="140px">jetbrick-template</th>
+        <th>velocity</th>
+        <th>jetbrick-template</th>
         <th width="40px">异同</th>
-        <th width="100px">功能</th>
+        <th>功能</th>
         <th>变化</th>
     </tr>
     <tr>

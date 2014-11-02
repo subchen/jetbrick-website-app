@@ -1,8 +1,10 @@
 package jetbrick.website.app;
 
 import java.io.File;
-import java.util.*;
-import jetbrick.website.app.model.*;
+import java.util.ArrayList;
+import java.util.List;
+import jetbrick.website.app.model.Menu;
+import jetbrick.website.app.model.Product;
 
 public final class AppConfig {
 
@@ -27,15 +29,28 @@ public final class AppConfig {
         PRODUCT_LIST = new ArrayList<Product>();
         Menu menu = null;
 
+        // jetbrick-all --------------------------------------------------------------
+        Product all = new Product("jetbrick-all", ALL_VERSION);
+        all.setHidden(true);
+        PRODUCT_LIST.add(all);
+
+        all.add("index.jetx");
+        all.add("jetbrick-code-standards.md");
+
         // jetbrick-commons --------------------------------------------------------------
         Product commons = new Product("jetbrick-commons", COMMONS_VERSION);
         PRODUCT_LIST.add(commons);
+
+        commons.add("jetbrick-commons/overview.md");
+        commons.add("jetbrick-commons/download.md");
+        commons.add("jetbrick-commons/index.html");
 
         // jetbrick-ioc --------------------------------------------------------------
         Product ioc = new Product("jetbrick-ioc", IOC_VERSION);
         PRODUCT_LIST.add(ioc);
 
         menu = ioc.addMenu("开发指南");
+        menu.addChild("jetbrick-ioc/overview.md");
         menu.addChild("jetbrick-ioc/helloworld.md");
         menu.addDivider();
         menu.addChild("jetbrick-ioc/anno-iocbean.md");
@@ -47,15 +62,16 @@ public final class AppConfig {
         menu.addChild("jetbrick-ioc/custom-annotation.md");
         menu.addDivider();
         menu.addChild("jetbrick-ioc/annotation-list.md");
-        
-        //ioc.add("jetbrick-ioc/download.md");
-        //ioc.add("jetbrick-ioc/release-notes.md");
-        
+
+        ioc.add("jetbrick-ioc/download.md");
+        ioc.add("jetbrick-ioc/index.html");
+
         // jetbrick-webmvc --------------------------------------------------------------
         Product webmvc = new Product("jetbrick-webmvc", WEBMVC_VERSION);
         PRODUCT_LIST.add(webmvc);
 
         menu = webmvc.addMenu("开发指南");
+        menu.addChild("jetbrick-webmvc/overview.md");
         menu.addChild("jetbrick-webmvc/helloworld.md");
         menu.addChild("jetbrick-webmvc/webxml.md");
         menu.addChild("jetbrick-webmvc/config.md");
@@ -80,12 +96,16 @@ public final class AppConfig {
         menu.addDivider();
         menu.addChild("jetbrick-webmvc/custom-annotation.md");
 
-        //webmvc.add("jetbrick-webmvc/download.md");
-        //webmvc.add("jetbrick-webmvc/release-notes.md");
-        
+        webmvc.add("jetbrick-webmvc/download.md");
+        webmvc.add("jetbrick-webmvc/index.html");
+
         // jetbrick-orm --------------------------------------------------------------
+        Product orm = new Product("jetbrick-orm", ORM_VERSION);
+        PRODUCT_LIST.add(orm);
 
-
+        ioc.add("jetbrick-orm/overview.md");
+        ioc.add("jetbrick-orm/download.md");
+        ioc.add("jetbrick-orm/index.html");
 
         // jetbrick-template 1x ---------------------------------------------------------
         Product template1x = new Product("jetbrick-template-1x", TEMPLATE_1X_VERSION);
@@ -113,7 +133,7 @@ public final class AppConfig {
         menu.addChild("jetbrick-template/1x/faq-spring.md", "在 Spring 中的集成方法");
 
         template1x.add("jetbrick-template/1x/download.md");
-        template1x.add("jetbrick-template/1x/history.md");
+        template1x.add("jetbrick-template/1x/release-notes.md");
         template1x.add("jetbrick-template/1x/index.html");
 
         // jetbrick-template 2x ---------------------------------------------------------
@@ -166,7 +186,6 @@ public final class AppConfig {
         menu.addChild("jetbrick-template/2x/web-integration-nutz.md", "与 Nutz 集成");
 
         template2x.add("jetbrick-template/2x/download.md");
-        template2x.add("jetbrick-template/2x/release-notes.md");
         template2x.add("jetbrick-template/2x/index.html");
         template2x.add("jetbrick-template/index.jetx");
     }

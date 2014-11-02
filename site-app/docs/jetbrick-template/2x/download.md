@@ -73,7 +73,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 更新历史 Release Notes
 ---------------------------------------
 
-[完整历史更新记录，请看这里](release-notes.html)
+[完整历史更新记录，请看这里](https://github.com/subchen/jetbrick-template-2x/releases)
 
 
 开源许可 License

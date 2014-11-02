@@ -20,6 +20,9 @@ public final class AppFunctions {
 
     public static String getBasePath(String url) {
         int count = StringUtils.count(url, '/');
+        if (count == 0) {
+            return ".";
+        }
         StringBuilder sb = new StringBuilder();
         for (int i=0; i<count; i++) {
             if (sb.length() > 0) {
@@ -29,7 +32,7 @@ public final class AppFunctions {
         }
         return sb.toString();
     }
-    
+
     public static String getMarkdownTitle(String url) {
         String html = htmlGet(url);
         Document document = Jsoup.parse(html);

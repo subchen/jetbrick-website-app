@@ -1,6 +1,7 @@
 package jetbrick.website.app.model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public final class Product {
     private final String name;
@@ -18,7 +19,7 @@ public final class Product {
         this.version = version;
         this.basedir = name;
         this.welcome = name + "/index.html";
-        this.scm = "https://github.io/subchen/" + name;
+        this.scm = "https://github.com/subchen/" + name;
         this.hidden = false;
         this.announcement = null;
         this.menuList = new ArrayList<Menu>();
@@ -56,33 +57,33 @@ public final class Product {
     public void setScm(String scm) {
         this.scm = scm;
     }
-    
+
     public boolean isHidden() {
         return hidden;
     }
-    
+
     public void setHidden(boolean hidden) {
         this.hidden = hidden;
     }
-    
+
     public String getAnnouncement() {
         return announcement;
     }
-    
+
     public void setAnnouncement(String announcement) {
         this.announcement = announcement;
     }
-    
+
     public List<Menu> getMenuList() {
         return menuList;
     }
-    
+
     public Menu addMenu(String name) {
         Menu menu = new Menu(null, name);
         menuList.add(menu);
         return menu;
     }
-    
+
     public Menu addMenu(String url, String name) {
         Menu menu = new Menu(url, name);
         menuList.add(menu);
@@ -92,7 +93,7 @@ public final class Product {
     public List<String> getFileList() {
         return fileList;
     }
-    
+
     public void add(String url) {
         fileList.add(url);
     }
