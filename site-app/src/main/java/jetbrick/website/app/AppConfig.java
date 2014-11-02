@@ -31,6 +31,8 @@ public final class AppConfig {
 
         // jetbrick-all --------------------------------------------------------------
         Product all = new Product("jetbrick", ALL_VERSION);
+        all.setBasedir("");
+        all.setWelcome("index.html");
         all.setHidden(true);
         PRODUCT_LIST.add(all);
 
