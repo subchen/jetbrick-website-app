@@ -30,7 +30,7 @@ public final class AppConfig {
         Menu menu = null;
 
         // jetbrick-all --------------------------------------------------------------
-        Product all = new Product("jetbrick-all", ALL_VERSION);
+        Product all = new Product("jetbrick", ALL_VERSION);
         all.setHidden(true);
         PRODUCT_LIST.add(all);
 
