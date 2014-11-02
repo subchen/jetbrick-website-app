@@ -1,5 +1,4 @@
 #define(Product PRODUCT, String TITLE, String FILE_PATH)
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +23,7 @@
     </article>
 
     #include("/include/discuss.jetx")
+
 </div>
 
 #include("/include/footer.jetx")

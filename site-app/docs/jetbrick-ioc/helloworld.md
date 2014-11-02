@@ -42,7 +42,7 @@ public class Test {
 ------------------------------------
 
 
-通过 [`@IocBean`](iocbean.html) 注解来自动将对象加入到 IoC 容器中，并通过 `@Inject` 进行对象注入。
+通过 `@IocBean` 注解来自动将对象加入到 IoC 容器中，并通过 `@Inject` 进行对象注入。
 
 ```java
 package jetbrick.docs.demo;

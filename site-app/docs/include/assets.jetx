@@ -1,17 +1,16 @@
 #define(String WEBROOT_PATH, String BASE_PATH, String FILE_PATH)
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="canonical" href="${WEBROOT_PATH}/${FILE_PATH}"/>
     <link rel="shortcut icon" type="image/x-icon" href="${BASE_PATH}/favicon.ico" />
-    
+
     <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/github-markdown.css" />
     <link rel="stylesheet" type="text/css" href="${BASE_PATH}/assets/css/application.css" />
-    
+
     <!--[if lt IE 9]><script type="text/javascript" src="${BASE_PATH}/assets/js/html5shiv.js"></script><![endif]-->
     <script type="text/javascript" src="${BASE_PATH}/assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="${BASE_PATH}/assets/js/bootstrap.min.js"></script>
