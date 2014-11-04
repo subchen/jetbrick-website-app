@@ -54,6 +54,8 @@ public class UsersController extends Controller {
 }
 ```
 
+> [info] **好消息**：JFinal 内置的 ActiveRecord 的 `Model` 和 `Record` 现在可以直接通过 `${model.name}` 方式访问拉!
+
 
 范例源码
 --------------------------------

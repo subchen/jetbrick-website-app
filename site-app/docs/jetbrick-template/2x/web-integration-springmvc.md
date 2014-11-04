@@ -30,8 +30,8 @@ application-context.xml 配置
     <!-- 直接配置属性 -->
     <property name="configProperties">
         <props>
-            <prop key="jetx.template.input.encoding">utf-8</prop>
-            <prop key="jetx.template.output.encoding">utf-8</prop>
+            <prop key="jetx.input.encoding">utf-8</prop>
+            <prop key="jetx.output.encoding">utf-8</prop>
         </props>
     </property>
 </bean>
