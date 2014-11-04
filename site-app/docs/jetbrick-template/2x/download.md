@@ -60,14 +60,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 范例下载 Samples
 ---------------------------------------
 
-* [jetx-samples-servlet.zip](demo/jetx-samples-servlet.zip)
-* [jetx-samples-jfinal.zip](demo/jetx-samples-jfinal.zip)
-* [jetx-samples-springmvc.zip](demo/jetx-samples-springmvc.zip)
-* [jetx-samples-struts.zip](demo/jetx-samples-struts.zip)
-* [jetx-samples-jodd.zip](demo/jetx-samples-jodd.zip)
-
-下载的 zip 包中包含完整的源代码和可直接运行的 war 包。
-更多代码可以前往： https://github.com/subchen/jetbrick-template-webmvc-samples/
+https://github.com/subchen/jetbrick-template-2x-samples/
 
 
 更新历史 Release Notes

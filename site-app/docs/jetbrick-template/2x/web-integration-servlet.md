@@ -40,5 +40,5 @@ web.xml 配置
 范例源码
 --------------------------------
 
-具体例子代码参考： https://github.com/subchen/jetbrick-template-webmvc-samples/
+具体例子代码参考： https://github.com/subchen/jetbrick-template-2x-samples/
 

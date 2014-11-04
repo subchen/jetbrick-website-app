@@ -92,21 +92,10 @@ github: https://github.com/subchen/jetbrick-template
 范例下载 Samples
 =============================
 
-### 官方范例：
 
-* [jetx-samples-servlet.zip](demo/jetx-samples-servlet.zip)
-* [jetx-samples-jfinal.zip](demo/jetx-samples-jfinal.zip)
-* [jetx-samples-springmvc.zip](demo/jetx-samples-springmvc.zip)
-* [jetx-samples-struts.zip](demo/jetx-samples-struts.zip)
-* [jetx-samples-jodd.zip](demo/jetx-samples-jodd.zip)
+官方范例可以前往： https://github.com/subchen/jetbrick-template-1x-samples/
 
-下载的 zip 包中包含完整的源代码和可直接运行的 war 包。
-更多代码可以前往： https://github.com/subchen/jetbrick-template-webmvc-samples/
 
-### 网友提供的范例：
-
-* [jetx-samples-nutz-by-howe.zip](demo/jetx-samples-nutz-by-howe.zip)
-* [jetx-samples-springmvc-by-yingzhuo.zip](demo/jetx-samples-springmvc-by-yingzhuo.zip)
 
 ### 自定义标签 Tags/Methods/Functions：
 
@@ -116,13 +105,6 @@ github: https://github.com/subchen/jetbrick-template
 
 感谢网友 应卓 提供相关的实现。
 
-<a name="documents"></a>
-离线文档下载 Documents
-=============================
-
-[jetbrick-template-1.2.2-documents.pdf](download/jetbrick-template-1.2.2-documents.pdf)
-
-感谢网友 laughing 提供离线 PDF 文档。
 
 
 <a name="version"></a>
