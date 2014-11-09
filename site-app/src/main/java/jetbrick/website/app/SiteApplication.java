@@ -18,13 +18,13 @@ public final class SiteApplication {
         ctx.put("WEBROOT_PATH", AppConfig.WEBROOT_PATH);
         ctx.put("PRODUCT_LIST", AppConfig.PRODUCT_LIST);
 
-        ctx.put("COMMONS-VERSION", AppConfig.COMMONS_VERSION);
-        ctx.put("IOC-VERSION", AppConfig.IOC_VERSION);
-        ctx.put("ORM-VERSION", AppConfig.ORM_VERSION);
-        ctx.put("WEBMVC-VERSION", AppConfig.WEBMVC_VERSION);
-        ctx.put("TEMPLATE-1X-VERSION", AppConfig.TEMPLATE_1X_VERSION);
-        ctx.put("TEMPLATE-VERSION", AppConfig.TEMPLATE_VERSION);
-        ctx.put("ALL-VERSION", AppConfig.ALL_VERSION);
+        ctx.put("COMMONS_VERSION", AppConfig.COMMONS_VERSION);
+        ctx.put("IOC_VERSION", AppConfig.IOC_VERSION);
+        ctx.put("ORM_VERSION", AppConfig.ORM_VERSION);
+        ctx.put("WEBMVC_VERSION", AppConfig.WEBMVC_VERSION);
+        ctx.put("TEMPLATE_1X_VERSION", AppConfig.TEMPLATE_1X_VERSION);
+        ctx.put("TEMPLATE_VERSION", AppConfig.TEMPLATE_VERSION);
+        ctx.put("ALL_VERSION", AppConfig.ALL_VERSION);
     }
 
     public void execute() {
