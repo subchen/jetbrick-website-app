@@ -172,8 +172,6 @@ jetx.import.variables = HttpServletRequest request, \
 * @JetAnnotations.Functions
 * @JetAnnotations.Tags
 
-更多详细内容请参考： [如何让自动扫描发现用户自定义的扩展方法/函数/标签 Class](faq-autoscan.html)
-
 
 ### jetx.autoscan.skiperrors
 

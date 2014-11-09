@@ -192,5 +192,5 @@ Webapp 环境
     * User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36
     ```
 
-完整的 demo 请参考： https://github.com/subchen/jetbrick-template-samples/blob/master/quickstart-webapp/
+完整的 demo 请参考： https://github.com/subchen/jetbrick-template-2x-samples/
 
