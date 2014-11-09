@@ -167,6 +167,7 @@ public final class AppConfig {
         menu.addDivider();
         menu.addChild("jetbrick-template/2x/include.md", "嵌入子模板 Include");
         menu.addChild("jetbrick-template/2x/layout.md", "布局 Layout");
+        menu.addChild("jetbrick-template/2x/security-manager.md", "安全管理器 SecurityManager");
 
         menu = template2x.addMenu("jetbrick-template/2x/config.md", "配置");
 
