@@ -18,9 +18,9 @@ Controller 字段注入
 Action 参数注入
 ---------------------------
 
-在 Action 中，我们不仅可以注入 IoC 容器中的对象，我们也可以注入 Request/Session 上下文相关的对象。
+在 Action 方法中，我们不仅可以注入 IoC 容器中的对象，我们也可以注入 Request/Session 上下文相关的对象。
 
-对于 Action 参数的注入，我们支持 2 种方式：
+对于 Action 方法参数的注入，我们支持 2 种方式：
 
 ### **根据 Annotation 注入**
 
@@ -57,7 +57,7 @@ Action 参数注入
 * `SessionAttributeMap` - a map of session attributes.
 * `ServetContextAttributeMap` - a map of servlet context attributes.
 * `ServetContextInitParameterMap` - a map of servlet context init parameters.
-* `@XXX` - 用户自定义类型
+* `XXX` - 用户自定义类型
 
 
 下面我们将对每一个 Annotation 和参数类型来说明
@@ -69,8 +69,8 @@ Action 参数注入
 
 这几个 Annotation 是 IoC 容器本身提供的，具体说明可以参考 IoC 中的相关内容。
 
-* [@Inject](../jetbrick-ioc/inject.html)
-* [@Config](../jetbrick-ioc/config.html)
+* [@Inject](../jetbrick-ioc/anno-inject.html)
+* [@Config](../jetbrick-ioc/anno-config.html)
 
 #### @PathVariable
 
@@ -233,7 +233,7 @@ a map of servlet context init parameters.
 进阶（自定义 Annotation 或者类型）
 ------------------------------------
 
-jetbrick webmvc 已经内置了大量的参数注入方式，怎么用都可以，并且我们也提供了扩展机制。
+jetbrick-webmvc 已经内置了大量的参数注入方式，怎么用都可以，并且我们也提供了扩展机制。
 
 如果用户想自定义注入的对象或者 Annotation，请看下面的章节：[自定义注入 Annotation
 ](custom_annotation.html)

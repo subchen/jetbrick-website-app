@@ -12,6 +12,6 @@ JDBC 的轻量级封装，面向对象的 API 接口。简单，高效。
 - 支持数据库方言 Dialect
 - 支持 JSR303 Validator
 - 支持运行期自动升降级数据库
-- 配合 [jetbrick-schema-app][] 自动生成 pojo, dao
+- 配合 jetbrick-schema-app 自动生成 pojo, dao
 
 

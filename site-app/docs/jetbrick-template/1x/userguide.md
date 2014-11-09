@@ -453,13 +453,13 @@ ${debug("id = {}, users.size = {}.", id, users.size()}
 
 1. 将模板编译路径连接到 Project 的 source path
 
-    ![png](/assets/images/screen_link_source.png)
+    ![png](/assets/images/snapshots/screen_link_source.png)
 
 2. 设置断点 
 
-    ![png](/assets/images/screen_set_breakpoint.png)
+    ![png](/assets/images/snapshots/screen_set_breakpoint.png)
 
 3. 开始 debug
 
-    ![png](/assets/images/screen_debug.png)
+    ![png](/assets/images/snapshots/screen_debug.png)
 

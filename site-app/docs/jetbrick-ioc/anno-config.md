@@ -5,7 +5,7 @@
 
 假设我们有这样一个配置文件：
 
-app.properties
+**app.properties**
 
 ```
 app.encoding = utf-8
@@ -13,7 +13,7 @@ app.debug = true
 app.users = admin, test
 ```
 
-AppConfig.java
+**AppConfig.java**
 
 ```java
 @IocBean
@@ -32,12 +32,13 @@ public class AppConfig {
 }
 ```
 
-然后这样下面的代码将自动将 app.properties 中的属性注入到 AppConfig 类中。
+然后这样下面的代码将自动将 `app.properties` 中的属性注入到 `AppConfig` 类中。
 
 ```java
 MutableIoc ioc = new MutableIoc();
-ioc.load(new IocPropertiesLoader("app.properties"));
+ioc.load(new IocPropertiesLoader("classpath:app.properties");
 ioc.addBean(AppConfig.class);
+
 AppConfig config = ioc.getBean(AppConfig.class);
 ```
 

@@ -1,7 +1,15 @@
 文件上传支持 FileUpload
 ==============================
 
-jetbrick-webmvc 使用 [commons-fileupload](http://commons.apache.org/fileupload) 来处理文件上传。
+jetbrick-webmvc 可以使用 [commons-fileupload](http://commons.apache.org/fileupload) 来处理文件上传。
+
+```xml
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-fileupload</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+```
 
 jetbrick-webmvc 会自动判断 Request 请求时候是否是文件上传(multipart/form-data)，然后会将上传文件内容解析出来，将文件内容储存在临时文件中（由 `web.upload.dir` 配置），并封装成 FilePart 对象给用户使用。
 

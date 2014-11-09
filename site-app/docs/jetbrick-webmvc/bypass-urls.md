@@ -23,9 +23,7 @@ jetbrick 提供了 2 种资源过滤器，使用的不同的匹配算法。用�
 
 ```
 $bypassUrls = jetbrick.web.mvc.router.PrefixSuffixBypassRequestUrls
-$bypassUrls.patterns = \
-	*.jsp, *.js, *.css, *.jpg, *.png, *.gif, *.ico, *.swf, \
-	/assets/*, /static/*
+$bypassUrls.patterns = *.jsp, *.html, /assets/*
 
 web.urls.bypass = $bypassUrls
 ```
@@ -35,7 +33,7 @@ web.urls.bypass = $bypassUrls
 ```
 $bypassUrls = jetbrick.web.mvc.router.RegexBypassRequestUrls
 $bypassUrls.patterns = \
-	^(.+[.])(jsp|js|css|jpg|png|gif|ico|swf)$, \
+	^(.+[.])(jsp|html)$, \
 	^(/assets/|/static/).+$
 
 web.urls.bypass = $bypassUrls
@@ -48,7 +46,9 @@ web.urls.bypass = $bypassUrls
 
 ```java
 public interface BypassRequestUrls {
+
     public boolean accept(HttpServletRequest request, String path);
+
 }
 ```
 

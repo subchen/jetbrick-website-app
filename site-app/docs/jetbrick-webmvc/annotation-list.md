@@ -33,7 +33,7 @@ Action 注解
 
 注解                     |  说明                                 
 -------------------------|------------------------------
-@Managed                 | 可以表示一个 ResultHandler/ViewHandler/ArgumentGetter 类
+@Managed                 | 可以表示一个 ResultHandler/ViewHandler/ArgumentGetter/FileUpload 类
 @ManagedWith             | 表示一个 Result 类，或者是一个 Argument Annotation
 
 

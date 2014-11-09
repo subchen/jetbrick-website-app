@@ -43,6 +43,6 @@
 
 8. 编码规范
 
-    [JAVA 编码规范 1.0 (jetbrick 版)](coding-guide.html)
+    [JAVA 编码规范 2.0 (jetbrick 版)](http://subchen.github.io/jetbrick-code-standards.html)
 
 

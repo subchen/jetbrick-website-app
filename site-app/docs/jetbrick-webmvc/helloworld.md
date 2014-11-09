@@ -85,5 +85,5 @@ Hello ${name}!
 
 打开你的浏览器，输入：http://127.0.0.1:8080/demo/hello
 
-![运行结果截图](/assets/images/tomcat_hello_world.png)
+![运行结果截图](/assets/images/snapshots/tomcat_hello_world.png)
 

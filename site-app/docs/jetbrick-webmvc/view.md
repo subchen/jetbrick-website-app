@@ -91,6 +91,18 @@ public String form() {
 
 默认使用 jetbrick-template 页面作为 View
 
+需要加入依赖：
+
+```xml
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-jetbrickmvc</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+```
+
+范例代码如下：
+
 ```java
 @Action
 public String list() {
@@ -174,7 +186,7 @@ public class FreemarkerViewHandler extends AbstractTemplateViewHandler {
 
 > [info] **提示**：
 >
-> 1. 需要实现 `jetbrick.web.mvc.results.views.ViewHandler` 接口，我们推荐直接继承 `jetbrick.web.mvc.results.views.AbstractTemplateViewHandler` 抽象类
+> 1. 需要实现 `jetbrick.web.mvc.results.view.ViewHandler` 接口，我们推荐直接继承 `jetbrick.web.mvc.results.view.AbstractTemplateViewHandler` 抽象类
 > 2. 需要使用 `@Managed` 标注
 > 3. 需要将自定义的 ViewHandler 所在的 package 加入的 jetbrick 自动扫描路径下（由 `web.scan.packages` 配置）
 

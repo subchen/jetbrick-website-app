@@ -17,14 +17,13 @@ Interceptor 例子
 package jetbrick.docs.samples;
 
 import jetbrick.web.mvc.RequestContext;
-import jetbrick.web.mvc.config.WebappConfig;
 import jetbrick.web.mvc.intercept.Interceptor;
 import jetbrick.web.mvc.intercept.InterceptorChain;
 
 public class LogInterceptor implements Interceptor {
 
     @Override
-    public void init(WebConfig config) {
+    public void initialize() {
     }
 
     @Override
@@ -80,6 +79,7 @@ public class UserController {
 }
 ```
 
+
 ### Action 级别 (当前版本暂未实现)
 
 在 Action 方法上面添加 @InterceptedWith 标注
@@ -96,8 +96,8 @@ public class UserController {
 }
 ```
 
-> [warn] **注意**：
-> 拦截器调用的顺序如下：
+> [warn] **注意**：拦截器调用的顺序如下：
+> 
 > 1. Action 级别
 > 2. Controller 级别
 > 3. Global 级别

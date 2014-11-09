@@ -12,7 +12,6 @@ Plugin 例子
 package jetbrick.docs.samples;
 
 import jetbrick.dao.schema.upgrade.DbUpgradeApp;
-import jetbrick.web.mvc.config.WebConfig;
 import jetbrick.web.mvc.plugin.Plugin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +23,7 @@ public class DbUpgradePlugin implements Plugin {
     final Logger log = LoggerFactory.getLogger(DbUpgradePlugin.class);
 
     @Override
-    public void init(WebConfig config) {
+    public void initialize() {
         try {
             DbUpgradeApp.execute();
         } catch (Throwable e) {

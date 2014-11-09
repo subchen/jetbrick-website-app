@@ -94,6 +94,18 @@ public RawDownload download() {
 
 使用 fastjson 库来生成一个 json 输出。
 
+需要加入依赖：
+
+```xml
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-fastjson</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+```
+
+范例代码如下：
+
 ```java
 @Action
 public JSONAware list() {
@@ -107,6 +119,19 @@ public JSONAware list() {
 ### JsonElement
 
 使用 gson 库来生成一个 json 输出。
+
+
+需要加入依赖：
+
+```xml
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-gson</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+```
+
+范例代码如下：
 
 ```java
 @Action
@@ -183,7 +208,7 @@ public class MyResultHandler implements ResultHandler<MyResult> {
 ```
 
 > [info] **提示**：
-> 1. 需要实现 `jetbrick.web.mvc.results.ResultHandler` 接口
+> 1. 需要实现 `jetbrick.web.mvc.result.ResultHandler` 接口
 > 2. 需要使用 `@Managed(...)` 标注，参数是 Result 类。如果省略参数，那么将自动从 ResultHandler 接口的泛型参数中获取。
 
 

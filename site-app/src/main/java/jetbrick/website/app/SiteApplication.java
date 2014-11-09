@@ -1,9 +1,11 @@
 package jetbrick.website.app;
 
 import java.io.File;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 import jetbrick.io.file.FileCopyUtils;
-import jetbrick.website.app.model.*;
+import jetbrick.website.app.model.Menu;
+import jetbrick.website.app.model.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,10 +17,18 @@ public final class SiteApplication {
     public SiteApplication() {
         ctx.put("WEBROOT_PATH", AppConfig.WEBROOT_PATH);
         ctx.put("PRODUCT_LIST", AppConfig.PRODUCT_LIST);
+
+        ctx.put("COMMONS-VERSION", AppConfig.COMMONS_VERSION);
+        ctx.put("IOC-VERSION", AppConfig.IOC_VERSION);
+        ctx.put("ORM-VERSION", AppConfig.ORM_VERSION);
+        ctx.put("WEBMVC-VERSION", AppConfig.WEBMVC_VERSION);
+        ctx.put("TEMPLATE-1X-VERSION", AppConfig.TEMPLATE_1X_VERSION);
+        ctx.put("TEMPLATE-VERSION", AppConfig.TEMPLATE_VERSION);
+        ctx.put("ALL-VERSION", AppConfig.ALL_VERSION);
     }
 
     public void execute() {
-        for (Product product: AppConfig.PRODUCT_LIST) {
+        for (Product product : AppConfig.PRODUCT_LIST) {
             process(product);
         }
     }
@@ -26,16 +36,16 @@ public final class SiteApplication {
     private void process(Product product) {
         ctx.put("PRODUCT", product);
 
-        for (Menu menubar: product.getMenuList()) {
+        for (Menu menubar : product.getMenuList()) {
             process(menubar);
 
-            for (Menu menu: menubar.getChildren()) {
+            for (Menu menu : menubar.getChildren()) {
                 process(menu);
             }
         }
 
-        for (String url: product.getFileList()) {
-             process(url, null);
+        for (String url : product.getFileList()) {
+            process(url, null);
         }
     }
 
@@ -77,7 +87,7 @@ public final class SiteApplication {
                 File src = new File(AppConfig.JETX_DOCS_DIR, url);
                 File dest = new File(AppConfig.SITE_HTML_DIR, url);
                 FileCopyUtils.copyFile(src, dest);
-            } catch(Exception e) {
+            } catch (Exception e) {
                 throw new IllegalStateException(e);
             }
         }

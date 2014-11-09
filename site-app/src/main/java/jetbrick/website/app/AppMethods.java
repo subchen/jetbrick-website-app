@@ -19,7 +19,7 @@ public final class AppMethods {
         html = replaceVariable(html, "{{IOC-VERSION}}", AppConfig.IOC_VERSION);
         html = replaceVariable(html, "{{ORM-VERSION}}", AppConfig.ORM_VERSION);
         html = replaceVariable(html, "{{WEBMVC-VERSION}}", AppConfig.WEBMVC_VERSION);
-        html = replaceVariable(html, "{{TEMPLATE_1X_VERSION}}", AppConfig.TEMPLATE_1X_VERSION);
+        html = replaceVariable(html, "{{TEMPLATE-1X-VERSION}}", AppConfig.TEMPLATE_1X_VERSION);
         html = replaceVariable(html, "{{TEMPLATE-VERSION}}", AppConfig.TEMPLATE_VERSION);
         html = replaceVariable(html, "{{ALL-VERSION}}", AppConfig.ALL_VERSION);
 

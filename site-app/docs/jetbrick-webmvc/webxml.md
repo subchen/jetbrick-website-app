@@ -27,7 +27,6 @@
 传统的后缀名映射 "*.do"
 -------------------------------------
 
-
 ```xml
 <filter>
     <filter-name>jetbrick-webmvc</filter-name>

@@ -1,11 +1,10 @@
-一个简单的例子 Hello World
+快速入门 Hello World
 ===================================
-
 
 编程方式
 ---------------------------
 
-显式的将对象加入到 IoC 容器中，并通过 [`@Inject`](inject.html) 进行对象注入。
+显式的将对象加入到 IoC 容器中，并通过 `@Inject` 进行对象注入。
 
 ```java
 package jetbrick.docs.demo;
@@ -40,7 +39,6 @@ public class Test {
 
 通过 annotation 自动发现
 ------------------------------------
-
 
 通过 `@IocBean` 注解来自动将对象加入到 IoC 容器中，并通过 `@Inject` 进行对象注入。
 
@@ -118,7 +116,7 @@ public class Hello {
 public class Test {
     public static void main(String args[]) {
         MutableIoc ioc = new MutableIoc();
-        ioc.load(new PropertiesIocLoader("ioc.properties"));
+        ioc.load(new PropertiesIocLoader("classpath:app.properties"));
         Hello hello = (Hello) ioc.getBean("hello");
         hello.says(); // got "Hello WORLD"
     }

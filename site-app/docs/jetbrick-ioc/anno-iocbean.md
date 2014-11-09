@@ -30,7 +30,7 @@ Foo foo = (Foo) ioc.getBean("foo");
 缺省的对象名称
 ----------------------
 
-如果你的注解 @IocBean 省略了名字，那么默认名字为定义类的完整的类名，如下：
+如果你的注解 `@IocBean` 省略了名字，那么默认名字为定义类的完整的类名，如下：
 
 ```java
 package jetbrick.docs.demo;
@@ -57,7 +57,7 @@ public class Foo {
 	Foo foo = ioc.getBean(Foo.class);
 	```
 
-> Tips: 我们推荐对象都优先使用这种缺省名称，不容易产生命名冲突，并且代码更优雅。
+> [info] **最佳实践**：我们推荐对象都优先使用这种缺省名称，不容易产生命名冲突，并且代码更优雅。
 
 
 工厂类 IocFactory

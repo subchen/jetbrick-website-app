@@ -38,7 +38,7 @@ Maven 依赖 POM.xml
 <dependency>
     <groupId>com.github.subchen</groupId>
     <artifactId>jetbrick-template</artifactId>
-    <version>{{TEMPLATE_1X_VERSION}}</version>
+    <version>{{TEMPLATE-1X-VERSION}}</version>
 </dependency>
 ```
 
@@ -76,8 +76,8 @@ github: https://github.com/subchen/jetbrick-template
 3. 编译
 
     ```
-    git clone https://github.com/subchen/jetbrick-template.git
-    cd jetbrick-template
+    git clone https://github.com/subchen/jetbrick-template-1x.git
+    cd jetbrick-template-1x
     mvn install
     ```
 
@@ -111,9 +111,9 @@ github: https://github.com/subchen/jetbrick-template
 最新版本 Latest Version
 =============================
 
-* [jetbrick-template-{{TEMPLATE_1X_VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE_1X_VERSION}}/jetbrick-template-{{TEMPLATE_1X_VERSION}}.jar)
-* [jetbrick-template-{{TEMPLATE_1X_VERSION}}-sources.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE_1X_VERSION}}/jetbrick-template-{{TEMPLATE_1X_VERSION}}-sources.jar)
-* [jetbrick-template-{{TEMPLATE_1X_VERSION}}-javadoc.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE_1X_VERSION}}/jetbrick-template-{{TEMPLATE_1X_VERSION}}-javadoc.jar)
+* [jetbrick-template-{{TEMPLATE-1X-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE-1X-VERSION}}/jetbrick-template-{{TEMPLATE-1X-VERSION}}.jar)
+* [jetbrick-template-{{TEMPLATE-1X-VERSION}}-sources.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE-1X-VERSION}}/jetbrick-template-{{TEMPLATE-1X-VERSION}}-sources.jar)
+* [jetbrick-template-{{TEMPLATE-1X-VERSION}}-javadoc.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE-1X-VERSION}}/jetbrick-template-{{TEMPLATE-1X-VERSION}}-javadoc.jar)
 
 
 **第三方依赖 jar 下载**

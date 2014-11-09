@@ -44,6 +44,7 @@ web.http.cache
 response.setHeader("Buffer", "false");
 response.setHeader("Pragma", "no-cache");
 response.setDateHeader("Expires", 1L);
+
 // Http 1.1 header
 response.setHeader("Cache-Control", "no-cache, no-store, max-age=0");
 ```
@@ -58,6 +59,7 @@ jetbrick-webmvc 通过 Annotation 的自动扫描，可以自动发现如下的�
 * @Managed ResultHandler
 * @Managed ViewResult
 * @Managed ArgumentGetter
+* @Managed FileUpload
 
 这里，用户需要配置 classpath 下面允许扫描的 package 名称。可以配置多个。
 
@@ -84,7 +86,7 @@ web.urls.router
 web.view.default
 ---------------------------
 
-默认的 view 处理器别名： `jetx`
+默认的 view 处理器别名： `jsp`
 
 如果用户返回的 View Name 中，无法判断是有那个 View Handler 处理的话，那么将默认使用这里配置的 View Handler 来处理。
 

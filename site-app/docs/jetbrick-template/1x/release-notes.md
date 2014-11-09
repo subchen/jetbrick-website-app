@@ -1,10 +1,10 @@
-
 <a class="anchor" name="version"></a>
 所有版本 All Versions
 =============================
 
 |   时间     |  版本  |            二进制包                |                   源代码                   |  更新历史     |
 |------------|--------|------------------------------------|--------------------------------------------|---------------|
+| 2014-11-04 | 1.2.12 | [jetbrick-template-1.2.12.jar][64] | [jetbrick-template-1.2.12-sources.jar][65] | [更新历史][66]|
 | 2014-09-06 | 1.2.11 | [jetbrick-template-1.2.11.jar][61] | [jetbrick-template-1.2.11-sources.jar][62] | [更新历史][63]|
 | 2014-07-15 | 1.2.10 | [jetbrick-template-1.2.10.jar][57] | [jetbrick-template-1.2.10-sources.jar][58] | [更新历史][59]|
 | 2014-06-26 | 1.2.9  | [jetbrick-template-1.2.9.jar][54]  | [jetbrick-template-1.2.9-sources.jar][55]  | [更新历史][56]|
@@ -81,10 +81,23 @@
 [59]: #release_notes_1_2_10
 [61]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11.jar
 [62]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.11/jetbrick-template-1.2.11-sources.jar
-[62]: #release_notes_1_2_11
+[63]: #release_notes_1_2_11
+[64]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.12/jetbrick-template-1.2.12.jar
+[65]: http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/1.2.12/jetbrick-template-1.2.12-sources.jar
+[66]: #release_notes_1_2_12
 
 更新历史 Release Notes
 =============================
+
+<a class="anchor" name="release_notes_1_2_12"></a>
+**Version 1.2.12 (2014-11-04)**
+
+\[修复] [#112 WebLogic10.3.x下 ClasspathResourceLoader 无法加载资源][issue_112]
+\[修复] [#114 JFinal 中 content type 显示为 text/plain][issue_114]
+
+[issue_112]: https://github.com/subchen/jetbrick-template-1x/issues/112
+[issue_113]: https://github.com/subchen/jetbrick-template-1x/issues/114
+
 
 <a class="anchor" name="release_notes_1_2_11"></a>
 **Version 1.2.11 (2014-09-06)**

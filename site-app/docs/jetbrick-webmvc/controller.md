@@ -73,16 +73,16 @@ public class UsersController {
 
 下面的表格有助于对如何生成对于的 Action URL 有更直观的了解。
 
-| controller_path |  action_path  | URL                     |
-|-----------------|---------------|-------------------------|
-| 默认(空 or `/`)   | 默认          | /&lt;method>           |
-| 默认(空 or `/`)   | /             | /                       |
-| 默认(空 or `/`)   | /foo          | /foo                    |
-| 默认(空 or `/`)   | foo           | /foo                    |
-| /boo            | 默认          | /boo/&lt;method>        |
-| /boo            | /             | /boo/                   |
-| /boo            | /foo          | /boo/foo                |
-| /boo            | foo           | /boo/foo                |
+controller_path | action_path   | URL                     |
+----------------|---------------|-------------------------|
+默认(空 or `/`)   | 默认          | /&lt;method>            |
+默认(空 or `/`)   | /             | /                       |
+默认(空 or `/`)   | /foo          | /foo                    |
+默认(空 or `/`)   | foo           | /foo                    |
+/boo            | 默认          | /boo/&lt;method>        |
+/boo            | /             | /boo/                   |
+/boo            | /foo          | /boo/foo                |
+/boo            | foo           | /boo/foo                |
 
 
 Controller 单例？
