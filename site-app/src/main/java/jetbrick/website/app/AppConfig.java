@@ -41,7 +41,7 @@ public final class AppConfig {
 
         // jetbrick-commons --------------------------------------------------------------
         Product commons = new Product("jetbrick-commons", COMMONS_VERSION);
-        commons.setWelcome("jetbrick-commons/index.html");
+        commons.setWelcome("jetbrick-commons/overview.html");
         PRODUCT_LIST.add(commons);
 
         commons.add("jetbrick-commons/overview.md");
@@ -50,7 +50,7 @@ public final class AppConfig {
 
         // jetbrick-ioc --------------------------------------------------------------
         Product ioc = new Product("jetbrick-ioc", IOC_VERSION);
-        ioc.setWelcome("jetbrick-ioc/index.html");
+        ioc.setWelcome("jetbrick-ioc/overview.html");
         PRODUCT_LIST.add(ioc);
 
         menu = ioc.addMenu("开发指南");
@@ -72,7 +72,7 @@ public final class AppConfig {
 
         // jetbrick-webmvc --------------------------------------------------------------
         Product webmvc = new Product("jetbrick-webmvc", WEBMVC_VERSION);
-        webmvc.setWelcome("jetbrick-webmvc/index.html");
+        webmvc.setWelcome("jetbrick-webmvc/overview.html");
         PRODUCT_LIST.add(webmvc);
 
         menu = webmvc.addMenu("开发指南");
@@ -106,7 +106,7 @@ public final class AppConfig {
 
         // jetbrick-orm --------------------------------------------------------------
         Product orm = new Product("jetbrick-orm", ORM_VERSION);
-        orm.setWelcome("jetbrick-orm/index.html");
+        orm.setWelcome("jetbrick-orm/overview.html");
         PRODUCT_LIST.add(orm);
 
         ioc.add("jetbrick-orm/overview.md");
