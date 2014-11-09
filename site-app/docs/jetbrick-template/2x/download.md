@@ -10,7 +10,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 ```xml
 <dependency>
     <groupId>com.github.subchen</groupId>
-    <artifactId>jetbrick-template-core</artifactId>
+    <artifactId>jetbrick-template</artifactId>
     <version>{{TEMPLATE-VERSION}}</version>
 </dependency>
 ```
@@ -39,7 +39,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 最新版本 Latest Version
 ---------------------------------------
 
-* [jetbrick-template-core-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-core/{{TEMPLATE-VERSION}}/jetbrick-template-core-{{TEMPLATE-VERSION}}.jar)
+* [jetbrick-template-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE-VERSION}}/jetbrick-template-{{TEMPLATE-VERSION}}.jar)
 * [jetbrick-template-serlvet-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-serlvet/{{TEMPLATE-VERSION}}/jetbrick-template-serlvet-{{TEMPLATE-VERSION}}.jar)
 * [jetbrick-template-jetbrickmvc-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jetbrickmvc/{{TEMPLATE-VERSION}}/jetbrick-template-jetbrickmvc-{{TEMPLATE-VERSION}}.jar)
 * [jetbrick-template-springmvc-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-springmvc/{{TEMPLATE-VERSION}}/jetbrick-template-springmvc-{{TEMPLATE-VERSION}}.jar)

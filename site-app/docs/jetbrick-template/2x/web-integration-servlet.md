@@ -10,7 +10,7 @@ Maven 依赖
 ```xml
 <dependency>
     <groupId>com.github.subchen</groupId>
-    <artifactId>jetbrick-template-servlet</artifactId>
+    <artifactId>jetbrick-template-web</artifactId>
     <version>{{TEMPLATE-VERSION}}</version>
 </dependency>
 ```

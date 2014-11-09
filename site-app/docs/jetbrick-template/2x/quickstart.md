@@ -23,7 +23,7 @@
     ```xml
     <dependency>
         <groupId>com.github.subchen</groupId>
-        <artifactId>jetbrick-template-core</artifactId>
+        <artifactId>jetbrick-template</artifactId>
         <version>{{TEMPLATE-VERSION}}</version>
     </dependency>
     ```
@@ -148,7 +148,7 @@ Webapp 环境
     ```xml
     <dependency>
         <groupId>com.github.subchen</groupId>
-        <artifactId>jetbrick-template-servlet</artifactId>
+        <artifactId>jetbrick-template-web</artifactId>
         <version>{{TEMPLATE-VERSION}}</version>
     </dependency>
     ```

@@ -222,7 +222,7 @@ $loader.root = /opt/templates/
 $loader.reloadable = true
 ```
 
-#### 从 webapp 目录中加载 (需要 jetbrick-template-servlet-x.x.x.jar)
+#### 从 webapp 目录中加载 (需要 jetbrick-template-web-x.x.x.jar)
 
 ```
 jetx.template.loaders = $loader
