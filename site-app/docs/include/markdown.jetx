@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>${TITLE} (${PRODUCT.name})</title>
+    <title>${TITLE} :: ${PRODUCT.name}</title>
 
     #include("/include/assets.jetx")
 </head>

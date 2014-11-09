@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jetbrick - 轻量级 JAVA 开发框架</title>
+    <title>jetbrick :: 轻量级 JAVA 开发框架</title>
 
     #include("/include/assets.jetx")
 </head>
