@@ -5,7 +5,7 @@ Web 集成
 
 目前已近集成了几种流行的 Web 框架：
 
-* [HttpServlet](web-integration-servlet.html)
+* [Servlet](web-integration-servlet.html)
 * [Filter](web-integration-filter.html)
 * [Jetbrick webmvc](web-integration-jetbrickmvc.html)
 * [Springmvc](web-integration-springmvc.html)
@@ -86,6 +86,21 @@ $loader = jetbrick.template.loader.ServletResourceLoader
 $loader.root = /WEB-INF/templates
 $loader.reloadable = false
 ```
+
+
+默认配置文件
+---------------------
+
+`jetbrick-template.properties` 一般我们放在 `/WEB-INF/` 目录下，那么我们可以这么在 `web.xml` 中进行配置
+
+```xml
+<context-param>
+    <param-name>jetbrick-template-config-location</param-name>
+    <param-value>/WEB-INF/jetbrick-template.properties</param-value>
+</context-param>
+```
+
+这种配置文件路径指定方法对所有内置的 webmvc 集成都有效。
 
 
 获取 JetEngine

@@ -148,6 +148,8 @@ jetx.import.variables = HttpServletRequest request, \
 
 	jetx.import.macros = /macros/commons.jetx, /macros/auth.jetx
 
+> [info] **提示**：这里配置的外部宏文件路径是一个模板路径，需要使用 `engine.getTemplate(file)` 能加载到的路径名称。
+
 
 ### jetx.autoscan.packages
 
