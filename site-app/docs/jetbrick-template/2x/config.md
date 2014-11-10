@@ -123,7 +123,6 @@ jetx.import.variables = HttpServletRequest request, \
 ### jetx.import.functions
 
 允许配置多个 Function Class 定义，用逗号分隔。示例如下：
-
 	jetx.import.functions = app.project.methods.UserAuthFunctions
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetFunctions`
@@ -148,8 +147,9 @@ jetx.import.variables = HttpServletRequest request, \
 
 	jetx.import.macros = /macros/commons.jetx, /macros/auth.jetx
 
-> [info] **提示**：这里配置的外部宏文件路径是一个模板路径，需要使用 `engine.getTemplate(file)` 能加载到的路径名称。
+具体参考：[宏 Macro](ext-macro.html)。
 
+> [info] **提示**：这里配置的外部宏文件路径是一个模板路径，需要使用 `engine.getTemplate(file)` 能加载到的路径名称。
 
 ### jetx.autoscan.packages
 
