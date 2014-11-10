@@ -40,7 +40,7 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 ---------------------------------------
 
 * [jetbrick-template-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template/{{TEMPLATE-VERSION}}/jetbrick-template-{{TEMPLATE-VERSION}}.jar)
-* [jetbrick-template-serlvet-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-serlvet/{{TEMPLATE-VERSION}}/jetbrick-template-serlvet-{{TEMPLATE-VERSION}}.jar)
+* [jetbrick-template-web-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-web/{{TEMPLATE-VERSION}}/jetbrick-template-web-{{TEMPLATE-VERSION}}.jar)
 * [jetbrick-template-jetbrickmvc-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jetbrickmvc/{{TEMPLATE-VERSION}}/jetbrick-template-jetbrickmvc-{{TEMPLATE-VERSION}}.jar)
 * [jetbrick-template-springmvc-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-springmvc/{{TEMPLATE-VERSION}}/jetbrick-template-springmvc-{{TEMPLATE-VERSION}}.jar)
 * [jetbrick-template-jfinal-{{TEMPLATE-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-template-jfinal/{{TEMPLATE-VERSION}}/jetbrick-template-jfinal-{{TEMPLATE-VERSION}}.jar)
