@@ -111,7 +111,9 @@ jetx.import.variables = HttpServletRequest request, \
 
 允许配置多个 Method Class 定义，用逗号分隔。示例如下：
 
-	jetx.import.methods = StringMethods, app.project.methods.UserAuthMethods
+```
+jetx.import.methods = StringMethods, app.project.methods.UserAuthMethods
+```
 
 定义的类名会自动在 `jetx.import.classes` 里面查找 实际的Class。
 
@@ -123,7 +125,10 @@ jetx.import.variables = HttpServletRequest request, \
 ### jetx.import.functions
 
 允许配置多个 Function Class 定义，用逗号分隔。示例如下：
-	jetx.import.functions = app.project.methods.UserAuthFunctions
+
+```
+jetx.import.functions = app.project.methods.UserAuthFunctions
+```
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetFunctions`
 
@@ -134,7 +139,9 @@ jetx.import.variables = HttpServletRequest request, \
 
 允许配置多个 Tag Class 定义，用逗号分隔。示例如下：
 
-	jetx.import.tags = app.project.tags.UserTags
+```
+jetx.import.tags = app.project.tags.UserTags
+```
 
 `JetEngine` 默认会注册 `jetbrick.template.runtime.buildin.JetTags`
 
@@ -145,7 +152,9 @@ jetx.import.variables = HttpServletRequest request, \
 
 允许配置多个 Macro File 定义，用逗号分隔。示例如下：
 
-	jetx.import.macros = /macros/commons.jetx, /macros/auth.jetx
+```
+jetx.import.macros = /macros/commons.jetx, /macros/auth.jetx
+```
 
 具体参考：[宏 Macro](ext-macro.html)。
 
@@ -165,8 +174,9 @@ jetx.import.variables = HttpServletRequest request, \
 
 支持定义多个扫描的包。
 
-	jetx.autoscan.packages = app.methods, app.functions, app.tags
-
+```
+jetx.autoscan.packages = app.methods, app.functions, app.tags
+```
 
 要让 `JetEngine` 知道某个 Class 是扩展 Class，那么就需要在这个 Class 上面加入下面某个 Annotation
 

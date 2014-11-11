@@ -40,7 +40,7 @@
 </table>
 ```
 
-详细指令语法，请参考：[语法指南](syntax-core.html)。或者[和 Velocity 的比较](velocity-comparison.html)。
+详细指令语法，请参考：[语法-指令](syntax-directive.html), [语法-表达式](syntax-expression.html)。或者[和 Velocity 的比较](velocity-comparison.html)。
 
 
 易于集成 Web Integration

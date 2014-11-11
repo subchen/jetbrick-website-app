@@ -36,7 +36,7 @@ requestScope     | Map&lt;String,Object>   | 快捷访问 request.getAttribute(n
 param            | Map&lt;String,String>   | 快捷访问 request.getParameter(name)
 paramValues      | Map&lt;String,String[]> | 快捷访问 request.getParameterValues(name)
 CONTEXT_PATH     | String                  | 快捷访问 request.getContextPath()
-WEBROOT_PATH     | String                  | 完整的webapp路径: http://127.0.0.1:8080/myapp
+WEBROOT          | String                  | 完整的 webapp 路径: http://127.0.0.1:8080/myapp
 BASE_PATH        | String                  | 专门用于 &lt;base href="${BASE_PATH}">
 
 
