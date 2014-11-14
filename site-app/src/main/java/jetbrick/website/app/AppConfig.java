@@ -10,7 +10,7 @@ public final class AppConfig {
 
     public static final String WEBROOT_PATH = "http://subchen.github.io";
 
-    public static final String COMMONS_VERSION = "2.0.1";
+    public static final String COMMONS_VERSION = "2.0.2";
     public static final String IOC_VERSION = "2.0.1";
     public static final String ORM_VERSION = "2.0";
     public static final String WEBMVC_VERSION = "2.0";
