@@ -43,7 +43,7 @@
                         </property>
                         <property>
                             <key>site.html.dir</key>
-                            <value>${project.build.directory}/site</value>
+                            <value>${basedir}/../../subchen.github.io</value>
                         </property>
                     </systemProperties>
                 </configuration>

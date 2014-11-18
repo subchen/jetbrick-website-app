@@ -13,8 +13,9 @@
 [jetx.autoscan.skiperrors][8]             | 自动扫描的时候跳过遇到错误 | false
 [jetx.template.loaders][11]               | 模板资源载入Class          | jetbrick.template.loader.ClasspathResourceLoader
 [jetx.template.suffix][12]                | 默认模板文件扩展名         | .jetx
-[jetx.input.encoding][13]                 | 模板源文件的编码格式       | utf-8
-[jetx.output.encoding][14]                | 模板输出编码格式           | utf-8
+[jetx.template.source.securityManager][13]| createTemplate()使用的安全管理器 |
+[jetx.input.encoding][14]                 | 模板源文件的编码格式       | utf-8
+[jetx.output.encoding][15]                | 模板输出编码格式           | utf-8
 [jetx.syntax.strict][21]                  | 是否默认启用严格语法模式   | false
 [jetx.syntax.safecall][22]                | 是否默认启用全局的安全调用 | false
 [jetx.trim.leading.whitespaces][23]       | 是否要删除模板开头处的空白 | true
@@ -33,8 +34,9 @@
 [8]: #jetx-autoscan-skiperrors
 [11]: #jetx-template-loaders
 [12]: #jetx-template-suffix
-[13]: #jetx-input-encoding
-[14]: #jetx-output-encoding
+[13]: #jetx-template-source-securitymanager
+[14]: #jetx-input-encoding
+[15]: #jetx-output-encoding
 [21]: #jetx-syntax-strict
 [22]: #jetx-syntax-safecall
 [23]: #jetx-trim-leading-whitespaces
@@ -260,6 +262,13 @@ $webLoader.reloadable = true
 ### jetx.template.suffix
 
 默认的模板文件扩展名 `.jetx`，主要用于 Web 框架集成中，用于查找和过滤模板用。
+
+
+### jetx.template.source.securityManager
+
+默认通过 `JetEngine.createTemplate()` 以源码方式创建的模板，设置安全管理器。
+
+具体可以参考：[安全管理器](security-manager.html)
 
 
 ### jetx.input.encoding

@@ -35,7 +35,8 @@
 
 * 单引号字符串：`'abc\u00A0\r\n'`
 * 内存地址比较：`===` `!==`
-* 简化的三元表达式：`a ?: b`，等价于： `(a==null) ? b : a`
+* 简化的三元表达式：`a ?: b`，等价于： `(a) ? a : b`
+* NULL 默认值：`a ?! b`，等价于： `(a != null) ? a : b` (支持级联检查 NULL 错误，如 `a.b.c ?! defaultValue`)
 * 静态字段调用：`Long::MAX_VALUE`
 * 静态方法调用：`Long::valueOf("123")`
 * List 常量：`[1,2,3]`
@@ -189,3 +190,27 @@ ${java.lang.Long::MAX_VALUE}
 ${Collections::emptyList()}
 ${java.lang.Long::valueOf("123")}
 ```
+
+NULL 默认值
+------------------------------
+
+语法：
+
+* `expression ?! defaultValue`
+
+
+类似于 `Freemarker` 中的 `!` 操作符，如果 `expression` 为 `NULL`，则返回 `defaultValue`。
+
+
+> [info] **提示**：`?!` 支持级联操作，如果 `obj.name` 这样的表达式中 `obj` 为 `NULL`，即使 `safecall=false` 的情况下，同样不会抛出 `NullPointerException`。
+
+
+示例：
+
+```
+${status ?! 0}
+${user.status ?! 0}  #// 如果 user==null, 同样会返回 0 (无需开启 safecall)
+```
+
+
+

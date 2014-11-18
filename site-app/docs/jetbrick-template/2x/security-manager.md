@@ -74,6 +74,18 @@ jetx.template.loaders = $loader
 ```
 
 
+为 `JetEngine.createTemplate()` 创建的模板，设置安全管理器
+--------------------------------------------------------------------------------
+
+由于 `JetEngine.createTemplate()` 以源码方式创建的模板，并没有使用 `ResourceLoader` 来加载，所有必须使用其他的方式指定 `JetSecurityManager`
+
+配置如下：
+
+```
+jetx.template.source.securityManager = $securityManager
+```
+
+
 自定义安全管理器
 --------------------
 
