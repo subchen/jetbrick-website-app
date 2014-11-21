@@ -13,6 +13,42 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
     <artifactId>jetbrick-template</artifactId>
     <version>{{TEMPLATE-VERSION}}</version>
 </dependency>
+
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-web</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-jetbrickmvc</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-springmvc</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-jfinal</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-jodd</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-struts</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-template-nutz</artifactId>
+    <version>{{TEMPLATE-VERSION}}</version>
+</dependency>
 ```
 
 如果你需要使用 Snapshot 版本，那么需要你可以选择：
