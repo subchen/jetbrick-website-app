@@ -1,7 +1,7 @@
 JAVA 编码规范 2.0 for Jetbrick
 ==================================
 
-1. Java 文件格式
+Java 文件格式
 ----------------------
 
 * 文件格式必须是 `UTF-8`，无 `BOM` 格式
@@ -11,25 +11,25 @@ JAVA 编码规范 2.0 for Jetbrick
 * 每个文件开头必须写上项目的标准 LICENSE 注释，如下：
 
     ```java
-	/**
-	 * Copyright 2013-2014 Guoqiang Chen, Shanghai, China. All rights reserved.
-	 *
-	 *   Author: Guoqiang Chen
-	 *    Email: subchen@gmail.com
-	 *   WebURL: https://github.com/subchen
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 *   http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 */
+    /**
+     * Copyright 2013-2014 Guoqiang Chen, Shanghai, China. All rights reserved.
+     *
+     *   Author: Guoqiang Chen
+     *    Email: subchen@gmail.com
+     *   WebURL: https://github.com/subchen
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *   http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
     ```
 
 * 代码必须是格式化的，请使用统一的 Eclipse 的代码格式文件：[jetbrick-eclipse-formatter.xml](http://github.com/jetbrick-aggregate/tree/master/jetbrick-eclipse-formatter/src/main/resources/jetbrick-eclipse-formatter.xml)
@@ -37,10 +37,10 @@ JAVA 编码规范 2.0 for Jetbrick
 
     ```java
     //@formatter:off
-    private static final String[] DATE_PATTERNS = new String[] { 
-        "yyyy-MM-dd HH:mm:ss.SSS", 
-        "yyyy-MM-dd HH:mm:ss", 
-        "yyyy-MM-dd", 
+    private static final String[] DATE_PATTERNS = new String[] {
+        "yyyy-MM-dd HH:mm:ss.SSS",
+        "yyyy-MM-dd HH:mm:ss",
+        "yyyy-MM-dd",
         "HH:mm:ss"
     };
     //@formatter:on
@@ -49,7 +49,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * Java 文件必须是可编译的，不应该有任何的 `warning` 存在
 
 
-2. 包名
+包名
 ---------------------
 
 * 包名必须是全部小写的，最好用一个单词表示，尽量不要以复数结尾
@@ -57,7 +57,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 接口或者抽象类的多种实现，推荐以 `support`, `spi` 等命名
 
 
-3. 类名
+类名
 ---------------------
 
 * 类名必须首字母大写，驼峰命名法： 如 `UserInfo`，`ClassUtils`
@@ -69,7 +69,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 每个 Class 都应该有简短的注释
 
 
-4. Imports
+Imports
 ---------------------
 
 * Imports 间不要有空行
@@ -77,7 +77,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 不要使用 `import static`, 除了 `JUnit` / `TestNG` 的 `assertXXX` 方法
 
 
-5. 方法
+方法
 ---------------------
 
 * 方法名称应该采用首字母小写，驼峰命名法： 如 `getUser`，`lookupClass`
@@ -87,14 +87,14 @@ JAVA 编码规范 2.0 for Jetbrick
 * 推荐每个 `public` 的方法的参数和返回值都加上 `@Nullable` 或者 `@NotNull` 标注
 
 
-6. 常量
+常量
 ---------------------
 
 * 常量必须是全大写，并用 `_` 分隔，如 `MAX_INTEGER`
 * 常量必须是 `static` `final`
 
 
-7. 变量
+变量
 ---------------------
 
 * 变量名称必须首字母小写，驼峰命名法
@@ -103,7 +103,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 如果是集合或数组，用复数名词，或者添加 `List`, `Map` 等后缀
 
 
-8. 注释
+注释
 ---------------------
 
 * 注释必须和代码保持一致，中文/英文均可
@@ -113,7 +113,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 示例代码以 `<pre>` 包裹
 
 
-9. 异常
+异常
 ---------------------
 
 * 异常类名必须以 `Exception` 结尾
@@ -124,7 +124,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 被 `catch` 住的 `Exception`，必须要处理，或者重新抛出
 
 
-10. 日志
+日志
 ---------------------
 
 * 日志框架使用 `slf4j`
@@ -134,7 +134,7 @@ JAVA 编码规范 2.0 for Jetbrick
 * 被 `catch` 住的 `Exception`，应该被打印出来 `log.error(e)`
 
 
-11. 单元测试
+单元测试
 ---------------------
 
 * 单元测试框架用 `JUnit`

@@ -50,7 +50,7 @@ public final class AppMethods {
                 anchor = String.valueOf(Math.abs(text.hashCode()));
             }
             if ("h2".equals(tag)) {
-                text = (++n2) + " " + text;
+                text = (++n2) + ". " + text;
                 n3 = 0;
             } else if ("h3".equals(tag)) {
                 text = (n2) + "." + (++n3) + " " + text;
