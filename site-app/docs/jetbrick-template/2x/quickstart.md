@@ -31,6 +31,8 @@
 2. 新建一个 User.java 作为 Model
 
     ```java
+    package demo;
+
     public class User {
         private String name;
         private String email;
@@ -58,14 +60,13 @@
 2. 新建一个 users.jetx 模板，并放在默认的 classpath 根目录 (`src/main/resources`)
 
     ```html
-    #define(List users)
     <table>
       <tr>
         <td>序号</td>
         <td>姓名</td>
         <td>邮箱</td>
       </tr>
-      #for (User user : users)
+      #for (user : users)
       <tr>
         <td>${for.index}</td>
         <td>${user.name}</td>
@@ -78,6 +79,14 @@
 3. 新建一个 JUnit Test 测试类 JetxTest.java
 
     ```java
+    package demo;
+    
+    import java.io.StringWriter;
+    import java.util.*;
+    import jetbrick.template.JetEngine;
+    import jetbrick.template.JetTemplate;
+    import org.junit.Test;
+
     public class JetxTest {
     
         @Test
@@ -86,7 +95,7 @@
             List<User> users = Arrays.asList(
                 new User("张三", "zhangsan@qq.com"),
                 new User("李四", "lisi@qq.com"),
-                new User("王五", "wangwu@qq.com"),
+                new User("王五", "wangwu@qq.com")
             );
     
             // 1. 创建一个默认的 JetEngine
