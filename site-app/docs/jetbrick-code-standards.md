@@ -10,7 +10,7 @@ Java 文件格式
 * 行尾空白内容应该被 trim 掉
 * 每个文件开头必须写上项目的标准 LICENSE 注释，如下：
 
-    ```java
+    ```
     /**
      * Copyright 2013-2014 Guoqiang Chen, Shanghai, China. All rights reserved.
      *
