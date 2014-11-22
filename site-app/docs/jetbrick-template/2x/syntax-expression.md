@@ -112,6 +112,7 @@ key 可以加单双引号，也可以不加 (和 JSON 一样)
 
 ```
 {} // empty Map
+
 {name: "Jason", "statue": 0}
 ```
 
