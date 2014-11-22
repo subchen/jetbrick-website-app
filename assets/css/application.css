@@ -116,8 +116,8 @@ body, p, div, table, td {
     display: block;
     float: left;
 
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     padding: 0 30px;
     margin-left: 30px;
     color: #fff;
@@ -129,7 +129,16 @@ body, p, div, table, td {
 .jb-menulist a:hover {
     text-decoration: none;
     background-color: #47a447;
-    border-color: #398439;
+    border-color: #2B4EE3;
+}
+
+.jb-menulist a.blue {
+    background-color: #2B4EE3;
+    border-color: #5642CC;
+}
+.jb-menulist a.blue:hover {
+    background-color: #5642CC;
+    border-color: #133FFB;
 }
 
 .dropdown-submenu  { 
