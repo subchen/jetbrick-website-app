@@ -10,12 +10,12 @@ public final class AppConfig {
 
     public static final String WEBROOT_PATH = "http://subchen.github.io";
 
-    public static final String COMMONS_VERSION = "2.0.3";
+    public static final String COMMONS_VERSION = "2.0.4";
     public static final String IOC_VERSION = "2.0.1";
     public static final String ORM_VERSION = "2.0";
     public static final String WEBMVC_VERSION = "2.0";
     public static final String TEMPLATE_1X_VERSION = "1.2.12";
-    public static final String TEMPLATE_VERSION = "2.0.3";
+    public static final String TEMPLATE_VERSION = "2.0.4";
     public static final String ALL_VERSION = "14.10.24";
 
     public static final File JETX_DOCS_DIR = new File(System.getProperty("jetx.docs.dir")).getAbsoluteFile();
@@ -37,7 +37,9 @@ public final class AppConfig {
         PRODUCT_LIST.add(all);
 
         all.add("index.jetx");
+        all.add("jetbrick-cases.jetx");
         all.add("jetbrick-code-standards.md");
+        all.add("about.md");
 
         // jetbrick-commons --------------------------------------------------------------
         Product commons = new Product("jetbrick-commons", COMMONS_VERSION);

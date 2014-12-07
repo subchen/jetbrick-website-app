@@ -165,6 +165,12 @@ Hello: jetbrick
 * `String includeGet(String relativeName)`
 * `String includeGet(String relativeName, Map<String, Object> parameters)`
 
+### 调用一个 servlet/action，并获取输出
+
+嵌入一个子页面，这个页面直接对应一个 servlet 或者 action URL，需要引入 jetbrick-template-web。
+
+* `String servletGet(String path)`
+
 ### 调用一个 macro，并获取输出
 
 * `String macroGet(String name, Object... arguments)`

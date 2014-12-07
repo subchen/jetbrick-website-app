@@ -135,7 +135,7 @@ Tag 的实现第一个参数是 `JetTagContext`，它包含了 Tag 运行时的�
     如果不存在指定 name 的 context 变量，那么输出 body 内容，否则输出指定的 context 变量内容。
 
 
-### Web 缓存相关
+### Web 缓存相关 (需要 jetbrick-template-web)
 
 * `#tag application_cache(String name, long timeout)` ... `#end`
 
