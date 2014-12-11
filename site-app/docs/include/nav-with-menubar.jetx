@@ -44,8 +44,10 @@
                         #continue(p.hidden)
                         <li><a href="${BASE_PATH}/${p.welcome}">${p.name}</a></li>
                     #end
+                        <!--
                         <li class="divider"></li>
                         <li><a href="${BASE_PATH}/jetbrick-cases.html">jetbrick 真实案例</a></li>
+                        -->
                         <li class="divider"></li>
                         <li><a href="${BASE_PATH}/jetbrick-code-standards.html">jetbrick 代码规范</a></li>
                         <li class="divider"></li>
