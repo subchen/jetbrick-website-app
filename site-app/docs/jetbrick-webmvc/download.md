@@ -12,6 +12,27 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
     <artifactId>jetbrick-webmvc</artifactId>
     <version>{{WEBMVC-VERSION}}</version>
 </dependency>
+
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-fileupload</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-fastjson</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-gson</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-freemarker</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
 ```
 
 如果你需要使用 Snapshot 版本，那么需要你可以选择：
@@ -41,6 +62,14 @@ Release 版本已发布到 Maven 中央库： http://central.maven.org/maven2/co
 * [jetbrick-webmvc-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc/{{WEBMVC-VERSION}}/jetbrick-webmvc-{{WEBMVC-VERSION}}.jar)
 * [jetbrick-webmvc-sources-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc/{{WEBMVC-VERSION}}/jetbrick-webmvc-sources-{{WEBMVC-VERSION}}.jar)
 * [jetbrick-webmvc-javadoc-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc/{{WEBMVC-VERSION}}/jetbrick-webmvc-javadoc-{{WEBMVC-VERSION}}.jar)
+* [jetbrick-webmvc-fileupload-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-fileupload/{{WEBMVC-VERSION}}/jetbrick-webmvc-fileupload-{{WEBMVC-VERSION}}.jar)
+* [jetbrick-webmvc-fileupload-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-fileupload/{{WEBMVC-VERSION}}/jetbrick-webmvc-fileupload-{{WEBMVC-VERSION}}-sources.jar)
+* [jetbrick-webmvc-fastjson-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-fastjson/{{WEBMVC-VERSION}}/jetbrick-webmvc-fastjson-{{WEBMVC-VERSION}}.jar)
+* [jetbrick-webmvc-fastjson-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-fastjson/{{WEBMVC-VERSION}}/jetbrick-webmvc-fastjson-{{WEBMVC-VERSION}}-sources.jar)
+* [jetbrick-webmvc-gson-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-gson/{{WEBMVC-VERSION}}/jetbrick-webmvc-gson-{{WEBMVC-VERSION}}.jar)
+* [jetbrick-webmvc-gson-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-gson/{{WEBMVC-VERSION}}/jetbrick-webmvc-gson-{{WEBMVC-VERSION}}-sources.jar)
+* [jetbrick-webmvc-freemarker-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-freemarker/{{WEBMVC-VERSION}}/jetbrick-webmvc-freemarker-{{WEBMVC-VERSION}}.jar)
+* [jetbrick-webmvc-freemarker-{{WEBMVC-VERSION}}.jar](http://search.maven.org/remotecontent?filepath=com/github/subchen/jetbrick-webmvc-freemarker/{{WEBMVC-VERSION}}/jetbrick-webmvc-freemarker-{{WEBMVC-VERSION}}-sources.jar)
 
 
 第三方依赖包 Dependences
