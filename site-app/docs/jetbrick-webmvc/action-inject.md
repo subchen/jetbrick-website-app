@@ -30,6 +30,7 @@ Action 参数注入
 * `@PathVariable` - Path URL 参数
 * `@RequestParam` - Request.getParameter(...)，也支持文件上传对象 FilePart
 * `@RequestForm` - 将多个 Request 参数，注入到一个 Form 对象中
+* `@RequestBody` - Request.getInputStream()
 * `@RequestHeader` - Request.getHeader(...)
 * `@RequestCookie` - Request.getCookies()
 * `@RequestAttribute` - Request.getAttribute(...)
@@ -101,8 +102,6 @@ Action 参数注入
 
 用于从 Request 中获取参数，等价于 `request.getParameter(...)`，支持自动类型转换。
 
-我们既可以注入普通的 Parameter，也可以注入 FilePart 对象（文件上传对象）
-
 ```java
 @Action
 public void action(
@@ -110,6 +109,24 @@ public void action(
         @RequestParam("file") FilePart file
     ) {
     ...
+}
+```
+
+`@RequestParam` 目前支持注入常见的类型：
+* JAVA 基本类型/包装类型
+* 数组类型
+* FilePart
+* JSONAware/JSONObject/JSONArray
+* org.w3c.dom.Document
+* JAXBElement
+
+也可以实现自定义类型的 `@RequestParam` 注入，只要实现下面的接口，并加入 `@Managed` annotation 即可：
+
+```java
+public interface RequestParamGetter<T> {
+
+    public T get(RequestContext ctx, ParameterInfo parameter, String name) throws Exception;
+
 }
 ```
 
@@ -131,6 +148,33 @@ public void action(@RequestForm LoginInfo form) {
     System.out.println(form.getUsername());
     System.out.println(form.getPassword());
     System.out.println(form.isRememberMe());
+}
+```
+
+
+#### @RequestBody
+
+如果你的 Request 使用 Payload 方式传递内容，比如 JSON 或者 XML 格式，那么我们可以使用 `@RequestBody` 来获取。
+
+```java
+@Action
+public void action(@RequestBody Document xmlDocument) {
+    ...
+}
+```
+
+目前，`RequestBody` 支持下面几种类型：
+* JSONAware/JSONObject/JSONArray
+* org.w3c.dom.Document
+* JAXBElement
+
+也可以实现自定义类型的 `@RequestBody` 注入，只要实现下面的接口，并加入 `@Managed` annotation 即可：
+
+```java
+public interface RequestBodyGetter<T> {
+
+    public T get(RequestContext ctx, ParameterInfo parameter) throws Exception;
+
 }
 ```
 

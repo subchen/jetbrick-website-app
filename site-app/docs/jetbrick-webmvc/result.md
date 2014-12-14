@@ -14,9 +14,10 @@ jetbrick 已经内置了多种 Result/ResultHandler 处理器：
 * `RawText`: 自定义文本输出
 * `RawData`: 自定义二进制输出
 * `RawDownload`: 文件下载
-* `JSONAware`: JSON 输出 (fastjson 库)
+* `JSONAware/JSONObject/JSONArray`: JSON 输出 (fastjson 库)
 * `JsonElement`: JSON 输出 (Gson 库)
-* `org.w3c.dom.Element`: XML 输出 (暂未实现)
+* `org.w3c.dom.Document`: XML 输出
+* `JAXBElement<?>`: JAXB XML 输出
 * `void`: 无 Response 输出。
 
 我们将分别介绍不同的 Result 的使用方法。
@@ -90,9 +91,9 @@ public RawDownload download() {
 }
 ```
 
-### JSONAware
+### JSONAware/JSONObject/JSONArray
 
-使用 fastjson 库来生成一个 json 输出。
+使用 fastjson 库来生成一个 json 输出。(自动支持 jsonp 调用)
 
 需要加入依赖：
 
@@ -118,7 +119,7 @@ public JSONAware list() {
 
 ### JsonElement
 
-使用 gson 库来生成一个 json 输出。
+使用 gson 库来生成一个 json 输出。(自动支持 jsonp 调用)
 
 
 需要加入依赖：
@@ -134,7 +135,7 @@ public JSONAware list() {
 范例代码如下：
 
 ```java
-@Action
+@Action(value="data.json")
 public GsonElement list() {
     JsonObject json = new JsonObject();
     json.add("list", ...);
@@ -143,13 +144,13 @@ public GsonElement list() {
 }
 ```
 
-### org.w3c.dom.Element (暂未实现)
+### org.w3c.dom.Document
 
 输出一个 XML Document
 
 ```java
-@Action
-public Element xml() {
+@Action(value="data.xml")
+public Document getXml() {
     DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = factory.newDocumentBuilder();
     Document doc = builder.newDocument();
@@ -158,7 +159,69 @@ public Element xml() {
     doc.appendChild(root);
     ...
     //
-    return doc.getDocumentElement();
+    return doc;
+}
+```
+
+### JAXBElement
+
+输出一个 JAXB XML Document
+
+```java
+@Action(value="data.xml")
+public JAXBElement<Users> getXml() {
+    Users users = new Users();
+
+    User user = new User();
+    user.setId("1");
+    user.setName("张三");
+    users.setUsers(Arrays.asList(user));
+
+    return new JAXBElement<Users>(new QName("users"), Users.class, users);
+}
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name="users")
+public class Users {
+
+    @XmlElement(name="user")
+    private List<User> users;
+
+    public List<User> getUsers() {
+        return users;
+    }
+    
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+}
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name="user")
+public class User {
+ 
+    @XmlElement
+    private String id;
+
+    @XmlElement
+    private String name;
+    
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 ```
 

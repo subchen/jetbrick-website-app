@@ -32,6 +32,7 @@ jetbrick 已经内置了多种 View/ViewHandler 处理器：
 * `redirect`: Redirect 到一个指定的 page/URL
 * `jsp`: 使用 JSP 作为 View
 * `jetx`: 使用 jetbrick-template 作为 View
+* `ftl`: 使用 freemarker 作为 View
 * `json`: 使用 JSON 文本输出作为 View
 * `xml`: 使用 XML 文本输出作为 View
 * `text`: 使用纯文本输出作为 View
@@ -89,7 +90,7 @@ public String form() {
 
 ### jetx
 
-默认使用 jetbrick-template 页面作为 View
+使用 jetbrick-template 页面作为 View
 
 需要加入依赖：
 
@@ -112,6 +113,35 @@ public String list() {
 @Action
 public String form() {
     return "form.jetx";
+}
+```
+
+
+### ftl
+
+使用 freemarker 页面作为 View
+
+需要加入依赖：
+
+```xml
+<dependency>
+    <groupId>com.github.subchen</groupId>
+    <artifactId>jetbrick-webmvc-freemarker</artifactId>
+    <version>{{WEBMVC-VERSION}}</version>
+</dependency>
+```
+
+范例代码如下：
+
+```java
+@Action
+public String list() {
+    return "ftl:list";
+}
+
+@Action
+public String form() {
+    return "form.ftl";
 }
 ```
 
