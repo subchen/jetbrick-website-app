@@ -280,7 +280,7 @@ a map of servlet context init parameters.
 jetbrick-webmvc 已经内置了大量的参数注入方式，怎么用都可以，并且我们也提供了扩展机制。
 
 如果用户想自定义注入的对象或者 Annotation，请看下面的章节：[自定义注入 Annotation
-](custom_annotation.html)
+](custom-annotation.html)
 
 
 
