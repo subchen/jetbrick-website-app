@@ -86,9 +86,9 @@ jetx.import.classes = jetbrick.app.model.*, \
 允许配置多个变量定义，用逗号分隔。示例如下：
 
 ```
-jetx.import.variables = HttpServletRequest request, \
-                        jetbrick.dao.orm.Pagelist pagelist, \
-                        List entites
+jetx.import.defines = HttpServletRequest request, \
+                      jetbrick.dao.orm.Pagelist pagelist, \
+                      List entites
 ```
 
 变量的类型如果没有使用包名，那么将会自动在 `jetx.import.classes` 里面查找 Class。
