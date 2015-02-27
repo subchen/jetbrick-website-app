@@ -55,8 +55,9 @@ public final class AppMethods {
             } else if ("h3".equals(tag)) {
                 text = (n2) + "." + (++n3) + " " + text;
             }
+            text = "<a class=\"header-anchor\" href=\"#" + anchor + "\">§</a>" + text;
             text = "<a class=\"anchor\" name=\"" + anchor + "\"></a>" + text;
-            header.html(text);
+            header.addClass("header").html(text);
         }
         return document.body().html();
     }

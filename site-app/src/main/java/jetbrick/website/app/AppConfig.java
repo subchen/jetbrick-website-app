@@ -15,7 +15,7 @@ public final class AppConfig {
     public static final String ORM_VERSION = "2.0";
     public static final String WEBMVC_VERSION = "2.1";
     public static final String TEMPLATE_1X_VERSION = "1.2.12";
-    public static final String TEMPLATE_VERSION = "2.0.7";
+    public static final String TEMPLATE_VERSION = "2.0.8";
     public static final String ALL_VERSION = "14.10.24";
 
     public static final File JETX_DOCS_DIR = new File(System.getProperty("jetx.docs.dir")).getAbsoluteFile();
@@ -111,9 +111,9 @@ public final class AppConfig {
         orm.setWelcome("jetbrick-orm/overview.html");
         PRODUCT_LIST.add(orm);
 
-        ioc.add("jetbrick-orm/overview.md");
-        ioc.add("jetbrick-orm/download.md");
-        ioc.add("jetbrick-orm/index.html");
+        orm.add("jetbrick-orm/overview.md");
+        orm.add("jetbrick-orm/download.md");
+        orm.add("jetbrick-orm/index.html");
 
         // jetbrick-template 1x ---------------------------------------------------------
         Product template1x = new Product("jetbrick-template-1x", TEMPLATE_1X_VERSION);
