@@ -123,8 +123,8 @@
 
 ```
 #for (Book book : user.books)
-	${for.index} // 内部循环计数器，从 1 开始计数
-	...
+    ${for.index} // 内部循环计数器，从 1 开始计数
+    ...
 #end
 ```
 
@@ -136,6 +136,7 @@
 * `for.last` 是否最后一个元素。
 * `for.odd` 是否第奇数个元素。
 * `for.even` 是否第偶数个元素。
+* `for.outer` 获取外部 `#for` 指令的 `for` 对象
 
 
 ### for-else
@@ -157,6 +158,17 @@
 ```
 #for (int i : range(1, 100))
 	...
+#end
+```
+
+### for in map
+
+对一个 Map 进行 for 循环，那么返回的是一个 `Map.Entry` 对象。
+
+```
+#for (Map.Entry entry : map)
+    KEY: ${entry.key}
+    VALUE: ${entry.value}
 #end
 ```
 
