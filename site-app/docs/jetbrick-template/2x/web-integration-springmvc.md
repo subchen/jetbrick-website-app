@@ -40,6 +40,12 @@ application-context.xml 配置
 > [warn] **小心**：如果你同时指定 `configLocation` 和 `configProperties` 属性，那么 `configLocation` 文件中的属性优先级高。
 
 
+Spring-boot 集成
+----------------------------------------------
+
+范例请参考： https://github.com/yingzhuo/springboot-jetx2-examples
+
+
 范例源码
 --------------------------------
 
