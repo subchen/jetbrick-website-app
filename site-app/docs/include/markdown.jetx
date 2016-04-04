@@ -24,7 +24,7 @@
 
 	<hr style="margin: 10px 0 5px 0;" />
 
-    #include("/include/discuss.jetx")
+    #//include("/include/discuss.jetx")
 
 </div>
 
