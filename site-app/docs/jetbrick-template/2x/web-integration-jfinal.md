@@ -37,6 +37,8 @@ public class JetxConfig extends JFinalConfig {
     public void configConstant(Constants me) {
         me.setMainRenderFactory(new JetTemplateRenderFactory());
         ...
+        // 注意, 这里请不要使用 me.setBaseViewPath("...") 更改 prefix path
+        // 需要的话，请使用模板的 `$loader.root` 代替
     }
 
 }
