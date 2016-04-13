@@ -37,7 +37,9 @@ application-context.xml 配置
 </bean>
 ```
 
-> [warn] **小心**：如果你同时指定 `configLocation` 和 `configProperties` 属性，那么 `configLocation` 文件中的属性优先级高。
+> [warn] **小心**：
+> * 如果你同时指定 `configLocation` 和 `configProperties` 属性，那么 `configLocation` 文件中的属性优先级高。
+> * 请不应该在使用 `viewResolver` 的 `prefix` 属性，用模板的 `$loader.root` 代替
 
 
 Spring-boot 集成
